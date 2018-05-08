@@ -1,15 +1,14 @@
-body{
-    background-image: url(../../assets/images/footer_lodyas.png);
-    background-repeat: repeat;
-    display: block;
-}
 .main{
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
+    background-image: url(../../assets/images/footer_lodyas.png);
+    background-repeat: repeat;
+    z-index: 1;
 }
+
 .lightBG{
     background-color: lightgrey;
     color: rgb(31, 30, 30);
@@ -19,51 +18,58 @@ body{
     background-color: #333333;
     color: white
 }
-.horizontal-block{
-    display: flex;
-    flex: 1;
+.recommendedWidth{
+    width: 960px;
+}
+.centerContent{
+    margin: 0 auto;
+}
+/* stretch grey block across top */
+.outerNav{
+    width: 100%;
     height: 50px;
     border-bottom: 5px solid #383838;
 }
+/* align to right of recommended width */
+.innerNav{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+/* add navigation padding */
+.nav{
+    padding: 20px;
+}  
+
+/* Remove Hyperlink Formatting */
 nav a{
     color: rgb(31, 30, 30);
     text-decoration: none;
 }
-.navlinks{
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
-    margin-right: 25px;
- 
-}
+/* put logo on left */
 .logo{
-    align-self: flex-start;
+    margin-right: auto;
 }
-.nav{
-    margin: 5px;
-    padding: 15px;
-}
+
 hr{
     margin: 10px 25px;
 }
-.content{
-    width: 960px;
-    margin: 0 auto;
-    background-color: lightgrey;
-}
+
 .aboutme{
     display: flex;
     flex: 1;
     flex-wrap: wrap;
+    flex-direction: row;
 }
-.aboutmemain{
+.aboutmeP{
+    padding: 10px;
+    max-width: 470px;
+
+}
+.readOn{
     display: flex;
     flex: 1;
-}
-.aboutme p{
-    padding: 10px;
-    width: 500px;
-    margin: 0 auto;
+    justify-content: center;
 }
 .attention{
     font-family: 'Georgia', Times, "Times New Roman", serif;
