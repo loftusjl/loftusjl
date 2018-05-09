@@ -12,7 +12,7 @@
 .lightBG{
     background-color: lightgrey;
     color: rgb(31, 30, 30);
-
+    
 }
 .darkBG{
     background-color: #333333;
@@ -54,7 +54,9 @@ nav a{
 hr{
     margin: 10px 25px;
 }
-
+p{
+    /* border: 1px solid red; */
+}
 .aboutme{
     display: flex;
     flex: 1;
@@ -64,7 +66,7 @@ hr{
 .aboutmeP{
     padding: 10px;
     max-width: 470px;
-
+    
 }
 .readOn{
     display: flex;
@@ -88,3 +90,4 @@ hr{
     text-align: center;
     border-top: 5px solid cyan;
 }
+* { border: 1px solid red; }
