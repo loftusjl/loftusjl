@@ -8,7 +8,11 @@
 .centerContent{margin: 0 auto;}
 .nav{padding: 20px;}  
 .attention{font-size: 2em; font-weight: bold; margin: auto 25px;}
-p{line-height: 1.5em; text-align: justify;}
+p{
+    line-height: 2em; 
+    font-size: 1.2em; 
+    text-align: justify;
+}
 
 /* navbar styles */
 .outerNav{
