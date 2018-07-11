@@ -7,14 +7,15 @@
   <title>Jesse Loftus</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/materialize.min.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
 </head>
 
-<body>
+<body class="amber lighten-5 teal-text text-darken-4">
   <header>
-    <nav class="nav-wrapper transparent">
+    <nav class="nav-wrapper">
       <div class="container">
         <a href="#" class="brand-logo">Jesse Loftus</a>
         <a href="#" data-target="mobile-menu" class="sidenav-trigger">
@@ -33,6 +34,14 @@
         </ul>
       </div>
     </nav>
+  <div class="container">
+      <div class="row">
+        <div class="col l8 push-l3 me">
+          <span><h2>I'm Jesse Loftus</h2></span>
+          <div><h3>Full Stack Developer <span>|</h3></span></div>
+        </div>
+      </div>
+  </div>
   </header>
 
   <ul class="sidenav" id="mobile-menu">
@@ -51,12 +60,12 @@
   </ul>
   <!-- ABOUT ME SECTION -->
   <section class="container section scrollspy" >
-    <div class="row" id="aboutme">
+    <div class="row " id="aboutme">
       <div class="col s12 l4">
-          <img src="./assets/images/20171227_154007.jpg" alt="" class="responsive-img materialboxed">
+          <img src="./assets/images/20171227_154007.jpg" alt="" class="responsive-img materialboxed z-depth-2">
       </div>
       <div class="col s12 l6 offset-l1">
-        <h2 class="indigo-text text-darken-4">About Me</h2>
+        <h2 class="card-title">About Me</h2>
         <p>Web developer with an extensive background in database development. A consummate business professional with over 16 years as a federal employee in both aircraft rework and hospital equipment management. Enjoys working with end-users to develop highly impactful and innovative software to directly decrease man-hours and increase reliability and efficiency in area workflows.</p>
 
            <p>Currently attending UC San Diego Extension Coding Bootcamp to become a full stack web developer.</p>
@@ -64,24 +73,34 @@
     </div>
   </section>
 
-  <div class="parallax-container">
-      <div class="parallax"><img src="./assets/images/glass_texture_shapes_116816_1920x1080.jpg"></div>
+  <div class="parallax-container z-depth-2 hide-on-med-and-down">
+      <div class="parallax"><img src="./assets/images/forest_foggy_misty_trees_perspective_sky_foliage_autumn-672839.jpg"></div>
     </div>
         
   <!-- PORTFOLIO SECTION -->
 <section class="container section scrollspy" id="portfolio">
-  <div class="row">
+  <div class="row valign-wrapper">
     <div class="col s12 l4">
       <img src="./assets/images/crystalGame.png" alt="" class="responsive-img materialboxed">
     </div>
   </div>
 </section>
+
+<div class="parallax-container z-depth-2 hide-on-med-and-down">
+    <div class="parallax"><img src="./assets/images/wallhaven-611538.jpg"></div>
+  </div>
 <!-- GITHUB SECTION -->
+<section class="section container scrollspy">
+  <div class="progress">
+      <div class="determinate" style="width: 70%"></div>
+    </div>
+    <h3>Javascript 80%</h3>
+</section>
   <!-- JAVASCRIPT -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   <script src="./assets/js/materialize.min.js"></script>
-  <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/main.js"></script>
   <script>
     $(document).ready(function () {
       $('.sidenav').sidenav();
@@ -90,7 +109,7 @@
     })
     document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.scrollspy');
-    var instances = M.ScrollSpy.init(elems, options);
+    // var instances = M.ScrollSpy.init(elems, options);
   });
   </script>
 </body>
