@@ -7,11 +7,16 @@ header {
     background-position: center;
     height: 100vh;
 }
+.hero-text {
+    margin-top: 15%;
+    background: rgba(43, 55, 55, 0.267);
+    border-radius: 25px;
+}
 .me {
-    margin-top: 20%;
     font-family: 'Abril Fatface', cursive;
     color: #f5eedb;
     text-shadow: -1px 0 #000000a4, 0 1px #000000, 1px 0 #00000071, 0 -1px #00000071;
+    margin: 0 auto;
 }
 .card-title {
     margin-top:0;
