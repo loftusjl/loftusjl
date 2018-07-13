@@ -5,11 +5,16 @@ getTitle();
 function getTitle() {
     for (i = 0; i < iAm.length; i++) {
         var title = iAm[i].split('');
-        console.log(title);
+        typeIt(title);
     }
 }
-function typeIt(a) {
-    for (i = 0; i < a.length; i++) {
-        console.log(a);
+
+let typeIt = {
+    writeTitle: function (a) {
+        var aString = '';
+        for (i = 0; i < a.length; i++) {
+            aString += a[i];
+            console.log(aString);
+        }
     }
 }
