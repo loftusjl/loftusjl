@@ -38,13 +38,8 @@
     </nav>
     <div class="container hero-text valign-wrapper">
       <div class="me">
-        <span>
-          <!-- <h2>I'm Jesse Loftus</h2> -->
-        </span>
         <div>
-          <h3>Full Stack Developer
-            <span>|</h3>
-          </span>
+          <h1>Jesse Loftus</h1>
         </div>
       </div>
     </div>
@@ -72,12 +67,12 @@
       </div>
       <div class="col s12 l6 offset-l1">
         <h2 class="card-title">About Me</h2>
-        <p>Web developer with an extensive background in database development. A consummate business professional with over
-          16 years as a federal employee in both aircraft rework and hospital equipment management. Enjoys working with end-users
+        <p>I'm a web developer with an extensive background in database development. A consummate business professional with over
+          16 years as a federal employee in both aircraft rework and hospital equipment management. I enjoy working with end-users
           to develop highly impactful and innovative software to directly decrease man-hours and increase reliability and
           efficiency in area workflows.</p>
 
-        <p>Currently attending UC San Diego Extension Coding Bootcamp to become a full stack web developer.</p>
+        <p>I'm currently attending UC San Diego Extension Coding Bootcamp to become a full stack web developer and strengthen the knowledge I've gathered through independent study.</p>
       </div>
     </div>
   </section>
@@ -350,13 +345,11 @@
         <hr>
         <p class="text-flow">Send me a message with any inquiries or just to say hey!</p>
         <br>
-        <a href="https://github.com/loftusjl" target="_blank"><i class="fab fa-lg fa-github-square fa-4x teal-text text-darken-4"></i></a>
-        <a href="https://www.linkedin.com/in/jesse-loftus-861aaa1b/" target="_blank"><i class="fab fa-lg fa-linkedin fa-4x teal-text text-darken-4"></i></a>
-        <a href="https://twitter.com/JLLoft" target="_blank"><i class="fab fa-lg fa-twitter-square fa-4x teal-text text-darken-4"></i></a>
+
 
       </div>
       <div class="col s12 l5 offset-l2">
-        <form>
+        <form class="contact" action="mailto:jesse.loftus@gmail.com" method="POST" enctype="text/plain">
           <div class="row">
             <div class="input-field col s6">
               <i class="material-icons prefix">perm_identity</i>
@@ -377,9 +370,9 @@
               <textarea name="message" id="message" cols="20" rows="20" class="materialize-textarea"></textarea>
               <label for="message">Your Message</label>
             </div>
-            <div class="input-field center">
-              <button class="btn teal darken-4">Submit</button>
-            </div>
+          </div>
+          <div class="input-field center">
+            <button class="btn teal darken-4" type="submit" name="action">Submit</button>
           </div>
         </form>
       </div>
@@ -389,7 +382,18 @@
 
   <!-- FOOTER -->
   <footer class="page-footer amber lighten-5 teal-text text-darken-4">
-
+    <div class="container valign-wrapper footer">
+      <a href="https://github.com/loftusjl" target="_blank" class="tooltipped" data-position="top" data-tooltip="GitHub">
+        <i class="fab fa-lg fa-github-square fa-2x teal-text text-darken-4"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/jesse-loftus-861aaa1b/" target="_blank" class="tooltipped" data-position="top" data-tooltip="Linkedin">
+        <i class="fab fa-lg fa-linkedin fa-2x teal-text text-darken-4"></i>
+      </a>
+      <a href="https://twitter.com/JLLoft" target="_blank" class="tooltipped" data-position="top" data-tooltip="Twitter">
+        <i class="fab fa-lg fa-twitter-square fa-2x teal-text text-darken-4"></i>
+      </a>
+      <div class="container center-align">&copy; 2018 Jesse Loftus</div>
+    </div>
   </footer>
 
   <!-- JAVASCRIPT -->
@@ -402,6 +406,7 @@
       $('.sidenav').sidenav();
       $('.materialboxed').materialbox();
       $('.parallax').parallax();
+      $('.tooltipped').tooltip();
     })
   </script>
 </body>
