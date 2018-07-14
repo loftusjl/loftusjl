@@ -2,55 +2,413 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>About Me</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/reset.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Merriweather|Playfair+Display" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/brands.css" integrity="sha384-Pln/erVatVEIIVh7sfyudOXs5oajCSHg7l5e2Me02e3TklmDuKEhQ8resTIwyI+w" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/fontawesome.css" integrity="sha384-rnr8fdrJ6oj4zli02To2U/e6t1qG8dvJ8yNZZPsKHcU7wFK3MGilejY5R/cUc5kf" crossorigin="anonymous">
-    <script src="main.js"></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Jesse Loftus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/materialize.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
 </head>
 
-<body class="main">
-    <nav class="main-BG outerNav centerContent">
-        <ul class="innerNav recommendedWidth centerContent">
-            <li class="nav logo">
-                <a href="#">Jesse Loftus</a>
-            </li>
-            <li class="nav navlinks active">
-                <a href="#">About</a>
-            </li>
-            <li class="nav navlinks">
-                <a href="contact.html">Contact</a>
-            </li>
-            <li class="nav navlinks">
-                <a href="portfolio.html">Portfolio</a>
-                </iv>
+<body class="amber lighten-5 teal-text text-darken-4">
+  <header>
+    <nav class="nav-wrapper">
+      <div class="container">
+        <a href="#" class="brand-logo">Jesse Loftus</a>
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a href="#aboutme">About Me</a>
+          </li>
+          <li>
+            <a href="#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
         </ul>
+      </div>
     </nav>
-    <content>
-        <div class="main-BG content-border recommendedWidth centerContent shadow border-radius">
-            <div class="content">
-                <h1 class="attention teal-text">About Me</h1>
-                <hr>
-                <div class="aboutme">
-                    <div class="bio">
-                        <img class="profilepic shadow" src="./assets/images/20171227_154007.jpg" alt="Profile Picture">
-                        <p>Web developer with an extensive background in database development. A consummate business professional with over 16 years as a federal employee in both aircraft rework and hospital equipment management. Enjoys working with end-users to develop highly impactful and innovative software to directly decrease man-hours and increase reliability and efficiency in area workflows.
-                        </p>
-                    </div>
-                   <div class="bio-more">
-                        <p>Currently attending UC San Diego Extension Coding Bootcamp to become a full stack web developer.</p>
-                        
-                   </div>
-                </div>
-            </div>
+    <div class="container hero-text valign-wrapper">
+      <div class="me">
+        <div>
+          <h1>Jesse Loftus</h1>
         </div>
-    </content>
-    <footer class="footer footer-BG">Copyright &#169;</footer>
+      </div>
+    </div>
+  </header>
+
+  <ul class="sidenav" id="mobile-menu">
+    <div class="btn btn-floating z-depth-2 right sidenav-close" id="mobile-links-close">
+      <i class="material-icons">close</i>
+    </div>
+    <li>
+      <a href="#aboutme">About Me</a>
+    </li>
+    <li>
+      <a href="#portfolio">Portfolio</a>
+    </li>
+    <li>
+      <a href="#contact">Contact</a>
+    </li>
+  </ul>
+  <!-- ABOUT ME SECTION -->
+  <section class="container section">
+    <div class="row" id="aboutme">
+      <div class="col s12 l4 valign-wrapper">
+        <img src="./assets/images/20171227_154007.jpg" alt="" class="responsive-img materialboxed hoverable z-depth-2">
+      </div>
+      <div class="col s12 l6 offset-l1">
+        <h2 class="card-title">About Me</h2>
+        <p>I'm a web developer with an extensive background in database development. A consummate business professional with over
+          16 years as a federal employee in both aircraft rework and hospital equipment management. I enjoy working with end-users
+          to develop highly impactful and innovative software to directly decrease man-hours and increase reliability and
+          efficiency in area workflows.</p>
+
+        <p>I'm currently attending UC San Diego Extension Coding Bootcamp to become a full stack web developer and strengthen the knowledge I've gathered through independent study.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="parallax-container z-depth-2 hide-on-med-and-down">
+    <div class="parallax">
+      <img src="./assets/images/forest_foggy_misty_trees_perspective_sky_foliage_autumn-672839.jpg">
+    </div>
+  </div>
+
+  <!-- PORTFOLIO SECTION -->
+  <section class="container section" id="portfolio">
+    <h2>Portfolio</h2>
+    <hr>
+    <div class="row">
+      <!-- Project Start -->
+      <div class="col s12 m6">
+        <div class="card small hoverable">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="./assets/images/travelMap01.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">The Destinator
+              <i class="material-icons right">more_vert</i>
+            </span>
+            <div class="card-action activator">
+              <a class="activator teal-text text-darken-4">Read more...</a>
+            </div>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">The Destinator
+              <i class="material-icons right">close</i>
+            </span>
+            <p>A destination search site filtered by country and then desired city. The Destinator gives you a 5 day forecast,
+              highest ranked hotels, restaurants, and points of interest in the surrounding area.</p>
+            <div class="container">
+              <div class="row card-action">
+                <div class="col s5">
+                  <p>
+                    <i class="material-icons">web</i>
+                    <a href="https://loftusjl.github.io/Project1/" target="_blank">Live Site</a>
+                  </p>
+                </div>
+                <div class="col s5">
+                  <p>
+                    <i class="fab fa-github-square fa-lg"></i>
+                    <a href="https://github.com/loftusjl/Project1" target="_blank">GitHub</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project End -->
+      <!-- Project Start -->
+      <div class="col s12 m6">
+        <div class="card small hoverable">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="./assets/images/crystalGame.png">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Crystal Lazor Gunship!
+              <i class="material-icons right">more_vert</i>
+            </span>
+            <div class="card-action activator">
+              <a class="activator teal-text text-darken-4">Read more...</a>
+            </div>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Crystal Lazor Gunship!
+              <i class="material-icons right">close</i>
+            </span>
+            <p>Each game your crystals receive a random value. Click a crystal and try to remember the value. Each click adds
+              to your score. Try to hit the target score without going over!</p>
+            <div class="container">
+              <div class="row card-action">
+                <div class="col s5">
+                  <p>
+                    <i class="material-icons">web</i>
+                    <a href="https://loftusjl.github.io/unit-4-game" target="_blank">Live Site</a>
+                  </p>
+                </div>
+                <div class="col s5">
+                  <p>
+                    <i class="fab fa-github-square fa-lg"></i>
+                    <a href="https://github.com/loftusjl/unit-4-game" target="_blank">GitHub</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project End -->
+      <!-- Project Start -->
+      <div class="col s12 m6">
+        <div class="card small hoverable">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="./assets/images/hangmanChucky.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Horror Hangman
+              <i class="material-icons right">more_vert</i>
+            </span>
+            <div class="card-action activator">
+              <a class="activator teal-text text-darken-4">Read more...</a>
+            </div>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Horror Hangman
+              <i class="material-icons right">close</i>
+            </span>
+            <p>Try to guess the villain in this horror movie take on the classic game hangman!</p>
+            <div class="container">
+              <div class="row card-action">
+                <div class="col s5">
+                  <p>
+                    <i class="material-icons">web</i>
+                    <a href="https://loftusjl.github.io/WordGuessGame/" target="_blank">Live Site</a>
+                  </p>
+                </div>
+                <div class="col s5">
+                  <p>
+                    <i class="fab fa-github-square fa-lg"></i>
+                    <a href="https://github.com/loftusjl/WordGuessGame" target="_blank">GitHub</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project End -->
+      <!-- Project Start -->
+      <div class="col s12 m6">
+        <div class="card small hoverable">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="./assets/images/HIPAA.png">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">HIPAA Quiz
+              <i class="material-icons right">more_vert</i>
+            </span>
+            <div class="card-action activator">
+              <a class="activator teal-text text-darken-4">Read more...</a>
+            </div>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">HIPAA Quiz
+              <i class="material-icons right">close</i>
+            </span>
+            <p>A HIPAA training quiz which provides a knowledge check for HIPAA training. Questions are randomized and you are
+              only given so much time to answer. You must score 70% or greater to pass.</p>
+            <div class="container">
+              <div class="row card-action">
+                <div class="col s5">
+                  <p>
+                    <i class="material-icons">web</i>
+                    <a href="https://loftusjl.github.io/TriviaGame/" target="_blank">Live Site</a>
+                  </p>
+                </div>
+                <div class="col s5">
+                  <p>
+                    <i class="fab fa-github-square fa-lg"></i>
+                    <a href="https://github.com/loftusjl/TriviaGame" target="_blank">GitHub</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project End -->
+      <!-- Project Start -->
+      <div class="col s12 m6">
+        <div class="card small hoverable">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="./assets/images/giphyGuy.png">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Giphy Topics
+              <i class="material-icons right">more_vert</i>
+            </span>
+            <div class="card-action activator">
+              <a class="activator teal-text text-darken-4">Read more...</a>
+            </div>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Giphy Topics
+              <i class="material-icons right">close</i>
+            </span>
+            <p>A Giphy image grabber using the Giphy API. Grab images from the site and display them in thumbnail sized images
+              based on pre-selected topics or topics you enter. Images will toggle animation on click. **Warning: This site
+              is loud**</p>
+            <div class="container">
+              <div class="row card-action">
+                <div class="col s5">
+                  <p>
+                    <i class="material-icons">web</i>
+                    <a href="https://loftusjl.github.io/GiphySearch/" target="_blank">Live Site</a>
+                  </p>
+                </div>
+                <div class="col s5">
+                  <p>
+                    <i class="fab fa-lg fa-github-square"></i>
+                    <a href="https://github.com/loftusjl/GiphySearch" target="_blank">GitHub</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project End -->
+      <!-- Project Start -->
+      <div class="col s12 m6">
+        <div class="card small hoverable">
+          <div class="card-image waves-effect waves-block waves-light">
+            <img class="activator" src="./assets/images/trainSchedule.jpg">
+          </div>
+          <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Train Schedule
+              <i class="material-icons right">more_vert</i>
+            </span>
+            <div class="card-action activator">
+              <a class="activator teal-text text-darken-4">Read more...</a>
+            </div>
+          </div>
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Train Schedule
+              <i class="material-icons right">close</i>
+            </span>
+            <p>Enter your trains with the Train Name, Destination, First Train Time (in military time), and Frequency -- in
+              minutes. The scheduler will keep track of when the trains are due to arrive and alert you about which should
+              be showing up next in relative time.</p>
+            <div class="container">
+              <div class="row card-action">
+                <div class="col s5">
+                  <p>
+                    <i class="material-icons">web</i>
+                    <a href="https://loftusjl.github.io/TrainSchedule" target="_blank">Live Site</a>
+                  </p>
+                </div>
+                <div class="col s5">
+                  <p>
+                    <i class="fab fa-github-square fa-lg"></i>
+                    <a href="https://github.com/loftusjl/TrainSchedule" target="_blank">GitHub</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Project End -->
+    </div>
+  </section>
+
+  <div class="parallax-container z-depth-2 hide-on-med-and-down">
+    <div class="parallax">
+      <img src="./assets/images/lappy_parallax.png">
+    </div>
+  </div>
+  <!-- CONTACT SECTION -->
+  <section class="section container" id="contact">
+    <div class="row">
+      <div class="col s12 l5">
+        <h2>Contact Me</h2>
+        <hr>
+        <p class="text-flow">Send me a message with any inquiries or just to say hey!</p>
+        <br>
+
+
+      </div>
+      <div class="col s12 l5 offset-l2">
+        <form class="contact" action="mailto:jesse.loftus@gmail.com" method="POST" enctype="text/plain">
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">perm_identity</i>
+              <input type="text" name="first_name" id="first_name" class="validate">
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input type="text" name="last_name" id="last_name">
+              <label for="last_name">Last Name</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">email</i>
+              <input type="email" name="email" id="email">
+              <label for="email">Email Address</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">message</i>
+              <textarea name="message" id="message" cols="20" rows="20" class="materialize-textarea"></textarea>
+              <label for="message">Your Message</label>
+            </div>
+          </div>
+          <div class="input-field center">
+            <button class="btn teal darken-4" type="submit" name="action">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="page-footer amber lighten-5 teal-text text-darken-4">
+    <div class="container valign-wrapper footer">
+      <a href="https://github.com/loftusjl" target="_blank" class="tooltipped" data-position="top" data-tooltip="GitHub">
+        <i class="fab fa-lg fa-github-square fa-2x teal-text text-darken-4"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/jesse-loftus-861aaa1b/" target="_blank" class="tooltipped" data-position="top" data-tooltip="Linkedin">
+        <i class="fab fa-lg fa-linkedin fa-2x teal-text text-darken-4"></i>
+      </a>
+      <a href="https://twitter.com/JLLoft" target="_blank" class="tooltipped" data-position="top" data-tooltip="Twitter">
+        <i class="fab fa-lg fa-twitter-square fa-2x teal-text text-darken-4"></i>
+      </a>
+      <div class="container center-align">&copy; 2018 Jesse Loftus</div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="./assets/js/materialize.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.sidenav').sidenav();
+      $('.materialboxed').materialbox();
+      $('.parallax').parallax();
+      $('.tooltipped').tooltip();
+    })
+  </script>
 </body>
 
 </html>

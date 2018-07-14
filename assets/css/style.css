@@ -1,185 +1,53 @@
-.main{
-    font-family: 'Playfair Display', serif, 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-    background-image: url(../../assets/images/footer_lodyas.png);
-    background-repeat: repeat;
-    color: #777;
+nav {
+    color: #f5eedb;
 }
-
-.centerContent{margin: 0 auto;}
-.nav{padding: 20px;}  
-.attention{font-size: 2em; font-weight: bold; margin: auto 25px;}
-p{
-    line-height: 2em; 
-    font-size: 1.2em; 
-    text-align: justify;
+header {
+    background: url('../images/riverbed.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
 }
-
-/* navbar styles */
-.outerNav{
-    width: 100%;
-    height: 50px;
-    border-bottom: 5px solid #ccc;
-    margin-bottom: 20px;
+#portfolio {
+    padding-top: 0;
+    padding-bottom: 2rem;
 }
-.innerNav{
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
+.material-icons{
+    display: inline-flex;
+    vertical-align: top;
 }
-ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+.hero-text {
+    margin-top: 15%;
+    /* background: rgba(43, 55, 55, 0.267);
+    border-radius: 25px; */
 }
-.active{
-    background-color:rgba(89, 204, 198, .6);
+.me {
+    font-family: 'Abril Fatface', cursive;
+    color: rgb(202, 218, 236);
+    text-shadow: -1px 0 #000000a4, 0 1px #000000, 1px 0 #00000071, 0 -1px #00000071;
+    margin: 0 auto;
 }
-nav a:link{
-    color: #777;
-    text-decoration: none;
+.card-reveal {
+    overflow:hidden
 }
-nav .logo a:link{color: #fff;}
-nav .logo a:visited{color: #fff;}
-nav .logo{
-    padding:10px; 
-    margin-right: auto; 
-    font-size: 2em; 
-    font-weight: bold; 
-    max-height: 50px;
-    background-color: #4aaaa5;
-    font-family: 'Merriweather', serif;
+.card-title {
+    margin-top:0;
 }
-.navlinks a:visited{color: #777;}
-.navlinks:hover{
-    background-color: #0CE89E;
-    box-shadow: 10px 10px 20px #4aaaa5;
+nav {
+    background-color: rgba(43, 55, 55, 0.37);
 }
-
-/* content styles */
-.content hr{
-    margin: 15px 25px;
+.section{
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+    /* max-height: 60vh; */
+  }
+.section > h3 {
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin-top: .5rem;
 }
-.content{
-    max-width: 910px;
-    margin: 20px auto 10px auto;
-}
-.content-stuff{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin: auto 25px 100px 25px;
-}
-
-/* aboutme styles */
-.aboutme{margin: 15px 0px auto 25px;}    
-.bio p{
-    width: 840px;
-    position: relative;
-    left: 20px;
-}
-.bio-more p{
-    width: 860px;
-    margin: 15px 0px;
-}
-.profilepic{
-    height: 200px;
-    width: 200px;
-    float: left;
-    border-radius: 50%;
-}
-
-/* contact styles */
-
-/* portfolio styles */
-.portfolio{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-.box{
-    margin: 25px;
-    position: relative;
-}
-.box img{
-    height: 250px;
-    width: 250px;
-}
-.box-label{
-    background-color: #4aaaa5;
-    color: #fff;
-    text-align: center;
-    font-weight: bold;
-    padding: 15px 0;
-    margin: 25px;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    right: -25px;
-}
-
-/* contact styles */
-input, textarea{
-    width: 100%;
-    margin: 10px auto;
-}
-.contact-label{
+.footer {
     padding: 15px;
-    margin: 20px;
 }
-.button {
-    border: none;
-    color: #fff;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
+.footer > a {
+    margin: 0 3px;
 }
-.btn:hover{
-    background-color: #0CE89E;
-    box-shadow: 10px 10px 20px #4aaaa5;
-}
-.btn:active{
-    box-shadow: none !important;
-}
-.social{
-    border: none;
-    color: #fff;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    margin: 10px auto 10px 0;
-    width: 45px;
-    border: 1px solid rgba(102, 102, 102, .2);
-}
-.social-links{
-    display: flex;
-    flex: 1;
-    justify-content: flex-start;
-    margin-right: auto;
-}
-/* footer styles */
-.footer{
-    position: fixed;
-    padding: 15px;
-    height: 30px;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    border-top: 5px solid #4aaaa5;
-}
-
-.shadow{box-shadow: 10px 10px 20px rgba(94, 127, 126, .8);}
-.border-radius{border-radius: 10px;}
-
-/* assignment requirements */
-.teal-text{color: #4aaaa5;}
-.teal-border{border-color: #4aaaa5;}
-.teal-BG{background-color: #4aaaa5;}
-h1, h2, h3, h4{font-family: 'Georgia', Times, 'Times New Roman', serif;}
-.main-BG{ background-color: #fff;}
-.header-border{border-color: #ccc;}
-.content-border{border:2px solid #ddd;}
-.footer-BG{background-color: #666; color: #fff}
-.recommendedWidth{width: 960px;}
