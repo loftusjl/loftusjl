@@ -7,6 +7,10 @@ header {
     background-position: center;
     height: 100vh;
 }
+#portfolio {
+    padding-top: 0;
+    padding-bottom: 2rem;
+}
 .material-icons{
     display: inline-flex;
     vertical-align: top;
