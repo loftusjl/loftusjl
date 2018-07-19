@@ -26,8 +26,6 @@ header {
 }
 .hero-text {
     margin-top: 15%;
-    /* background: rgba(43, 55, 55, 0.267);
-    border-radius: 25px; */
 }
 .me {
     font-family: 'Abril Fatface', cursive;
@@ -42,7 +40,15 @@ header {
     margin-top:0;
 }
 nav {
-    background-color: rgba(43, 55, 55, 0.37);
+    background-color: rgba(43, 55, 55, 0.363);
+}
+#mobile-menu {
+    background-color: rgba(43, 55, 55, 0.603);
+    padding: 15px;
+}
+#mobile-menu > li {
+margin: 5px auto;
+
 }
 .section{
     padding-top: 4vw;

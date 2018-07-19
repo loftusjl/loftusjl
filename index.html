@@ -45,20 +45,20 @@
     </div>
   </header>
 
-  <ul class="sidenav" id="mobile-menu">
-    <div class="btn btn-floating z-depth-2 right sidenav-close" id="mobile-links-close">
-      <i class="material-icons">close</i>
-    </div>
-    <li>
-      <a href="#aboutme">About Me</a>
-    </li>
-    <li>
-      <a href="#portfolio">Portfolio</a>
-    </li>
-    <li>
-      <a href="#contact">Contact</a>
-    </li>
-  </ul>
+  <div class="valign-wrappr" >
+    <ul class="sidenav" id="mobile-menu">
+      <li class="brown lighten-3">
+        <a href="#aboutme" class="sidenav-close">About Me</a>
+      </li>
+      <li class="brown lighten-3">
+        <a href="#portfolio" class="sidenav-close">Portfolio</a>
+      </li>
+      <li class="brown lighten-3">
+        <a href="#contact" class="sidenav-close">Contact</a>
+      </li>
+    </ul>
+  </div>
+
   <!-- ABOUT ME SECTION -->
   <section class="container section" id="aboutme">
     <div class="row">
@@ -407,6 +407,9 @@
       $('.materialboxed').materialbox();
       $('.parallax').parallax();
       $('.tooltipped').tooltip();
+      $('.fixed-action-btn').floatingActionButton({
+    toolbarEnabled: true
+  });
     })
   </script>
 </body>
