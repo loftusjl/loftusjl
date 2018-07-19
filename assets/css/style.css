@@ -10,6 +10,15 @@ header {
 #portfolio {
     padding-top: 0;
     padding-bottom: 2rem;
+    min-height: 100vh;
+}
+#aboutme  {
+    min-height: 100vh;
+    
+}
+#contact {
+    min-height: 90vh;
+
 }
 .material-icons{
     display: inline-flex;
