@@ -42,14 +42,21 @@ header {
 nav {
     background-color: rgba(43, 55, 55, 0.363);
 }
+.sidenav-wrapper {
+        padding-left: 300px;
+}
 #mobile-menu {
     background-color: rgba(43, 55, 55, 0.603);
     padding: 15px;
 }
 #mobile-menu > li {
 margin: 5px auto;
-
 }
+.offscreen {
+    position: absolute;
+    left: -999em;
+}
+
 .section{
     padding-top: 4vw;
     padding-bottom: 4vw;

@@ -18,7 +18,7 @@
 <body class="amber lighten-5 teal-text text-darken-4">
   <header>
     <nav class="nav-wrapper">
-      <div class="container">
+      <div class="container" id="myNavbar">
         <a href="#" class="brand-logo">Jesse Loftus</a>
         <a href="#" data-target="mobile-menu" class="sidenav-trigger">
           <i class="material-icons">menu</i>
@@ -45,20 +45,30 @@
     </div>
   </header>
 
-  <div class="valign-wrappr" >
+  <!-- SIDE NAV -->
     <ul class="sidenav" id="mobile-menu">
-      <li class="brown lighten-3">
+      <li class="blue-grey lighten-5">
         <a href="#aboutme" class="sidenav-close">About Me</a>
       </li>
-      <li class="brown lighten-3">
+      <li class="blue-grey lighten-5">
         <a href="#portfolio" class="sidenav-close">Portfolio</a>
       </li>
-      <li class="brown lighten-3">
+      <li class="blue-grey lighten-5">
         <a href="#contact" class="sidenav-close">Contact</a>
       </li>
     </ul>
-  </div>
-
+  <!-- FLOATING ACTION BUTTON -->
+  <div class="fixed-action-btn offscreen">
+      <a class="btn-floating btn-large blue-grey darken-3">
+        <i class="large material-icons">keyboard_arrow_up</i>
+      </a>
+      <ul>
+        <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+        <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+        <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+        <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+      </ul>
+    </div>
   <!-- ABOUT ME SECTION -->
   <section class="container section" id="aboutme">
     <div class="row">
@@ -89,7 +99,7 @@
     <hr>
     <div class="row">
       <!-- Project Start -->
-      <div class="col s12 m6">
+      <div class="col s12 l6">
         <div class="card small hoverable">
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src="./assets/images/travelMap01.jpg">
@@ -129,7 +139,7 @@
       </div>
       <!-- Project End -->
       <!-- Project Start -->
-      <div class="col s12 m6">
+      <div class="col s12 l6">
         <div class="card small hoverable">
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src="./assets/images/crystalGame.png">
@@ -169,7 +179,7 @@
       </div>
       <!-- Project End -->
       <!-- Project Start -->
-      <div class="col s12 m6">
+      <div class="col s12 l6">
         <div class="card small hoverable">
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src="./assets/images/hangmanChucky.jpg">
@@ -208,7 +218,7 @@
       </div>
       <!-- Project End -->
       <!-- Project Start -->
-      <div class="col s12 m6">
+      <div class="col s12 l6">
         <div class="card small hoverable">
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src="./assets/images/HIPAA.png">
@@ -248,7 +258,7 @@
       </div>
       <!-- Project End -->
       <!-- Project Start -->
-      <div class="col s12 m6">
+      <div class="col s12 l6">
         <div class="card small hoverable">
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src="./assets/images/giphyGuy.png">
@@ -289,7 +299,7 @@
       </div>
       <!-- Project End -->
       <!-- Project Start -->
-      <div class="col s12 m6">
+      <div class="col s12 l6">
         <div class="card small hoverable">
           <div class="card-image waves-effect waves-block waves-light">
             <img class="activator" src="./assets/images/trainSchedule.jpg">
