@@ -13,6 +13,7 @@
     crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/materialize.min.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/html.css">
 </head>
 
 <body class="amber lighten-5 teal-text text-darken-4">
@@ -57,26 +58,50 @@
         <a href="#contact" class="sidenav-close">Contact</a>
       </li>
     </ul>
-  <!-- FLOATING ACTION BUTTON -->
-  <div class="fixed-action-btn offscreen">
-      <a class="btn-floating btn-large blue-grey darken-3">
-        <i class="large material-icons">keyboard_arrow_up</i>
-      </a>
-      <ul>
-        <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
-        <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-        <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-        <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-      </ul>
-    </div>
+
   <!-- ABOUT ME SECTION -->
   <section class="container section" id="aboutme">
     <div class="row">
-      <div class="col s12 l4 valign-wrapper">
-        <img src="./assets/images/20171227_154007.jpg" alt="" class="responsive-img materialboxed hoverable z-depth-2">
+      <div class="col s12 l6">
+        <!-- <img src="./assets/images/20171227_154007.jpg" alt="" class="responsive-img materialboxed hoverable z-depth-2"> -->
+        <h3 class="card-title">Technical Skills</h3>
+        <table>
+          <tbody class="flow-text">
+            <tr>
+                
+              <td><i class="fab fa-js-square a-3x teal-text text-darken-4"></i> Javascript</td>
+              <td><i class="fab fa-html5 a-3x teal-text text-darken-4"></i> HTML5</td>
+            </tr>
+            <tr>
+              <td><i class="fab fa-react a-3x teal-text text-darken-4"></i> React.js</td>
+              <td><i class="fab fa-css3-alt a-3x teal-text text-darken-4"></i> CSS</td>
+            </tr>
+            <tr>
+              <td><i class="fab fa-node a-3x teal-text text-darken-4"></i> Node.js</td>
+              <td><i class="icon-jquery"></i> jQuery</td>
+            </tr>
+            <tr>
+              <td><i class="icon-sql"></i> SQL</td>
+              <td><i class="icon-handlebars"></i> Handlebars</td>
+            </tr>
+            <tr>
+              <td><i class="fab fa-node-js a-3x teal-text text-darken-4"></i> Express.js</td>
+              <td><i class="icon-bootstrap"></i> Bootstrap</td>
+            </tr>
+            <tr>
+              <td><i class="icon-vba"></i> VBA</td>
+              <td><i class="icon-materialize"></i> Materialize</td>
+            </tr>
+            <tr>
+              <td><i class="icon-access"></i> Microsoft Access</td>
+              <td><i class="icon-mongodb"></i> MongoDB</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div class="col s12 l6 offset-l1">
-        <h2 class="card-title">About Me</h2>
+      <div class="col s12 l5 offset-l1">
+        <h3 class="card-title">About Me</h3>
+        <h1>link to my</h1>
         <p>I am a web developer with an extensive background in database development. A fast learner and a highly focused, organized, professional with 16 years federal employment in both aircraft rework and hospital equipment management industries.</p>
           <p>I am constantly learning and have taken college courses on database design, SQL, Web Development, Java and A+ certification. Currently, I am working to further develop my technical skills by attending the UC San Diego Extension Code bootcamp for full-stack development.</p>
       <p>I have always been drawn to software and web development which led me to build and currently maintain the Equipment Office Manager (EOM) which has been utilized by the Navy Medicine South West Region since 2011. EOM holds 2,980 Command purchase records along with scans of the original purchase request for audit readiness and totals $231M to-date. In addition, EOM has been used as the equipment receiving system and currently holds records for 29,530 pieces of equipment valued at $186.7M. For developing the EOM, I was awarded Equipment Manager of the year by the Navy Bureau of Medicine and Surgery.</p>
@@ -94,395 +119,10 @@
 
   <!-- PORTFOLIO SECTION -->
   <section class="container section" id="portfolio">
-    <h2>Portfolio</h2>
+    <h2>Portfolio: Proof of Concept</h2>
     <hr>
-    <div class="row">
-      <!-- Project Start -->
-      <div class="col s12 l6">
-        <div class="card small hoverable">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="./assets/images/burgerBonzai.PNG">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Burger Bonzai
-              <i class="material-icons right">more_vert</i>
-            </span>
-            <div class="card-action activator">
-              <a class="activator teal-text text-darken-4">Read more...</a>
-            </div>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">Burger Bonzai
-              <i class="material-icons right">close</i>
-            </span>
-            <p>Burger Bonzai is a full-stack web-app using MySQL, Node, Express, Handlebars and a homemade ORM.</p>
-            <div class="container">
-              <div class="row card-action">
-                  <div class="col s5">
-                      <p>
-                        <a href="https://enigmatic-lowlands-17209.herokuapp.com/" target="_blank" class="tooltipped teal-text text-darken-4" data-position="top" data-tooltip="Live Site"><i class="material-icons">web</i>
-                        Live Site</a>
-                      </p>
-                    </div>
-                <div class="col s5">
-                  <p>
-                    <a href="https://github.com/loftusjl/burger" target="_blank" class="tooltipped teal-text text-darken-4" data-position="top" data-tooltip="GitHub"><i class="fab fa-github-square fa-lg"></i>
-                    GitHub</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Project End -->
-      <!-- Project Start -->
-      <div class="col s12 l6">
-        <div class="card small hoverable">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="./assets/images/friendfinder.jpg">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Friend Finder
-              <i class="material-icons right">more_vert</i>
-            </span>
-            <div class="card-action activator">
-              <a class="activator teal-text text-darken-4">Read more...</a>
-            </div>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">Friend Finder
-              <i class="material-icons right">close</i>
-            </span>
-            <p>Friend Finder is a full-stack web-app that will compare your survey results with those of 200 users and return the name and profile pic of the people who match your responses most closely!</p>
-            <div class="container">
-              <div class="row card-action">
-                  <div class="col s5">
-                      <p>
-                        <a href="https://frozen-river-95808.herokuapp.com/" target="_blank" class="tooltipped teal-text text-darken-4" data-position="top" data-tooltip="Live Site"><i class="material-icons">web</i>
-                        Live Site</a>
-                      </p>
-                    </div>
-                <div class="col s5">
-                  <p>
-                    <a href="https://github.com/loftusjl/FriendFinder" target="_blank" class="tooltipped teal-text text-darken-4" data-position="top" data-tooltip="GitHub"><i class="fab fa-github-square fa-lg"></i>
-                    GitHub</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Project End -->
-      <!-- Project Start -->
-      <div class="col s12 l6">
-        <div class="card small hoverable">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="./assets/images/bamazonButton.PNG">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Bamazon Node App
-              <i class="material-icons right">more_vert</i>
-            </span>
-            <div class="card-action activator">
-              <a class="activator teal-text text-darken-4">Read more...</a>
-            </div>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">Bamazon Node App
-              <i class="material-icons right">close</i>
-            </span>
-            <p>An Amazon-like storefront using MySQL, NodeJS, and Javascript. The app takes in orders from customers and depletes stock from the store's inventory. It will also track product sales across store departments and then provide a summary of the highest-grossing departments in the store along with various other functions.</p>
-            <div class="container">
-              <div class="row card-action">
-                <div class="col s5">
-                  <p>
-                    <a href="https://github.com/loftusjl/bamazon" target="_blank" class="tooltipped teal-text text-darken-4" data-position="top" data-tooltip="GitHub"><i class="fab fa-github-square fa-lg"></i>
-                    GitHub</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Project End -->
-      <!-- Project Start -->
-      <div class="col s12 l6">
-        <div class="card small hoverable">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="./assets/images/travelMap01.jpg">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">The Destinator
-              <i class="material-icons right">more_vert</i>
-            </span>
-            <div class="card-action activator">
-              <a class="activator teal-text text-darken-4">Read more...</a>
-            </div>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">The Destinator
-              <i class="material-icons right">close</i>
-            </span>
-            <p>A destination search site filtered by country and then desired city. The Destinator gives you a 5 day forecast,
-              highest ranked hotels, restaurants, and points of interest in the surrounding area.</p>
-            <div class="container">
-              <div class="row card-action">
-                <div class="col s5">
-                  <p>
-                    <a href="https://loftusjl.github.io/TheDestinator/" target="_blank" class="tooltipped teal-text text-darken-4" data-position="top" data-tooltip="Live Site"><i class="material-icons">web</i>
-                    Live Site</a>
-                  </p>
-                </div>
-                <div class="col s5">
-                  <p>
-                    <a href="https://github.com/loftusjl/TheDestinator" target="_blank" class="tooltipped teal-text text-darken-4" data-position="top" data-tooltip="GitHub"><i class="fab fa-github-square fa-lg"></i>
-                    GitHub</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Project End -->
-      <!-- Project Start -->
-      <div class="col s12 l6">
-        <div class="card small hoverable">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="./assets/images/CLI.png">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">LIRI Node App
-              <i class="material-icons right">more_vert</i>
-            </span>
-            <div class="card-action activator">
-              <a class="activator teal-text text-darken-4">Read more...</a>
-            </div>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">LIRI Node App
-              <i class="material-icons right">close</i>
-            </span>
-            <p>A NodeJS command line tool for pulling tweets or movie and song info.</p>
-            <div class="container">
-              <div class="row card-action">
-                
-                <div class="col s5">
-                  <p>
-                    <a href="https://github.com/loftusjl/liri-node-app" target="_blank" class="tooltipped teal-text text-darken-4" data-position="top" data-tooltip="GitHub"><i class="fab fa-github-square fa-lg"></i>
-                    GitHub</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Project End -->
-      <!-- Project Start -->
-      <div class="col s12 l6">
-        <div class="card small hoverable">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="./assets/images/crystalGame.png">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Crystal Lazor Gunship!
-              <i class="material-icons right">more_vert</i>
-            </span>
-            <div class="card-action activator">
-              <a class="activator teal-text text-darken-4">Read more...</a>
-            </div>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">Crystal Lazor Gunship!
-              <i class="material-icons right">close</i>
-            </span>
-            <p>Each game your crystals receive a random value. Click a crystal and try to remember the value. Each click adds
-              to your score. Try to hit the target score without going over!</p>
-            <div class="container">
-              <div class="row card-action">
-                <div class="col s5">
-                  <p>
-                    <a href="https://loftusjl.github.io/Crystal-Lazor-Gunship/" target="_blank" class="tooltipped teal-text text-darken-4" data-position="top" data-tooltip="Live Site"><i class="material-icons">web</i>
-                    Live Site</a>
-                  </p>
-                </div>
-                <div class="col s5">
-                  <p>
-                    <a href="https://github.com/loftusjl/Crystal-Lazor-Gunship" target="_blank" class="tooltipped teal-text text-darken-4" data-position="top" data-tooltip="GitHub"><i class="fab fa-github-square fa-lg"></i>
-                    GitHub</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Project End -->
-      <!-- Project Start -->
-      <div class="col s12 l6">
-        <div class="card small hoverable">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="./assets/images/hangmanChucky.jpg">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Horror Hangman
-              <i class="material-icons right">more_vert</i>
-            </span>
-            <div class="card-action activator">
-              <a class="activator teal-text text-darken-4">Read more...</a>
-            </div>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">Horror Hangman
-              <i class="material-icons right">close</i>
-            </span>
-            <p>Try to guess the villain in this horror movie take on the classic game hangman!</p>
-            <div class="container">
-              <div class="row card-action">
-                <div class="col s5">
-                  <p>
-                    <a href="https://loftusjl.github.io/WordGuessGame/" target="_blank" class="tooltipped teal-text text-darken-4" data-position="top" data-tooltip="Live Site"><i class="material-icons">web</i>
-                    Live Site</a>
-                  </p>
-                </div>
-                <div class="col s5">
-                  <p>
-                    <a href="https://github.com/loftusjl/WordGuessGame" target="_blank" class="tooltipped teal-text text-darken-4" data-position="top" data-tooltip="GitHub"><i class="fab fa-github-square fa-lg"></i>
-                    GitHub</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Project End -->
-      <!-- Project Start -->
-      <div class="col s12 l6">
-        <div class="card small hoverable">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="./assets/images/HIPAA.png">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">HIPAA Quiz
-              <i class="material-icons right">more_vert</i>
-            </span>
-            <div class="card-action activator">
-              <a class="activator teal-text text-darken-4">Read more...</a>
-            </div>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">HIPAA Quiz
-              <i class="material-icons right">close</i>
-            </span>
-            <p>A HIPAA training quiz which provides a knowledge check for HIPAA training. Questions are randomized and you are
-              only given so much time to answer. You must score 70% or greater to pass.</p>
-            <div class="container">
-              <div class="row card-action">
-                <div class="col s5">
-                  <p>
-                    <a href="https://loftusjl.github.io/TriviaGame/" target="_blank" class="tooltipped teal-text text-darken-4" data-position="top" data-tooltip="Live Site"><i class="material-icons">web</i>
-                    Live Site</a>
-                  </p>
-                </div>
-                <div class="col s5">
-                  <p>
-                    <a href="https://github.com/loftusjl/TriviaGame" target="_blank" class="tooltipped teal-text text-darken-4" data-position="top" data-tooltip="GitHub"><i class="fab fa-github-square fa-lg"></i>
-                    GitHub</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Project End -->
-      <!-- Project Start -->
-      <div class="col s12 l6">
-        <div class="card small hoverable">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="./assets/images/giphyGuy.png">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Giphy Topics
-              <i class="material-icons right">more_vert</i>
-            </span>
-            <div class="card-action activator">
-              <a class="activator teal-text text-darken-4">Read more...</a>
-            </div>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">Giphy Topics
-              <i class="material-icons right">close</i>
-            </span>
-            <p>A Giphy image grabber using the Giphy API. Grab images from the site and display them in thumbnail sized images
-              based on pre-selected topics or topics you enter. Images will toggle animation on click. **Warning: This site
-              is loud**</p>
-            <div class="container">
-              <div class="row card-action">
-                <div class="col s5">
-                  <p>
-                    <a href="https://loftusjl.github.io/GiphySearch/" target="_blank" class="tooltipped teal-text text-darken-4" data-position="top" data-tooltip="Live Site"><i class="material-icons">web</i>
-                    Live Site</a>
-                  </p>
-                </div>
-                <div class="col s5">
-                  <p>
-                    <a href="https://github.com/loftusjl/GiphySearch" target="_blank" class="tooltipped teal-text text-darken-4" data-position="top" data-tooltip="GitHub"><i class="fab fa-lg fa-github-square"></i>
-                    GitHub</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Project End -->
-      <!-- Project Start -->
-      <div class="col s12 l6">
-        <div class="card small hoverable">
-          <div class="card-image waves-effect waves-block waves-light">
-            <img class="activator" src="./assets/images/trainSchedule.jpg">
-          </div>
-          <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Train Schedule
-              <i class="material-icons right">more_vert</i>
-            </span>
-            <div class="card-action activator">
-              <a class="activator teal-text text-darken-4">Read more...</a>
-            </div>
-          </div>
-          <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">Train Schedule
-              <i class="material-icons right">close</i>
-            </span>
-            <p>Enter your trains with the Train Name, Destination, First Train Time (in military time), and Frequency -- in
-              minutes. The scheduler will keep track of when the trains are due to arrive and alert you about which should
-              be showing up next in relative time.</p>
-            <div class="container">
-              <div class="row card-action">
-                <div class="col s5">
-                  <p>
-                    <a href="https://loftusjl.github.io/TrainSchedule" target="_blank" class="tooltipped teal-text text-darken-4" data-position="top" data-tooltip="Live Site"><i class="material-icons">web</i>
-                    Live Site</a>
-                  </p>
-                </div>
-                <div class="col s5">
-                  <p>
-                    <a href="https://github.com/loftusjl/TrainSchedule" target="_blank" class="tooltipped teal-text text-darken-4" data-position="top" data-tooltip="GitHub"><i class="fab fa-github-square fa-lg"></i>
-                    GitHub</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Project End -->
+    <div class="row" id="applications">
+      
     </div>
   </section>
 
@@ -498,6 +138,7 @@
         <h2>Contact Me</h2>
         <hr>
         <p class="text-flow">Send me a message with any inquiries or just to say hey!</p>
+        <a href="mailto:jesse.loftus@gmail.com" class="flow-text teal-text text-darken-4" style="text-decoration: underline">Jesse.Loftus@Gmail.com</a>
         <br>
 
 
