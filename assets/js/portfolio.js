@@ -1,5 +1,14 @@
 const portfolio = [
     {
+        name: 'Dynamite Kitchen Supplier',
+        image: './assets/images/dks.png',
+        description: "Dynamite Kitchen Supplier (DkS) is a full-stack web-app that will allow for role based users to input orders for purchase using a restaurant kitchen as its model. The app allow's for a seperation of roles each with their own set of privileges and access. Users will need to login or create a new user which will be stored in the database. Username: supervisor, Password: password",
+        technologies:'',
+        live: 'https://serene-forest-68972.herokuapp.com/',
+        github: 'https://github.com/loftusjl/Dynamite-Kitchen-Supplier',
+        types: ['fullStack']
+    },
+    {
         name: 'Burger Bonzai',
         image: './assets/images/burgerBonzai.PNG',
         description: 'Burger Bonzai is a full-stack web-app using MySQL, Node, Express, Handlebars and a homemade ORM.',
