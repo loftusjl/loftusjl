@@ -1,3 +1,74 @@
+let portfolio = require('./portfolio');
+
+document.onload = function() {
+
+}
+
+function addProject(name, image, description, technologies, live, github, types) {
+  const elem = document.createElement('div');
+  let domString = `<div class="col s12 l6">
+  <div class="card small hoverable">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="${image}">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">${name}
+        <i class="material-icons right">more_vert</i>
+      </span>
+      <div class="card-action activator">
+        <a class="activator teal-text text-darken-4">Read more...</a>
+      </div>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">${name}
+        <i class="material-icons right">close</i>
+      </span>
+      <p>${description}</p>
+      <div class="container">
+        <div class="row card-action">
+          <div class="col s5">
+            <p>
+              <a href="${live}" target="_blank" class="tooltipped teal-text text-darken-4" data-position="top" data-tooltip="Live Site"><i class="material-icons">web</i>
+              Live Site</a>
+            </p>
+          </div>
+          <div class="col s5">
+            <p>
+              <a href="${github}" target="_blank" class="tooltipped teal-text text-darken-4" data-position="top" data-tooltip="GitHub"><i class="fab fa-github-square fa-lg"></i>
+              GitHub</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>`
+elem.innerHTML = domString;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // TypeWriter was created by Daniel Groen
 // https://codepen.io/danielgroen/pen/VeRPOq
 
