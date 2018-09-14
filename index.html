@@ -47,28 +47,44 @@
   </header>
 
   <!-- SIDE NAV -->
-    <ul class="sidenav" id="mobile-menu">
-      <li class="blue-grey lighten-5">
-        <a href="#aboutme" class="sidenav-close">About Me</a>
-      </li>
-      <li class="blue-grey lighten-5">
-        <a href="#portfolio" class="sidenav-close">Portfolio</a>
-      </li>
-      <li class="blue-grey lighten-5">
-        <a href="#contact" class="sidenav-close">Contact</a>
-      </li>
-    </ul>
+  <ul class="sidenav" id="mobile-menu">
+    <li class="blue-grey lighten-5">
+      <a href="#aboutme" class="sidenav-close">About Me</a>
+    </li>
+    <li class="blue-grey lighten-5">
+      <a href="#portfolio" class="sidenav-close">Portfolio</a>
+    </li>
+    <li class="blue-grey lighten-5">
+      <a href="#contact" class="sidenav-close">Contact</a>
+    </li>
+  </ul>
 
   <!-- ABOUT ME SECTION -->
   <section class="container section" id="aboutme">
     <div class="row">
-      <div class="col s12 l6">
+        <div class="col s12 m5">
+            <div class="card">
+              <div class="card-image">
+                <img class="responsive-img" src="./assets/images/20171227_154007.jpg">
+                <span class="card-title">About Me</span>
+                <a href="./assets/misc/JesseLoftusResume.pdf" class="tooltipped teal-text text-darken-4 teal darken-4 btn-floating halfway-fab waves-effect waves-light" data-tooltip="Download My Résumé"><i class="fas fa-file-alt"></i>
+                  Résumé</a>
+              </div>
+              <div class="card-content">
+                <p>San Diego resident, outdoor enthusiast, gamer, and overall problem solver who has always been drawn
+                  to software and web development. Throughout the years I’ve found myself constantly building
+                  applications to make processes better or fill in the gaps left by other systems.</p>
+                
+              </div>
+            </div>
+          </div>
+      <div class="col s12 l5 offset-l2">
         <!-- <img src="./assets/images/20171227_154007.jpg" alt="" class="responsive-img materialboxed hoverable z-depth-2"> -->
         <h3 class="card-title">Technical Skills</h3>
         <table>
           <tbody class="flow-text">
             <tr>
-                
+
               <td><i class="fab fa-js-square a-3x teal-text text-darken-4"></i> Javascript</td>
               <td><i class="fab fa-html5 a-3x teal-text text-darken-4"></i> HTML5</td>
             </tr>
@@ -99,15 +115,7 @@
           </tbody>
         </table>
       </div>
-      <div class="col s12 l5 offset-l1">
-        <h3 class="card-title">About Me</h3>
-        <h1>link to my</h1>
-        <p>I am a web developer with an extensive background in database development. A fast learner and a highly focused, organized, professional with 16 years federal employment in both aircraft rework and hospital equipment management industries.</p>
-          <p>I am constantly learning and have taken college courses on database design, SQL, Web Development, Java and A+ certification. Currently, I am working to further develop my technical skills by attending the UC San Diego Extension Code bootcamp for full-stack development.</p>
-      <p>I have always been drawn to software and web development which led me to build and currently maintain the Equipment Office Manager (EOM) which has been utilized by the Navy Medicine South West Region since 2011. EOM holds 2,980 Command purchase records along with scans of the original purchase request for audit readiness and totals $231M to-date. In addition, EOM has been used as the equipment receiving system and currently holds records for 29,530 pieces of equipment valued at $186.7M. For developing the EOM, I was awarded Equipment Manager of the year by the Navy Bureau of Medicine and Surgery.</p>
-        <p>Through my developing the EOM I found great enjoyment working directly with end-users to develop a usable system that would provide increased reliability and efficiency in their day to day work lives.</p>
 
-      </div>
     </div>
   </section>
 
@@ -122,7 +130,7 @@
     <h2>Portfolio: Proof of Concept</h2>
     <hr>
     <div class="row" id="applications">
-      
+      <!-- populated by main.js -->
     </div>
   </section>
 
@@ -137,11 +145,19 @@
       <div class="col s12 l5">
         <h2>Contact Me</h2>
         <hr>
-        <p class="text-flow">Send me a message with any inquiries or just to say hey!</p>
+        <p class="text-flow">If you like my work and would like to get in touch, send me an email or contact me through
+          social sites listed below.</p>
         <a href="mailto:jesse.loftus@gmail.com" class="flow-text teal-text text-darken-4" style="text-decoration: underline">Jesse.Loftus@Gmail.com</a>
-        <br>
-
-
+        <a href="https://github.com/loftusjl" target="_blank" class="tooltipped" data-position="top" data-tooltip="GitHub">
+          <i class="fab fa-lg fa-github-square fa-2x teal-text text-darken-4"></i> GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/jesse-loftus-861aaa1b/" target="_blank" class="tooltipped" data-position="top"
+          data-tooltip="Linkedin">
+          <i class="fab fa-lg fa-linkedin fa-2x teal-text text-darken-4"></i> LinkedIn
+        </a>
+        <a href="https://twitter.com/JLLoft" target="_blank" class="tooltipped" data-position="top" data-tooltip="Twitter">
+          <i class="fab fa-lg fa-twitter-square fa-2x teal-text text-darken-4"></i> Twitter
+        </a>
       </div>
       <div class="col s12 l5 offset-l2">
         <form class="contact" action="mailto:jesse.loftus@gmail.com" method="POST" enctype="text/plain">
@@ -177,18 +193,7 @@
 
   <!-- FOOTER -->
   <footer class="page-footer amber lighten-5 teal-text text-darken-4">
-    <div class="container valign-wrapper footer">
-      <a href="https://github.com/loftusjl" target="_blank" class="tooltipped" data-position="top" data-tooltip="GitHub">
-        <i class="fab fa-lg fa-github-square fa-2x teal-text text-darken-4"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/jesse-loftus-861aaa1b/" target="_blank" class="tooltipped" data-position="top" data-tooltip="Linkedin">
-        <i class="fab fa-lg fa-linkedin fa-2x teal-text text-darken-4"></i>
-      </a>
-      <a href="https://twitter.com/JLLoft" target="_blank" class="tooltipped" data-position="top" data-tooltip="Twitter">
-        <i class="fab fa-lg fa-twitter-square fa-2x teal-text text-darken-4"></i>
-      </a>
-      <div class="container center-align">&copy; 2018 Jesse Loftus</div>
-    </div>
+    <div class="container center-align">&copy; 2018 Jesse Loftus</div>
   </footer>
 
   <!-- JAVASCRIPT -->
@@ -203,8 +208,8 @@
       $('.parallax').parallax();
       $('.tooltipped').tooltip();
       $('.fixed-action-btn').floatingActionButton({
-    toolbarEnabled: true
-  });
+        toolbarEnabled: true
+      });
     })
   </script>
 </body>
