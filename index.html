@@ -26,12 +26,7 @@
       href="./assets/css/materialize.min.css"
       media="screen,projection"
     />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
-      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="./assets/font/font-awesome.min.css" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -50,11 +45,14 @@
           <p class="flow-text" style="font-weight:bolder; font-size: 2em;">
             Jesse Loftus
           </p>
-          <p style="font-weight:bold; font-size: 1.2em">Web App Developer</p>
+          <p style="font-weight:bold; font-size: 1.2em">
+            Web Applications Developer
+          </p>
+          <hr />
           <p>
-            <i class="fa fa-linkedin-square" aria-hidden="true"></i
-            ><i class="fa fa-github-square" aria-hidden="true"></i
-            ><i class="fa fa-envelope" aria-hidden="true"></i>
+            <i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i>
+            <i class="fa fa-github-square fa-lg" aria-hidden="true"></i>
+            <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
           </p>
         </div>
       </div>
@@ -110,12 +108,23 @@
       </section>
     </div>
 
-    <script>
-      M.AutoInit();
-    </script>
     <script
-      type="text/javascript"
-      src="./assets/js/materialize.min.js"
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
     ></script>
+    <script src="./assets/js/materialize.min.js"></script>
+    <!-- <script src="./assets/js/main.js"></script> -->
+    <script>
+      $(document).ready(function() {
+        $('.sidenav').sidenav();
+        $('.materialboxed').materialbox();
+        $('.parallax').parallax();
+        $('.tooltipped').tooltip();
+        $('.fixed-action-btn').floatingActionButton({
+          toolbarEnabled: true
+        });
+      });
+    </script>
   </body>
 </html>

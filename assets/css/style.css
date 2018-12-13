@@ -7,12 +7,12 @@ body {
     calc(var(--header-height) / 3) calc(var(--header-height) / 3) calc(
       var(--header-height) / 3
     )
-    / var(--header-height) 1fr;
+    / var(--header-height) 3fr 1fr;
   margin: 5px;
 }
 .profile-pic {
   background-image: url('../images/IMG_2357.JPG');
-  border-radius: 50%;
+  border-radius: 15%;
   background-repeat: no-repeat;
   background-size: cover;
   height: var(--header-height);
@@ -25,6 +25,7 @@ body {
   grid-column: 2;
   grid-row: 2;
   margin-left: 20px;
+  padding: 2px;
 }
 :root {
   --main-color: #f5eedb;
