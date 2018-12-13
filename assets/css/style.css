@@ -1,75 +1,34 @@
-nav {
-    color: #f5eedb;
+body {
+  background-color: var(--main-color);
 }
-header {
-    background: url('../images/riverbed.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+.title {
+  display: grid;
+  grid-template:
+    calc(var(--header-height) / 3) calc(var(--header-height) / 3) calc(
+      var(--header-height) / 3
+    )
+    / var(--header-height) 1fr;
+  margin: 5px;
 }
-#portfolio {
-    padding-top: 0;
-    padding-bottom: 2rem;
-    min-height: 100vh;
+.profile-pic {
+  background-image: url('../images/IMG_2357.JPG');
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: var(--header-height);
+  width: var(--header-height);
+  position: relative;
+  grid-column: 1;
+  grid-row: 1 / 3;
 }
-#aboutme  {
-    min-height: 100vh;
-    
+.titleLine {
+  grid-column: 2;
+  grid-row: 2;
+  margin-left: 20px;
 }
-#contact {
-    min-height: 90vh;
-
-}
-.material-icons{
-    display: inline-flex;
-    vertical-align: top;
-}
-.hero-text {
-    margin-top: 15%;
-}
-.me {
-    font-family: 'Abril Fatface', cursive;
-    color: rgb(202, 218, 236);
-    text-shadow: -1px 0 #000000a4, 0 1px #000000, 1px 0 #00000071, 0 -1px #00000071;
-    margin: 0 auto;
-}
-.card-reveal {
-    overflow:hidden
-}
-.card-title {
-    margin-top:0;
-}
-nav {
-    background-color: rgba(43, 55, 55, 0.363);
-}
-.sidenav-wrapper {
-        padding-left: 300px;
-}
-#mobile-menu {
-    background-color: rgba(43, 55, 55, 0.603);
-    padding: 15px;
-}
-#mobile-menu > li {
-margin: 5px auto;
-}
-.offscreen {
-    position: absolute;
-    left: -999em;
-}
-
-.section{
-    padding-top: 4vw;
-    padding-bottom: 4vw;
-    /* max-height: 60vh; */
-  }
-.section > h3 {
-    font-weight: bolder;
-    font-size: 1.5rem;
-    margin-top: .5rem;
-}
-.footer {
-    padding: 15px;
-}
-.footer > a {
-    margin: 0 3px;
+:root {
+  --main-color: #f5eedb;
+  --secondary-color: rgb(202, 218, 236);
+  --tertiary-color: rgba(43, 55, 55, 0.363);
+  --header-height: 200px;
 }

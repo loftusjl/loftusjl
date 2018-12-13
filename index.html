@@ -1,239 +1,121 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Jesse Loftus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Import Google Icon Font -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./assets/css/reset.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Abril+Fatface"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="./assets/css/materialize.min.css"
+      media="screen,projection"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./assets/css/style.css"
+    />
+    <link rel="stylesheet" href="./assets/css/html.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Jesse Loftus</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-    crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/materialize.min.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
-  <link rel="stylesheet" href="./assets/css/html.css">
-</head>
+  <body>
+    <header class="header">
+      <div class="title">
+        <div class="profile-pic z-depth-3 hoverable"></div>
 
-<body class="amber lighten-5 teal-text text-darken-4">
-  <header>
-    <nav class="nav-wrapper">
-      <div class="container" id="myNavbar">
-        <a href="#" class="brand-logo">Jesse Loftus</a>
-        <a href="#" data-target="mobile-menu" class="sidenav-trigger">
-          <i class="material-icons">menu</i>
-        </a>
-        <ul class="right hide-on-med-and-down">
-          <li>
-            <a href="#aboutme">About Me</a>
-          </li>
-          <li>
-            <a href="#portfolio">Portfolio</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="container hero-text valign-wrapper">
-      <div class="me">
-        <div>
-          <h1>Jesse Loftus</h1>
+        <div class="titleLine">
+          <p class="flow-text" style="font-weight:bolder; font-size: 2em;">
+            Jesse Loftus
+          </p>
+          <p style="font-weight:bold; font-size: 1.2em">Web App Developer</p>
+          <p>
+            <i class="fa fa-linkedin-square" aria-hidden="true"></i
+            ><i class="fa fa-github-square" aria-hidden="true"></i
+            ><i class="fa fa-envelope" aria-hidden="true"></i>
+          </p>
         </div>
       </div>
-    </div>
-  </header>
-
-  <!-- SIDE NAV -->
-  <ul class="sidenav" id="mobile-menu">
-    <li class="blue-grey lighten-5">
-      <a href="#aboutme" class="sidenav-close">About Me</a>
-    </li>
-    <li class="blue-grey lighten-5">
-      <a href="#portfolio" class="sidenav-close">Portfolio</a>
-    </li>
-    <li class="blue-grey lighten-5">
-      <a href="#contact" class="sidenav-close">Contact</a>
-    </li>
-  </ul>
-
-  <!-- ABOUT ME SECTION -->
-  <section class="container section" id="aboutme">
-    <div class="row">
-      <div class="col s12 m5">
-        <div class="card">
-          <div class="card-image">
-            <img class="responsive-img" src="./assets/images/IMG_2357.JPG">
-            <span class="card-title">About Me</span>
-            <a href="./assets/misc/JesseLoftusResume.pdf" class="tooltipped teal-text text-darken-4 teal darken-4 btn-floating halfway-fab waves-effect waves-light"
-              data-tooltip="Download My Résumé"><i class="fas fa-file-alt"></i>
-              Résumé</a>
-          </div>
-          <div class="card-content">
-            <p>San Diego resident, outdoor enthusiast, gamer, and overall problem solver who has always been drawn
-              to software and web development. Throughout the years I’ve found myself constantly building
-              applications to make processes better or fill in the gaps left by other systems.</p>
-
-          </div>
+      <nav class="navbar">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Logo</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="badges.html">Components</a></li>
+            <li><a href="collapsible.html">JavaScript</a></li>
+          </ul>
         </div>
-      </div>
-      <div class="col s12 l5 offset-l2">
-        <!-- <img src="./assets/images/20171227_154007.jpg" alt="" class="responsive-img materialboxed hoverable z-depth-2"> -->
-        <h3 class="card-title">Technical Skills</h3>
-        <table>
-          <tbody class="flow-text">
-            <tr>
+      </nav>
+    </header>
+    <div class="container">
+      <section class="row">
+        <article class="col m9">
+          <h2>About Me</h2>
+          <p>
+            For the last 12 years I constantly found myself developing systems
+            to better my work environment, increase accountability and
+            productivity. I’ve also been taking classes and independently
+            studying web development. More recently I graduated from the UCSD
+            Extension Full Stack Development Bootcamp.
+          </p>
+          <br />
+          <p>
+            To that end I have been working to move into a web applications
+            development role and fully leverage all the knowledge and experience
+            I’ve obtained over the years.
+          </p>
+        </article>
+        <aside class="col m3">
+          <p>San Diego, CA</p>
+          <p>Jesse.loftus@gmail.com</p>
+          <a href="#">Download Resume/CV</a>
+        </aside>
+      </section>
 
-              <td><i class="fab fa-js-square a-3x teal-text text-darken-4"></i> Javascript</td>
-              <td><i class="fab fa-html5 a-3x teal-text text-darken-4"></i> HTML5</td>
-            </tr>
-            <tr>
-              <td><i class="fab fa-react a-3x teal-text text-darken-4"></i> React.js</td>
-              <td><i class="fab fa-css3-alt a-3x teal-text text-darken-4"></i> CSS</td>
-            </tr>
-            <tr>
-              <td><i class="fab fa-node a-3x teal-text text-darken-4"></i> Node.js</td>
-              <td><i class="icon-jquery"></i> jQuery</td>
-            </tr>
-            <tr>
-              <td><i class="icon-sql"></i> SQL</td>
-              <td><i class="icon-handlebars"></i> Handlebars</td>
-            </tr>
-            <tr>
-              <td><i class="fab fa-node-js a-3x teal-text text-darken-4"></i> Express.js</td>
-              <td><i class="icon-bootstrap"></i> Bootstrap</td>
-            </tr>
-            <tr>
-              <td><i class="icon-vba"></i> VBA</td>
-              <td><i class="icon-materialize"></i> Materialize</td>
-            </tr>
-            <tr>
-              <td><i class="icon-access"></i> Microsoft Access</td>
-              <td><i class="icon-mongodb"></i> MongoDB</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-    </div>
-  </section>
-
-  <div class="parallax-container z-depth-2 hide-on-med-and-down">
-    <div class="parallax">
-      <img src="./assets/images/forest_foggy_misty_trees_perspective_sky_foliage_autumn-672839.jpg">
-    </div>
-  </div>
-
-  <!-- PORTFOLIO SECTION -->
-  <section class="container section" id="portfolio">
-    <h2>Portfolio</h2>
-    <hr>
-    <p class="flow-text">Because I cannot link to the systems developed on the job, below are some proof of concept
-      applications I've made to showcase different technologies and my ability to utilize them.</p>
-    <hr>
-    <div class="row" id="applications">
-      <!-- populated by main.js -->
-    </div>
-  </section>
-
-  <div class="parallax-container z-depth-2 hide-on-med-and-down">
-    <div class="parallax">
-      <img src="./assets/images/lappy_parallax.png">
-    </div>
-  </div>
-  <!-- CONTACT SECTION -->
-  <section class="section container" id="contact">
-    <div class="row">
-      <div class="col s12 l5">
-        <h2>Contact Me</h2>
-        <hr>
-        <p class="text-flow">If you like my work and would like to get in touch, send me an email or contact me through
-          social sites listed below.</p>
-
-
-        <ul class="collection">
-          <li class="collection-item">
-            <a style="text-decoration:none" href="mailto:jesse.loftus@gmail.com" class="flow-text tooltipped teal-text text-darken-4" style="text-decoration: underline" data-position="top" data-tooltip="Email me"><i
-                class="fas fa-lg fa-2x fa-envelope"></i> Jesse.Loftus@Gmail.com</a>
-          </li>
-          <li class="collection-item">
-            <a href="https://github.com/loftusjl" target="_blank" class="flow-text tooltipped teal-text text-darken-4"
-              data-position="top" data-tooltip="GitHub">
-              <i class="fab fa-lg fa-github-square fa-2x"></i> GitHub
-            </a>
-          </li>
-          <li class="collection-item">
-            <a href="https://www.linkedin.com/in/jesse-loftus-861aaa1b/" target="_blank" class="flow-text tooltipped teal-text text-darken-4"
-              data-position="top" data-tooltip="Linkedin">
-              <i class="fab fa-lg fa-linkedin fa-2x"></i> LinkedIn
-            </a>
-          </li>
-          <li class="collection-item">
-            <a href="https://twitter.com/JLLoft" target="_blank" class="flow-text tooltipped teal-text text-darken-4"
-              data-position="top" data-tooltip="Twitter">
-              <i class="fab fa-lg fa-twitter-square fa-2x"></i> Twitter
-            </a>
-          </li>
-        </ul>
-
-
-
-      </div>
-      <div class="col s12 l5 offset-l2">
-        <form class="contact" action="mailto:jesse.loftus@gmail.com" method="POST" enctype="text/plain">
-          <div class="row">
-            <div class="input-field col s6">
-              <i class="material-icons prefix">perm_identity</i>
-              <input type="text" name="first_name" id="first_name" class="validate">
-              <label for="first_name">First Name</label>
-            </div>
-            <div class="input-field col s6">
-              <input type="text" name="last_name" id="last_name">
-              <label for="last_name">Last Name</label>
-            </div>
-            <div class="input-field col s12">
-              <i class="material-icons prefix">email</i>
-              <input type="email" name="email" id="email">
-              <label for="email">Email Address</label>
-            </div>
-            <div class="input-field col s12">
-              <i class="material-icons prefix">message</i>
-              <textarea name="message" id="message" cols="20" rows="20" class="materialize-textarea"></textarea>
-              <label for="message">Your Message</label>
-            </div>
-          </div>
-          <div class="input-field center">
-            <button class="btn teal darken-4" type="submit" name="action">Submit</button>
-          </div>
-        </form>
-      </div>
+      <section class="row">
+        <article class="col m9">
+          <h3>Dynamite Kitchen Supplier</h3>
+          <p>
+            Dynamite Kitchen Supplier (DkS) is a full-stack web-app that will
+            allow for role based users to input orders for purchase using a
+            restaurant kitchen as its model. The app allow's for a seperation of
+            roles each with their own set of privileges and access. Users will
+            need to login or create a new user which will be stored in the
+            database. Username: supervisor, Password: password
+          </p>
+        </article>
+        <aside class="col m3">skills/education</aside>
+      </section>
     </div>
 
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="page-footer amber lighten-5 teal-text text-darken-4">
-    <div class="container center-align">&copy; 2018 Jesse Loftus</div>
-  </footer>
-
-  <!-- JAVASCRIPT -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-  <script src="./assets/js/materialize.min.js"></script>
-  <script src="./assets/js/main.js"></script>
-  <script>
-    $(document).ready(function () {
-      $('.sidenav').sidenav();
-      $('.materialboxed').materialbox();
-      $('.parallax').parallax();
-      $('.tooltipped').tooltip();
-      $('.fixed-action-btn').floatingActionButton({
-        toolbarEnabled: true
-      });
-    })
-  </script>
-</body>
-
+    <script>
+      M.AutoInit();
+    </script>
+    <script
+      type="text/javascript"
+      src="./assets/js/materialize.min.js"
+    ></script>
+  </body>
 </html>
