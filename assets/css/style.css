@@ -1,5 +1,34 @@
 body {
-  background-color: var(--main-color);
+  background-color: var(--text-primary-color);
+  color: var(--primary-text-color);
+  margin-top: 0;
+  font-size: var(--default-text-size);
+}
+header {
+  background-color: var(--primary-color);
+  color: var(--text-primary-color);
+}
+nav {
+  background-color: var(--dark-primary-color);
+  color: var(--primary-text-color);
+}
+ul {
+  display: inline-block;
+  margin-top: 0 !important;
+}
+li {
+  white-space: nowrap;
+}
+article {
+  background-color: var(--primary-color);
+  padding: 0 !important;
+}
+
+.row {
+  height: 100%;
+}
+.aside {
+  flex-grow: 1;
 }
 .title {
   display: grid;
@@ -8,7 +37,7 @@ body {
       var(--header-height) / 3
     )
     / var(--header-height) 3fr 1fr;
-  margin: 5px;
+  padding: 5px;
 }
 .profile-pic {
   background-image: url('../images/IMG_2357.JPG');
@@ -27,9 +56,40 @@ body {
   margin-left: 20px;
   padding: 2px;
 }
+.description {
+  background-color: var(--text-primary-color);
+  width: 100%;
+}
+/* PROJECTS */
+.project-banner {
+  position: relative;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.project-banner-text {
+  position: absolute;
+  text-shadow: var(--text-ouline);
+  color: var(--text-primary-color);
+  bottom: 0;
+}
+.project-banner-bg {
+  background-image: var(--current-bg);
+  background-position: center;
+  background-size: cover;
+  height: 100px;
+}
 :root {
-  --main-color: #f5eedb;
-  --secondary-color: rgb(202, 218, 236);
-  --tertiary-color: rgba(43, 55, 55, 0.363);
+  --primary-color: #3f51b5;
+  --dark-primary-color: #303f9f;
+  --light-primary-color: #c5cae9;
+  --text-primary-color: #ffffff;
+  --accent-color: #7c4dff;
+  --divider-color: #bdbdbd;
+  --primary-text-color: #212121;
+  --secondary-text-color: #757575;
+  --current-bg: url('../images/chef-hands-steak-plate.jpg');
   --header-height: 200px;
+  --default-text-size: 1.1em;
+  --text-ouline: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }

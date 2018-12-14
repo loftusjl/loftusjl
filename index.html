@@ -26,7 +26,7 @@
       href="./assets/css/materialize.min.css"
       media="screen,projection"
     />
-    <link rel="stylesheet" href="./assets/font/font-awesome.min.css" />
+    <script defer src="./assets/js/all.min.js"></script>
     <link
       rel="stylesheet"
       type="text/css"
@@ -67,23 +67,27 @@
         </div>
       </nav>
     </header>
-    <div class="container">
+    <div class="container body">
+      <!-- ABOUT ME SECTION -->
+      <h2>About Me</h2>
+      <hr />
       <section class="row">
         <article class="col m9">
-          <h2>About Me</h2>
-          <p>
-            For the last 12 years I constantly found myself developing systems
-            to better my work environment, increase accountability and
-            productivity. I’ve also been taking classes and independently
-            studying web development. More recently I graduated from the UCSD
-            Extension Full Stack Development Bootcamp.
-          </p>
-          <br />
-          <p>
-            To that end I have been working to move into a web applications
-            development role and fully leverage all the knowledge and experience
-            I’ve obtained over the years.
-          </p>
+          <div class="description">
+            <p>
+              For the last 12 years I constantly found myself developing systems
+              to better my work environment, increase accountability and
+              productivity. I’ve also been taking classes and independently
+              studying web development. More recently I graduated from the UCSD
+              Extension Full Stack Development Bootcamp.
+            </p>
+            <br />
+            <p>
+              To that end I have been working to move into a web applications
+              development role and fully leverage all the knowledge and
+              experience I’ve obtained over the years.
+            </p>
+          </div>
         </article>
         <aside class="col m3">
           <p>San Diego, CA</p>
@@ -91,20 +95,52 @@
           <a href="#">Download Resume/CV</a>
         </aside>
       </section>
-
+      <!-- PROJECTS SECTION -->
+      <h2>Projects</h2>
+      <hr />
       <section class="row">
         <article class="col m9">
-          <h3>Dynamite Kitchen Supplier</h3>
-          <p>
-            Dynamite Kitchen Supplier (DkS) is a full-stack web-app that will
-            allow for role based users to input orders for purchase using a
-            restaurant kitchen as its model. The app allow's for a seperation of
-            roles each with their own set of privileges and access. Users will
-            need to login or create a new user which will be stored in the
-            database. Username: supervisor, Password: password
-          </p>
+          <div class="current">
+            <div class="project-banner hoverable z-depth-1">
+              <h3 class="project-banner-text">Dynamite Kitchen Supplier</h3>
+              <div class="project-banner-bg"></div>
+            </div>
+            <div class="description">
+              <hr />
+              <p>
+                Dynamite Kitchen Supplier (DkS) is a full-stack web-app that
+                will allow for role based users to input orders for purchase
+                using a restaurant kitchen as its model. The app allow's for a
+                seperation of roles each with their own set of privileges and
+                access. Users will need to login or create a new user which will
+                be stored in the database. Username: supervisor, Password:
+                password
+              </p>
+            </div>
+          </div>
         </article>
-        <aside class="col m3">skills/education</aside>
+        <div class="aside col m3">
+          <aside>
+            <ul class="collection">
+              <li class="collection-item">
+                <i class="fab fa-js-square a-3x"></i> Javascript
+              </li>
+              <li class="collection-item">
+                <i class="icon-mongodb"></i> MongoDB
+              </li>
+              <li class="collection-item">
+                <i class="fab fa-node-js a-3x"></i> Express.js
+              </li>
+              <li class="collection-item">
+                <i class="fab fa-react a-3x"></i> React.js
+              </li>
+              <li class="collection-item">
+                <i class="fab fa-node a-3x"></i> Node.js
+              </li>
+              <li class="collection-item"><i class="icon-sql"></i> SQL</li>
+            </ul>
+          </aside>
+        </div>
       </section>
     </div>
 
