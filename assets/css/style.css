@@ -59,6 +59,8 @@ article {
 .description {
   background-color: var(--text-primary-color);
   width: 100%;
+  line-height: 1.6;
+  text-align: justify;
 }
 /* PROJECTS */
 .project-banner {
