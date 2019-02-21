@@ -1,0 +1,48 @@
+body {
+  background-color: #343a41;
+  height: 100vh;
+  border: 0;
+  margin: 0;
+}
+.header {
+  position: relative;
+}
+
+.color-clip {
+  position: absolute;
+  height: 300px;
+  width: 80vw;
+  top: 50px;
+  right: 0;
+}
+#orange {
+  background-color: #be5c51;
+  -webkit-clip-path: polygon(100% 0%, 100% 20%, 40% 100%, 20% 100%);
+}
+#orange:hover + .content {
+  height: 300px;
+}
+#blue {
+  background-color: #96c1ba;
+  -webkit-clip-path: polygon(100% 20%, 100% 40%, 60% 100%, 40% 100%);
+}
+#blue:hover + .content {
+  height: 300px;
+}
+#yellow {
+  background-color: #dbd359;
+  -webkit-clip-path: polygon(100% 40%, 100% 60%, 80% 100%, 60% 100%);
+}
+#yellow:hover + .content {
+  height: 300px;
+}
+.content {
+  position: absolute;
+  top: 350px;
+  right: 0;
+  height: 0;
+  overflow: hidden;
+  width: 65vw;
+  transition: height 2s;
+  -webkit-transition: height 2s; /* Safari 3.1 to 6.0 */
+}
