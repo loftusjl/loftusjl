@@ -8,29 +8,33 @@
     <link
       type="text/css"
       rel="stylesheet"
-      href="./clip-path.css"
+      href="./clip-path_polygon.css"
       media="screen,projection"
     />
   </head>
   <body>
     <div class="header">
-      <div id="orange" class="color-clip"></div>
+      <div id="orange" class="color-clip">
+        <div id="orange-text">Orange Section</div>
+      </div>
       <div class="content" style="background-color: #be5c51;">
         this is an orange space
       </div>
-      <div id="blue" class="color-clip"></div>
+      <div id="blue" class="color-clip"><span>Blue Section</span></div>
       <div class="content" style="background-color: #96c1ba;">
         this is a blue space
       </div>
-      <div id="yellow" class="color-clip"></div>
+      <div id="yellow" class="color-clip"><span>Yellow Section</span></div>
       <div class="content" style="background-color: #dbd359;">
         this is a yellow space
       </div>
+      <div id="grey" class="color-clip"></div>
     </div>
     <footer
       style="background-color:white; position: fixed; bottom:0; width: 100vw;"
     >
       this is the footer
     </footer>
+    <script src="./assets/js/text-path.js"></script>
   </body>
 </html>
