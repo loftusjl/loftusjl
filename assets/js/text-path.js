@@ -1,9 +1,10 @@
 // get viewport dimensions
 const vW = window.innerWidth;
 const vH = window.innerHeight;
-// triangle sides for getting the line angle
-const pA = vW - vW * 0.4;
-const pO = vH - vH * 0.2;
+// length of sides for getting the line angle
+// the decimal is the % of the screen the triangle touches
+const pA = Math.floor(vW - vW * 0.2);
+const pO = Math.floor(vH - vH * 0.4);
 // color elements
 const orange = document.getElementById('orange');
 const blue = document.getElementById('blue');
@@ -13,20 +14,14 @@ const orangeText = document.getElementById('orange-text');
 const degree = 1.15;
 
 document.addEventListener('DOMContentLoaded', function() {
-  const styles = `transform: rotate(-20deg); position: absolute; right: ${vW -
-    degree * vW}px; `;
-  console.log(`vH ${vH} - vH ${vH} * 20% = ${pO}`);
-  textDegree(orangeText, styles);
+  const styles = `transform: rotate(-${findAngle()}deg); position: absolute; left: ${vW -
+    0.71 * vW}px; bottom:70px; `;
+  appendStyles(orangeText, styles);
 });
-function textDegree(col, styles) {
+// add text rotation and position to colorText fields
+function appendStyles(col, styles) {
   col.setAttribute('style', styles);
 }
-const setStylesOnElement = function(styles, element) {
-  Object.assign(element.style, styles);
-};
-function polyAdjacent(deg) {
-  return vW - vW * deg;
-}
-function polyOpposite(deg) {
-  return vH - vH * deg;
+function findAngle() {
+  return Math.floor((Math.tan(pO / pA) * 180) / Math.PI);
 }
