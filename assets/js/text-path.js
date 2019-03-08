@@ -1,19 +1,35 @@
-// get viewport dimensions
-const vW = window.innerWidth;
-const vH = window.innerHeight;
-// length of sides for getting the line angle
-// the decimal is the % of the screen the triangle touches
-const pA = Math.floor(vW - vW * 0.2);
-const pO = Math.floor(vH - vH * 0.4);
 // color elements
 const orange = document.getElementById('orange');
-const blue = document.getElementById('blue');
-const yellow = document.getElementById('yellow');
-const colorArray = [orange, blue, yellow];
 const orangeText = document.getElementById('orange-text');
+const blue = document.getElementById('blue');
+const blueText = document.getElementById('blue-text');
+const yellow = document.getElementById('yellow');
+const yellowText = document.getElementById('yellow-text');
+
+const colorArray = [
+  {
+    color: orange,
+    text: orangeText,
+    opposite: oppositeLength(20),
+    adjacent: adjacentLength(40)
+  },
+  {
+    color: blue,
+    text: blueText,
+    opposite: oppositeLength(40),
+    adjacent: adjacentLength(60)
+  },
+  {
+    color: yellow,
+    text: yellowText,
+    opposite: oppositeLength(60),
+    adjacent: adjacentLength(80)
+  }
+];
 const degree = 1.15;
 
 document.addEventListener('DOMContentLoaded', function() {
+  console.log(colorArray);
   const styles = `transform: rotate(-${findAngle()}deg); position: absolute; left: ${vW -
     0.71 * vW}px; bottom:70px; `;
   appendStyles(orangeText, styles);
@@ -24,4 +40,10 @@ function appendStyles(col, styles) {
 }
 function findAngle() {
   return Math.floor((Math.tan(pO / pA) * 180) / Math.PI);
+}
+function oppositeLength(deg) {
+  return window.innerWidth - window.innerWidth * (deg / 100);
+}
+function adjacentLength(deg) {
+  return window.innerHeight - window.innerHeight * (deg / 100);
 }
