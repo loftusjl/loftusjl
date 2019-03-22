@@ -6,12 +6,18 @@ const blueText = document.getElementById('blue-text');
 const yellow = document.getElementById('yellow');
 const yellowText = document.getElementById('yellow-text');
 
+const vW = window.innerWidth * 0.8;
+const vH = 300;
+
 const colorArray = [
   {
     color: orange,
     text: orangeText,
     opposite: oppositeLength(20),
-    adjacent: adjacentLength(40)
+    adjacent: adjacentLength(40),
+    hypotenuse: Math.sqrt(
+      Math.pow(oppositeLength(20), 2) + Math.pow(adjacentLength(40), 2)
+    )
   },
   {
     color: blue,
@@ -26,27 +32,25 @@ const colorArray = [
     adjacent: adjacentLength(80)
   }
 ];
-const degree = 1.15;
 
 document.addEventListener('DOMContentLoaded', function() {
   console.log(colorArray);
-  console.log(
-    `Window width: ${window.innerWidth}, Opposite length: ${oppositeLength(20)}`
-  );
-  const styles = `transform: rotate(-${findAngle()}deg); position: absolute; left: ${vW -
-    0.71 * vW}px; bottom:70px; `;
+  const styles = `transform: rotate(${findAngle(40, 60) -
+    180}deg); position: absolute; left: ${vW - 0.55 * vW}px; bottom:70px; `;
   appendStyles(orangeText, styles);
 });
 // add text rotation and position to colorText fields
-function appendStyles(col, styles) {
-  col.setAttribute('style', styles);
+function appendStyles(el, styles) {
+  el.setAttribute('style', styles);
 }
-function findAngle() {
-  return Math.floor((Math.tan(pO / pA) * 180) / Math.PI);
+function findAngle(oLen, aLen) {
+  return Math.floor(
+    (Math.tan(oppositeLength(oLen) / adjacentLength(aLen)) * 180) / Math.PI
+  );
 }
 function oppositeLength(percent) {
-  return window.innerWidth - window.innerWidth * (percent / 100);
+  return vW - vW * (percent / 100);
 }
 function adjacentLength(percent) {
-  return window.innerHeight - window.innerHeight * (percent / 100);
+  return vH - vH * (percent / 100);
 }
