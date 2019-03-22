@@ -30,6 +30,9 @@ const degree = 1.15;
 
 document.addEventListener('DOMContentLoaded', function() {
   console.log(colorArray);
+  console.log(
+    `Window width: ${window.innerWidth}, Opposite length: ${oppositeLength(20)}`
+  );
   const styles = `transform: rotate(-${findAngle()}deg); position: absolute; left: ${vW -
     0.71 * vW}px; bottom:70px; `;
   appendStyles(orangeText, styles);
@@ -41,9 +44,9 @@ function appendStyles(col, styles) {
 function findAngle() {
   return Math.floor((Math.tan(pO / pA) * 180) / Math.PI);
 }
-function oppositeLength(deg) {
-  return window.innerWidth - window.innerWidth * (deg / 100);
+function oppositeLength(percent) {
+  return window.innerWidth - window.innerWidth * (percent / 100);
 }
-function adjacentLength(deg) {
-  return window.innerHeight - window.innerHeight * (deg / 100);
+function adjacentLength(percent) {
+  return window.innerHeight - window.innerHeight * (percent / 100);
 }
