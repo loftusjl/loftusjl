@@ -36,7 +36,7 @@ const colorArray = [
 document.addEventListener('DOMContentLoaded', function() {
   console.log(colorArray);
   const styles = `transform: rotate(${findAngle(40, 60) -
-    180}deg); position: absolute; left: ${vW - 0.55 * vW}px; bottom:70px; `;
+    180}deg); position: absolute; left: ${vW - 0.57 * vW}px; bottom:70px; `;
   appendStyles(orangeText, styles);
 });
 // add text rotation and position to colorText fields
