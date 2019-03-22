@@ -36,6 +36,10 @@ body::before {
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
 }
+::selection {
+  background: #0080ff;
+  text-shadow: none;
+}
 
 .header {
   position: relative;
