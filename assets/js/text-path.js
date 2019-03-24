@@ -33,47 +33,50 @@ const colorArray = [
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
-  a = adjacentLength(40);
-  b = Math.hypot(oppositeLength(40), adjacentLength(40));
-  c = oppositeLength(40);
+  a = adjacentLength(20);
+  b = Math.hypot(oppositeLength(0), adjacentLength(20));
+  c = oppositeLength(0);
   console.log(colorArray);
-  console.log(`
-  a = ${adjacentLength(40)}
-  b = ${Math.hypot(oppositeLength(40), adjacentLength(40))}
-  c = ${oppositeLength(40)}
-  A = ${solveAngle(b, c, a)};
-  B = ${solveAngle(c, a, b)};
-  C = ${solveAngle(a, b, c)};
-  total: ${a + b + c}`);
-
-  const styles = `transform: rotate(-${solveAngle(
-    a,
-    b,
-    c
-  )}deg); position: absolute; left: ${vW - 0.57 * vW}px; bottom:70px; `;
-  appendStyles(orangeText, styles);
-
-  const content = document.getElementById('orange-content');
-  let clicked = document.querySelector('#orange-content').dataset.clicked;
-  orange.addEventListener('click', function() {
-    clicked ^= 1;
-    setAttributes(content, {
-      'data-clicked': clicked,
-      style: 'background-color: #be5c51;'
-    });
+  setAttributes(orangeText, {
+    style: `transform: rotate(-${solveAngle(
+      a,
+      b,
+      c
+    )}deg); position: absolute; left: ${vW - 0.57 * vW}px; bottom:70px; `
   });
+
+  // On-click content toggles
+  let cItems = document.getElementsByClassName('color-clip');
+  let cArray = Array.from(cItems); // converts elements list into array
+  for (let c = 0; c < cArray.length; c++) {
+    let color = cArray[c];
+    let clicked = document.getElementById(`${color.id}-content`).dataset
+      .clicked;
+    cArray[c].addEventListener(
+      'click',
+      function() {
+        clicked ^= 1;
+        setAttributes(document.getElementById(`${color.id}-content`), {
+          'data-clicked': clicked,
+          style: `background-color: ${cArray[c].style.backgroundColor};`
+        });
+        let toggles = cArray.filter(color => color != cArray[c]);
+        for (t in toggles) {
+          if (
+            document.getElementById(`${toggles[t].id}-content`).dataset
+              .clicked == 1
+          ) {
+            setAttributes(document.getElementById(`${toggles[t].id}-content`), {
+              'data-clicked': 0
+            });
+          }
+        }
+      },
+      false
+    );
+  }
 });
 
-// add text rotation and position to colorText fields
-function appendStyles(el, styles) {
-  el.setAttribute('style', styles);
-}
-function findAngle(oLen, aLen, hLen) {
-  // return Math.hypot(oppositeLength(oLen), adjacentLength(aLen));
-  return (
-    (Math.tan(oppositeLength(oLen) / adjacentLength(aLen)) * 180) / Math.PI
-  );
-}
 function oppositeLength(percent) {
   return vH - vH * (percent / 100);
 }
@@ -89,7 +92,7 @@ function solveAngle(a, b, c) {
   else throw 'No solution';
 }
 function radToDeg(x) {
-  return (x / Math.PI) * 180 + 4;
+  return (x / Math.PI) * 180;
 }
 function setAttributes(el, attr) {
   for (const key in attr) {

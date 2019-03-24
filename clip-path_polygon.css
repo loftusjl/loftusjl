@@ -64,8 +64,22 @@ body::before {
   font-weight: bold;
   font-size: 1.5em;
 }
+#orange-content[data-clicked='0'],
+#blue-content[data-clicked='0'],
+#yellow-content[data-clicked='0'] {
+  height: 0;
+}
+#orange-content[data-clicked='1'],
+#blue-content[data-clicked='1'],
+#yellow-content[data-clicked='1'] {
+  height: 300px;
+}
+#orange:hover,
+#blue:hover,
+#yellow:hover {
+  cursor: pointer;
+}
 #orange {
-  background-color: #be5c51;
   -webkit-clip-path: polygon(100% 0%, 100% 20%, 40% 100%, 20% 100%);
   clip-path: polygon(100% 0%, 100% 20%, 40% 100%, 20% 100%);
 }
@@ -74,24 +88,11 @@ body::before {
   font-weight: bold;
   font-size: 2em;
 }
-#orange-content[data-clicked='0'] {
-  height: 0;
-}
-#orange-content[data-clicked='1'] {
-  height: 300px;
-}
-#orange:hover,
-#blue:hover,
-#yellow:hover {
-  cursor: pointer;
-}
 #blue {
-  background-color: #96c1ba;
   -webkit-clip-path: polygon(100% 20%, 100% 40%, 60% 100%, 40% 100%);
   clip-path: polygon(100% 20%, 100% 40%, 60% 100%, 40% 100%);
 }
 #yellow {
-  background-color: #dbd359;
   -webkit-clip-path: polygon(100% 40%, 100% 60%, 80% 100%, 60% 100%);
   clip-path: polygon(100% 40%, 100% 60%, 80% 100%, 60% 100%);
 }
