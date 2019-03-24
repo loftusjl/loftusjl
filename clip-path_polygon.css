@@ -8,11 +8,11 @@
 } */
 @font-face {
   font-family: Atarian;
-  src: url(./assets/font/SF\Atarian\System.ttf);
+  src: url(./assets/font/SF-Atarian-System.woff);
 }
 @font-face {
   font-family: Atarian;
-  src: url(./assets/font/SF\Atarian\System\Bold.ttf);
+  src: url(./assets/font/SF-Atarian-System-Bold.woff);
   font-weight: bold;
 }
 
@@ -68,9 +68,20 @@ body::before {
   background-color: #be5c51;
   -webkit-clip-path: polygon(100% 0%, 100% 20%, 40% 100%, 20% 100%);
 }
-#orange:hover + .content {
+#orange-text {
+  font-family: Atarian;
+  font-weight: bold;
+  font-size: 2em;
+}
+#orange-content[data-clicked='0'] {
+  height: 0;
+}
+#orange-content[data-clicked='1'] {
   height: 300px;
 }
+/* #orange:hover + .content {
+  height: 300px;
+} */
 #blue {
   background-color: #96c1ba;
   -webkit-clip-path: polygon(100% 20%, 100% 40%, 60% 100%, 40% 100%);
@@ -91,7 +102,7 @@ body::before {
   right: 0;
   height: 0;
   overflow: hidden;
-  width: 65vw;
+  width: 80vw;
   transition: height 2s;
   -webkit-transition: height 2s; /* Safari 3.1 to 6.0 */
 }
