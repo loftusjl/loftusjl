@@ -67,6 +67,7 @@ body::before {
 #orange {
   background-color: #be5c51;
   -webkit-clip-path: polygon(100% 0%, 100% 20%, 40% 100%, 20% 100%);
+  clip-path: polygon(100% 0%, 100% 20%, 40% 100%, 20% 100%);
 }
 #orange-text {
   font-family: Atarian;
@@ -79,22 +80,20 @@ body::before {
 #orange-content[data-clicked='1'] {
   height: 300px;
 }
-/* #orange:hover + .content {
-  height: 300px;
-} */
+#orange:hover,
+#blue:hover,
+#yellow:hover {
+  cursor: pointer;
+}
 #blue {
   background-color: #96c1ba;
   -webkit-clip-path: polygon(100% 20%, 100% 40%, 60% 100%, 40% 100%);
-}
-#blue:hover + .content {
-  height: 300px;
+  clip-path: polygon(100% 20%, 100% 40%, 60% 100%, 40% 100%);
 }
 #yellow {
   background-color: #dbd359;
   -webkit-clip-path: polygon(100% 40%, 100% 60%, 80% 100%, 60% 100%);
-}
-#yellow:hover + .content {
-  height: 300px;
+  clip-path: polygon(100% 40%, 100% 60%, 80% 100%, 60% 100%);
 }
 .content {
   position: absolute;
@@ -105,4 +104,74 @@ body::before {
   width: 80vw;
   transition: height 2s;
   -webkit-transition: height 2s; /* Safari 3.1 to 6.0 */
+}
+.blinking-cursor {
+  font-weight: 100;
+  font-size: 30px;
+  color: white;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from,
+  to {
+    color: transparent;
+    text-shadow: none;
+  }
+  50% {
+    color: white;
+    text-shadow: 0 0 5px #c8c8c8;
+  }
+}
+
+@-moz-keyframes blink {
+  from,
+  to {
+    color: transparent;
+    text-shadow: none;
+  }
+  50% {
+    color: white;
+    text-shadow: 0 0 5px #c8c8c8;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from,
+  to {
+    color: transparent;
+    text-shadow: none;
+  }
+  50% {
+    color: white;
+    text-shadow: 0 0 5px #c8c8c8;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from,
+  to {
+    color: transparent;
+    text-shadow: none;
+  }
+  50% {
+    color: white;
+    text-shadow: 0 0 5px #c8c8c8;
+  }
+}
+
+@-o-keyframes "blink" {
+  from,
+  to {
+    color: transparent;
+    text-shadow: none;
+  }
+  50% {
+    color: white;
+    text-shadow: 0 0 5px #c8c8c8;
+  }
 }
