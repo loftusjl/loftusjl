@@ -64,12 +64,17 @@ body::before {
 .header {
   position: relative;
 }
+.info {
+  position: absolute;
+  top: 150px;
+  left: 50px;
+}
 
 .color-clip {
   position: absolute;
   height: 300px;
   width: 80vw;
-  top: 50px;
+  top: 20px;
   right: 0;
   font-family: Atarian;
   font-weight: bold;
@@ -79,7 +84,7 @@ body::before {
   position: absolute;
   height: 300px;
   width: 80vw;
-  top: 350px;
+  top: 320px;
   right: 0;
   font-family: Atarian;
   font-weight: bold;
@@ -102,12 +107,12 @@ body::before {
 #orange-content[data-clicked='0'] ~ .color-bottom,
 #blue-content[data-clicked='0'] ~ .color-bottom,
 #yellow-content[data-clicked='0'] ~ .color-bottom {
-  top: 350px;
+  top: 320px;
 }
 #orange-content[data-clicked='1'] ~ .color-bottom,
 #blue-content[data-clicked='1'] ~ .color-bottom,
 #yellow-content[data-clicked='1'] ~ .color-bottom {
-  top: 650px;
+  top: 620px;
 }
 #orange:hover,
 #blue:hover,
@@ -147,7 +152,7 @@ body::before {
   position: absolute;
   border-top: 1px solid #282c3134;
   border-bottom: 1px solid #282c3134;
-  top: 350px;
+  top: 320px;
   right: 0;
   height: 0;
   overflow: hidden;
