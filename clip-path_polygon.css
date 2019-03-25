@@ -148,15 +148,33 @@ body::before {
   -webkit-clip-path: polygon(60% 0%, 80% 0%, 100% 40%, 100% 60%);
   clip-path: polygon(60% 0%, 80% 0%, 100% 20%, 100% 40%);
 }
+.frame {
+  background-color: transparent;
+  overflow: hidden;
+  border-radius: 2rem;
+  border: 1rem solid;
+  border-bottom-color: #121212;
+  border-left-color: #080808;
+  border-right-color: #080808;
+  border-top-color: #020202;
+  box-shadow: inset 0 0 18rem black, inset 0 0 3rem black, 0 0 10rem black;
+  height: 94%;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  width: 93%;
+  /* pointer-events: none; */
+}
+
 .content {
   position: absolute;
   border-top: 1px solid #282c3134;
   border-bottom: 1px solid #282c3134;
   top: 320px;
-  right: 0;
+  right: 2%;
   height: 0;
   overflow: hidden;
-  width: 100vw;
+  width: 95%;
   transition: height 2s;
   -webkit-transition: height 2s; /* Safari 3.1 to 6.0 */
   z-index: 2;
