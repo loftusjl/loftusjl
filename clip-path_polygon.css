@@ -84,6 +84,8 @@ body::before {
   font-family: Atarian;
   font-weight: bold;
   font-size: 1.5em;
+  transition: top 2s;
+  -webkit-transition: top 2s; /* Safari 3.1 to 6.0 */
   z-index: 1;
 }
 #orange-content[data-clicked='0'],
@@ -95,6 +97,16 @@ body::before {
 #blue-content[data-clicked='1'],
 #yellow-content[data-clicked='1'] {
   height: 300px;
+}
+#orange-content[data-clicked='0'] ~ .color-bottom,
+#blue-content[data-clicked='0'] ~ .color-bottom,
+#yellow-content[data-clicked='0'] ~ .color-bottom {
+  top: 350px;
+}
+#orange-content[data-clicked='1'] ~ .color-bottom,
+#blue-content[data-clicked='1'] ~ .color-bottom,
+#yellow-content[data-clicked='1'] ~ .color-bottom {
+  top: 650px;
 }
 #orange:hover,
 #blue:hover,
