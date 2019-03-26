@@ -15,27 +15,28 @@ const colorArray = [
     text: orangeText,
     opposite: oppositeLength(20),
     adjacent: adjacentLength(40),
-    hypotenuse: Math.hypot(oppositeLength(20), adjacentLength(40))
+    hypotenuse: Math.hypot(oppositeLength(20), adjacentLength(40)),
+    adjacentB: adjacentLength(20)
   },
   {
     color: blue,
     text: blueText,
-    opposite: oppositeLength(20),
-    adjacent: adjacentLength(40),
-    hypotenuse: Math.hypot(oppositeLength(20), adjacentLength(40))
+    opposite: oppositeLength(40),
+    adjacent: adjacentLength(60),
+    hypotenuse: Math.hypot(oppositeLength(40), adjacentLength(60)),
+    adjacentB: adjacentLength(40)
   },
   {
     color: yellow,
     text: yellowText,
-    opposite: oppositeLength(40),
-    adjacent: adjacentLength(60)
+    opposite: oppositeLength(60),
+    adjacent: adjacentLength(80),
+    hypotenuse: Math.hypot(oppositeLength(60), adjacentLength(80)),
+    adjacentB: adjacentLength(60)
   }
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
-  a = adjacentLength(40);
-  b = Math.hypot(oppositeLength(20), adjacentLength(40));
-  c = oppositeLength(20);
   console.log(colorArray);
 
   // adjust text positioning to stay inside color bars based on screen width
@@ -47,11 +48,24 @@ document.addEventListener('DOMContentLoaded', function() {
     position = 2.5;
   }
 
-  setAttributes(orangeText, {
-    style: `transform: rotate(-${
-      solveTriangle(a, b, c)[5]
-    }deg); position: absolute; right: ${adjacentLength(40) /
-      position}px; bottom:70px; `
+  colorArray.forEach(x => {
+    a = x.adjacent;
+    b = x.hypotenuse;
+    c = x.opposite;
+    // find dynamic position for rotated text
+    pos =
+      document.documentElement.clientWidth -
+      ((x.adjacentB - x.adjacent) / 2 + x.adjacentB);
+    console.log(
+      `color ${x.color}: adjacentB: ${x.adjacentB}, adjacent: ${
+        x.adjacent
+      }, maths:: ${(x.adjacentB - x.adjacent) / 2 + x.adjacent}`
+    );
+    setAttributes(x.text, {
+      style: `transform: rotate(-${
+        solveTriangle(a, b, c)[5]
+      }deg); left: ${pos}px; `
+    });
   });
 
   // On-click content toggles
