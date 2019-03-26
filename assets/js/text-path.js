@@ -37,10 +37,21 @@ document.addEventListener('DOMContentLoaded', function() {
   b = Math.hypot(oppositeLength(20), adjacentLength(40));
   c = oppositeLength(20);
   console.log(colorArray);
+
+  // adjust text positioning to stay inside color bars based on screen width
+  const screenWidth = document.documentElement.clientWidth;
+  let position = '';
+  if (screenWidth > 1140) {
+    position = 2;
+  } else if (screenWidth < 1140) {
+    position = 2.5;
+  }
+
   setAttributes(orangeText, {
     style: `transform: rotate(-${
       solveTriangle(a, b, c)[5]
-    }deg); position: absolute; left: ${vW - 0.57 * vW}px; bottom:70px; `
+    }deg); position: absolute; right: ${adjacentLength(40) /
+      position}px; bottom:70px; `
   });
 
   // On-click content toggles
