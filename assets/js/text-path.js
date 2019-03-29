@@ -37,40 +37,20 @@ const colorArray = [
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
-  console.log(colorArray);
-
   // adjust text positioning to stay inside color bars based on screen width
   const screenWidth = document.documentElement.clientWidth;
-  let position = '';
-  if (screenWidth > 1140) {
-    position = 2;
-  } else if (screenWidth < 1140) {
-    position = 2.5;
-  }
-
   colorArray.forEach(x => {
     a = x.adjacent;
     b = x.hypotenuse;
     c = x.opposite;
     // find dynamic position for rotated text
-    if (document.documentElement.clientWidth <= 900) {
-      pos =
-        document.documentElement.clientWidth -
-        ((x.adjacentB - x.adjacent) / 2 + x.adjacentB + 25); // good for width under 900px
-    } else if (document.documentElement.clientWidth <= 1350) {
-      pos =
-        document.documentElement.clientWidth -
-        ((x.adjacentB - x.adjacent) / 2 + x.adjacentB - 25); // good for width over 900x
+    if (screenWidth <= 900) {
+      pos = screenWidth - ((x.adjacentB - x.adjacent) / 2 + x.adjacentB + 25); // good for width under 900px
+    } else if (screenWidth <= 1350) {
+      pos = screenWidth - ((x.adjacentB - x.adjacent) / 2 + x.adjacentB - 25); // good for width over 900x
     } else {
-      pos =
-        document.documentElement.clientWidth -
-        ((x.adjacentB - x.adjacent) / 2 + x.adjacentB - 50); // good for width over 900x
+      pos = screenWidth - ((x.adjacentB - x.adjacent) / 2 + x.adjacentB - 50); // good for width over 900x
     }
-    console.log(
-      `color ${x.color}: adjacentB: ${x.adjacentB}, adjacent: ${
-        x.adjacent
-      }, maths:: ${(x.adjacentB - x.adjacent) / 2 + x.adjacent}`
-    );
     setAttributes(x.text, {
       style: `transform: rotate(-${
         solveTriangle(a, b, c)[5]
