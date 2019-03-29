@@ -63,16 +63,17 @@ document.addEventListener('DOMContentLoaded', function() {
   let cArray = Array.from(cItems); // converts elements list into array
   for (let c = 0; c < cArray.length; c++) {
     let color = cArray[c];
-    let clicked = document.getElementById(`${color.id}-content`).dataset
-      .clicked;
+    let colorContent = document.getElementById(`${color.id}-content`);
+    let clicked = colorContent.dataset.clicked;
     cArray[c].addEventListener(
       'click',
       function() {
         clicked ^= 1;
-        setAttributes(document.getElementById(`${color.id}-content`), {
+        setAttributes(colorContent, {
           'data-clicked': clicked,
           style: `background-color: ${cArray[c].style.backgroundColor};`
         });
+        window.scrollTo(0, document.body.scrollHeight);
         let toggles = cArray.filter(color => color != cArray[c]);
         for (t in toggles) {
           if (
@@ -90,7 +91,6 @@ document.addEventListener('DOMContentLoaded', function() {
     );
   }
 });
-
 function oppositeLength(percent) {
   return vH * ((100 - percent) / 100);
 }
