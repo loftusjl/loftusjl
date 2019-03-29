@@ -99,7 +99,8 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById(`${toggles[t].id}-content`).dataset
               .clicked == 1
           ) {
-            setAttributes(document.getElementById(`${toggles[t].id}-content`), {
+            let objDiv = document.getElementById(`${toggles[t].id}-content`);
+            setAttributes(objDiv, {
               'data-clicked': 0
             });
           }
