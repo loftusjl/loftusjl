@@ -53,9 +53,19 @@ document.addEventListener('DOMContentLoaded', function() {
     b = x.hypotenuse;
     c = x.opposite;
     // find dynamic position for rotated text
-    pos =
-      document.documentElement.clientWidth -
-      ((x.adjacentB - x.adjacent) / 2 + x.adjacentB);
+    if (document.documentElement.clientWidth <= 900) {
+      pos =
+        document.documentElement.clientWidth -
+        ((x.adjacentB - x.adjacent) / 2 + x.adjacentB + 25); // good for width under 900px
+    } else if (document.documentElement.clientWidth <= 1350) {
+      pos =
+        document.documentElement.clientWidth -
+        ((x.adjacentB - x.adjacent) / 2 + x.adjacentB - 25); // good for width over 900x
+    } else {
+      pos =
+        document.documentElement.clientWidth -
+        ((x.adjacentB - x.adjacent) / 2 + x.adjacentB - 50); // good for width over 900x
+    }
     console.log(
       `color ${x.color}: adjacentB: ${x.adjacentB}, adjacent: ${
         x.adjacent
