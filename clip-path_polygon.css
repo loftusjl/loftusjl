@@ -63,9 +63,10 @@ body::before {
 #blue-content {
   padding: 10px;
 }
-#blue-content p {
+.content p {
   padding: 10px 30px 0 10px;
   text-indent: 25px;
+  line-height: 1.75;
 }
 .header {
   position: fixed;
@@ -78,6 +79,12 @@ body::before {
   position: absolute;
   top: 150px;
   left: 50px;
+}
+.info a:visited {
+  color: aliceblue;
+}
+.info a {
+  color: aliceblue;
 }
 
 .color-clip {
@@ -199,6 +206,7 @@ body::before {
   position: absolute;
   border-top: 1px solid #282c3134;
   border-bottom: 1px solid #282c3134;
+  padding: 5px;
   top: 320px;
   right: 2%;
   height: 0;
