@@ -1,186 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Jesse Loftus</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Import Google Icon Font -->
     <link
       rel="stylesheet"
       type="text/css"
       media="screen"
       href="./assets/css/reset.css"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato|Montserrat"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="./assets/css/materialize.min.css"
-      media="screen,projection"
-    />
     <script defer src="./assets/js/all.min.js"></script>
     <link
-      rel="stylesheet"
       type="text/css"
-      media="screen"
+      rel="stylesheet"
       href="./assets/css/style.css"
+      media="screen,projection"
     />
     <link rel="stylesheet" href="./assets/css/html.css" />
   </head>
-
   <body>
-    <header class="header">
-      <div class="title">
-        <div class="profile-pic z-depth-3 hoverable"></div>
-
-        <div class="titleLine">
-          <p class="flow-text" style="font-weight:bolder; font-size: 2em;">
-            Jesse Loftus
-          </p>
-          <p style="font-weight:bold; font-size: 1.2em">
-            Web Applications Developer
-          </p>
-          <hr />
+    <div class="header frame">
+      <div id="screen">
+        <div class="info">
+          <span>Jesse Loftus</span>
+          <br />
+          <span>Web Application Developer</span
+          ><span class="blinking-cursor">&#9613;</span>
+          <br />
           <p>
-            <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
-            <i class="fab fa-github-square fa-lg" aria-hidden="true"></i>
-            <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
+            <a
+              href="https://www.linkedin.com/in/jesse-loftus-861aaa1b/"
+              target="_blank"
+              ><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/jesse-loftus-861aaa1b/"
+              target="_blank"
+              ><i class="fab fa-github-square fa-lg" aria-hidden="true"></i
+            ></a>
+            <a href="mailto:jesse.loftus@gmail.com" target="_blank"
+              ><i class="fa fa-envelope fa-lg" aria-hidden="true"></i
+            ></a>
           </p>
         </div>
-      </div>
-    </header>
-    <nav class="navbar">
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Logo</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">JavaScript</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div class="container body">
-      <!-- ABOUT ME SECTION -->
-      <h2>About Me</h2>
-      <hr />
-      <section class="row">
-        <article class="col m8 z-depth-1">
-          <div class="description">
-            <p>
-              For the last 12 years I constantly found myself developing systems
-              to better my work environment, increase accountability and
-              productivity. I’ve also been taking classes and independently
-              studying web development. More recently I graduated from the UCSD
-              Extension Full Stack Development Bootcamp.
-            </p>
-            <br />
-            <p>
-              To that end I have been working to move into a web applications
-              development role and fully leverage all the knowledge and
-              experience I’ve obtained over the years.
-            </p>
-          </div>
-        </article>
-        <aside class="col m3 offset-m1">
-          <ul class="collection" style="z-index:-1;">
-            <li class="collection-item">San Diego, CA</li>
-            <li class="collection-item">Jesse.loftus@gmail.com</li>
-            <li class="collection-item"><a href="#">Download Resume/CV</a></li>
-          </ul>
-        </aside>
-      </section>
-      <!-- PROJECTS SECTION -->
-      <h2>Projects</h2>
-      <hr />
-      <section class="row">
-        <article class="col m8 z-depth-1">
-          <div class="current">
-            <div class="project-banner hoverable z-depth-1">
-              <h3 class="project-banner-text">Dynamite Kitchen Supplier</h3>
-              <div class="project-banner-bg"></div>
-            </div>
-            <div class="description">
-              <p class="">
-                <i class="fab fa-js-square a-3x"></i> Javascript |
-                <i class="fab fa-node a-3x"></i> Node.js |
-                <i class="fab fa-node-js a-3x"></i> Express.js |
-                <i class="fas fa-database a-3x"></i> MySQL |
-                <a href="#">
-                  <i class="fab fa-github-square a-3x" aria-hidden="true"></i>
-                  GitHub
-                </a>
-              </p>
-              <hr />
-              <p>
-                Dynamite Kitchen Supplier (DkS) is a full-stack web-app that
-                will allow for role based users to input orders for purchase
-                using a restaurant kitchen as its model. The app allow's for a
-                seperation of roles each with their own set of privileges and
-                access. Users will need to login or create a new user which will
-                be stored in the database.
-              </p>
-              <blockquote>
-                <a href="#" class="waves-effect waves-teal btn-flat flow-text"
-                  ><i class="fas fa-link fa-lg" aria-hidden="true"></i> DEMO</a
-                >
-                Username: <em class="flow-text">supervisor</em> || Password:
-                <em class="flow-text">password</em>
-              </blockquote>
-            </div>
-            <div class="description"><hr /></div>
-          </div>
-        </article>
-        <div class="aside col offset-m1 m3">
-          <aside>
-            <h5>Tech Used</h5>
-            <ul class="collection">
-              <li class="collection-item">
-                <i class="fab fa-js-square a-3x"></i> Javascript
-              </li>
-              <li class="collection-item">
-                <i class="icon-mongodb"></i> MongoDB
-              </li>
-              <li class="collection-item">
-                <i class="fab fa-node-js a-3x"></i> Express.js
-              </li>
-              <li class="collection-item">
-                <i class="fab fa-react a-3x"></i> React.js
-              </li>
-              <li class="collection-item">
-                <i class="fab fa-node a-3x"></i> Node.js
-              </li>
-              <li class="collection-item"><i class="icon-sql"></i> SQL</li>
-            </ul>
-          </aside>
+        <div id="orange" class="color-clip" style="background-color: #be5c51;">
+          <div id="orange-text" class="color-text">Projects</div>
         </div>
-      </section>
+        <div id="orange-content" class="content" data-clicked="0">
+          <p>
+            I'm actively desiging a new projects layout. For now please visit my
+            GitHub page to view my work.
+            <a href="https://github.com/loftusjl"
+              ><i class="fab fa-github-square fa-lg" aria-hidden="true"></i
+              >GitHub Link</a
+            >
+          </p>
+        </div>
+        <div id="blue" class="color-clip" style="background-color: #96c1ba;">
+          <span id="blue-text" class="color-text">About Me</span>
+        </div>
+        <div id="blue-content" class="content" data-clicked="0">
+          <div class="profile-pic"></div>
+          <p>
+            For the last 12 years I constantly found myself developing systems
+            to better my work environment, increase accountability and
+            productivity. I’ve also been taking classes and independently
+            studying web development. More recently I graduated from the UCSD
+            Extension Full Stack Development Bootcamp and am in the process of
+            beginning work on my Computer Science Bachelors through National
+            University.
+          </p>
+          <p>
+            To that end I have been working to move into a web applications
+            development role and fully leverage all the knowledge and experience
+            I’ve obtained over the years.
+          </p>
+        </div>
+        <div id="yellow" class="color-clip" style="background-color: #dbd359;">
+          <span id="yellow-text" class="color-text">Contact</span>
+        </div>
+        <div id="yellow-content" class="content" data-clicked="0">
+          <p>Contact Info...</p>
+        </div>
+        <div
+          id="orangeB"
+          class="color-bottom"
+          style="background-color: #be5c51; background-image: linear-gradient(to bottom right, #be5c51,#282c31);"
+        ></div>
+        <div
+          id="blueB"
+          class="color-bottom"
+          style="background-color: #96c1ba; background-image: linear-gradient(to bottom right,#96c1ba,#282c31)"
+        ></div>
+        <div
+          id="yellowB"
+          class="color-bottom"
+          style="background-color: #dbd359; background-image: linear-gradient(to bottom right,#dbd359,#282c31)"
+        ></div>
+      </div>
     </div>
+    <div class="scroll-target"></div>
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"
-    ></script>
-    <script src="./assets/js/materialize.min.js"></script>
-    <!-- <script src="./assets/js/main.js"></script> -->
-    <script>
-      $(document).ready(function() {
-        $('.sidenav').sidenav();
-        $('.materialboxed').materialbox();
-        $('.parallax').parallax();
-        $('.tooltipped').tooltip();
-        $('.fixed-action-btn').floatingActionButton({
-          toolbarEnabled: true
-        });
-      });
-    </script>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
