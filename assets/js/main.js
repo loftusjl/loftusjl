@@ -1,217 +1,260 @@
-const portfolio = [
+// color elements
+const orange = document.getElementById('orange');
+const orangeText = document.getElementById('orange-text');
+const blue = document.getElementById('blue');
+const blueText = document.getElementById('blue-text');
+const yellow = document.getElementById('yellow');
+const yellowText = document.getElementById('yellow-text');
+
+const vW = document.documentElement.clientWidth * 0.8;
+const vH = 300;
+let cItems = document.getElementsByClassName('color-clip');
+let cArray = Array.from(cItems); // converts elements list into array
+
+const colorArray = [
   {
-    name: 'Dynamite Kitchen Supplier',
-    image: './assets/images/dks.png',
-    description: `Dynamite Kitchen Supplier (DkS) is a full-stack web-app that will allow for role based users to input orders for purchase using a restaurant kitchen as its model. The app allow's for a seperation of roles each with their own set of privileges and access. Users will need to login or create a new user which will be stored in the database. Username: supervisor, Password: password`,
-    technologies: '',
-    live: 'https://serene-forest-68972.herokuapp.com/',
-    github: 'https://github.com/loftusjl/Dynamite-Kitchen-Supplier',
-    types: ['fullStack']
+    color: orange,
+    text: orangeText,
+    opposite: oppositeLength(20),
+    adjacent: adjacentLength(40),
+    hypotenuse: Math.hypot(oppositeLength(20), adjacentLength(40)),
+    adjacentB: adjacentLength(20)
   },
   {
-    name: 'Burger Bonzai',
-    image: './assets/images/burgerBonzai.PNG',
-    description: 'Burger Bonzai is a full-stack web-app using MySQL, Node, Express, Handlebars and a homemade ORM.',
-    technologies: '',
-    live: 'https://enigmatic-lowlands-17209.herokuapp.com/',
-    github: 'https://github.com/loftusjl/burger',
-    types: ['fullStack']
+    color: blue,
+    text: blueText,
+    opposite: oppositeLength(40),
+    adjacent: adjacentLength(60),
+    hypotenuse: Math.hypot(oppositeLength(40), adjacentLength(60)),
+    adjacentB: adjacentLength(40)
   },
   {
-    name: 'Friend Finder',
-    image: './assets/images/friendfinder.jpg',
-    description: 'Friend Finder is a full-stack web-app that will compare your survey results with those of 200 users and return the name and profile pic of the people who match your responses most closely!',
-    technologies: '',
-    live: 'https://frozen-river-95808.herokuapp.com/',
-    github: 'https://github.com/loftusjl/FriendFinder',
-    types: ['fullStack']
-  },
-  {
-    name: 'Bamazon Node App',
-    image: './assets/images/bamazonButton.PNG',
-    description: "An Amazon-like storefront using MySQL, NodeJS, and Javascript. The app takes in orders from customers and depletes stock from the store's inventory. It will also track product sales across store departments and then provide a summary of the highest-grossing departments in the store along with various other functions.",
-    technologies: '',
-    live: '',
-    github: 'https://github.com/loftusjl/bamazon',
-    types: ['backEnd']
-  },
-  {
-    name: 'The Destinator',
-    image: './assets/images/travelMap01.jpg',
-    description: 'A destination search site filtered by country and then desired city. The Destinator gives you a 5 day forecast, highest ranked hotels, restaurants, and points of interest in the surrounding area.',
-    technologies: '',
-    live: 'https://loftusjl.github.io/TheDestinator/',
-    github: 'https://github.com/loftusjl/TheDestinator',
-    types: ['fullStack']
-  },
-  {
-    name: 'LIRI Node App',
-    image: './assets/images/CLI.png',
-    description: 'A NodeJS command line tool for pulling tweets or movie and song info.',
-    technologies: '',
-    live: '',
-    github: 'https://github.com/loftusjl/liri-node-app',
-    types: ['backEnd']
-  },
-  {
-    name: 'Crystal Lazor Gunship!',
-    image: './assets/images/crystalGame.png',
-    description: 'Each game your crystals receive a random value. Click a crystal and try to remember the value. Each click adds to your score. Try to hit the target score without going over!',
-    technologies: '',
-    live: 'https://loftusjl.github.io/Crystal-Lazor-Gunship/',
-    github: 'https://github.com/loftusjl/Crystal-Lazor-Gunship',
-    types: ['frontEnd']
-  },
-  {
-    name: 'Horror Hangman',
-    image: './assets/images/hangmanChucky.jpg',
-    description: 'Try to guess the villain in this horror movie take on the classic game hangman!',
-    technologies: '',
-    live: 'https://loftusjl.github.io/WordGuessGame/',
-    github: 'https://github.com/loftusjl/WordGuessGame',
-    types: ['frontEnd']
-  },
-  {
-    name: 'HIPAA Quiz',
-    image: './assets/images/HIPAA.png',
-    description: 'A HIPAA training quiz which provides a knowledge check for HIPAA training. Questions are randomized and you areonly given so much time to answer. You must score 70% or greater to pass.',
-    technologies: '',
-    live: 'https://loftusjl.github.io/TriviaGame/',
-    github: 'https://github.com/loftusjl/TriviaGame',
-    types: ['frontEnd']
-  },
-  {
-    name: 'Giphy Topics',
-    image: './assets/images/giphyGuy.png',
-    description: 'A Giphy image grabber using the Giphy API. Grab images from the site and display them in thumbnail sized images based on pre-selected topics or topics you enter. Images will toggle animation on click. **Warning: This site is loud**',
-    technologies: '',
-    live: 'https://loftusjl.github.io/GiphySearch/',
-    github: 'https://github.com/loftusjl/GiphySearch',
-    types: ['frontEnd']
-  },
-  {
-    name: 'Train Schedule',
-    image: './assets/images/trainSchedule.jpg',
-    description: 'Enter your trains with the Train Name, Destination, First Train Time (in military time), and Frequency -- in minutes. The scheduler will keep track of when the trains are due to arrive and alert you about which should be showing up next in relative time.',
-    technologies: '',
-    live: 'https://loftusjl.github.io/TrainSchedule',
-    github: 'https://github.com/loftusjl/TrainSchedule',
-    types: ['frontEnd']
+    color: yellow,
+    text: yellowText,
+    opposite: oppositeLength(60),
+    adjacent: adjacentLength(80),
+    hypotenuse: Math.hypot(oppositeLength(60), adjacentLength(80)),
+    adjacentB: adjacentLength(60)
   }
 ];
-
-// TypeWriter was created by Daniel Groen
-// https://codepen.io/danielgroen/pen/VeRPOq
-
-document.addEventListener('DOMContentLoaded', function (event) {
-  addProject(portfolio);
-  // array with texts to type in typewriter
-  var dataText = ["Hi, I'm Jesse.", "Front-End Developer.", "Back-End Developer.", "Full-Stack Developer."];
-  // type one text in the typwriter
-  // keeps calling itself until the text is finished
-  function typeWriter(text, i, fnCallback) {
-    // check if text isn't finished yet
-    if (i < (text.length)) {
-      // add next character to h1
-      document.querySelector("h1").innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
-
-      // wait for a while and call this function again for next character
-      setTimeout(function () {
-        typeWriter(text, i + 1, fnCallback)
-      }, 100);
-    }
-    // text finished, call callback if there is a callback function
-    else if (typeof fnCallback == 'function') {
-      // call callback after timeout
-      setTimeout(fnCallback, 700);
-    }
-  }
-  // start a typewriter animation for a text in the dataText array
-  function StartTextAnimation(i) {
-    if (typeof dataText[i] == 'undefined') {
-      setTimeout(function () {
-        StartTextAnimation(0);
-      }, 20000);
-    }
-    // check if dataText[i] exists
-    if (i < dataText[i].length) {
-      // text exists! start typewriter animation
-      typeWriter(dataText[i], 0, function () {
-        // after callback (and whole text has been animated), start next text
-        StartTextAnimation(i + 1);
-      });
-    }
-  }
-  // start the text animation
-  StartTextAnimation(0);
-  // Select all links with hashes
-  $('a[href*="#"]')
-    // Remove links that don't actually link to anything
-    .not('[href="#"]')
-    .not('[href="#0"]')
-    .click(function (event) {
-      // On-page links
-      if (
-        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
-        location.hostname == this.hostname
-      ) {
-        // Figure out element to scroll to
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        // Does a scroll target exist?
-        if (target.length) {
-          // Only prevent default if animation is actually gonna happen
-          event.preventDefault();
-          $('html, body').animate({
-            scrollTop: target.offset().top
-          }, 1000);
+document.addEventListener('DOMContentLoaded', function() {
+  positionText();
+  // On-click content toggles
+  for (let c = 0; c < cArray.length; c++) {
+    let color = cArray[c];
+    let colorContent = document.getElementById(`${color.id}-content`);
+    let bgColor = window
+      .getComputedStyle(document.body, null)
+      .getPropertyValue('background-image');
+    cArray[c].addEventListener(
+      'click',
+      function() {
+        let toggles = cArray.filter(color => color != cArray[c]);
+        for (t in toggles) {
+          if (
+            document.getElementById(`${toggles[t].id}-content`).dataset
+              .clicked == '1'
+          ) {
+            let objDiv = document.getElementById(`${toggles[t].id}-content`);
+            setAttributes(objDiv, {
+              'data-clicked': '0',
+              style: ``
+            });
+          }
         }
-      }
-    });
+        if (colorContent.dataset.clicked === '0') {
+          setAttributes(colorContent, {
+            'data-clicked': '1',
+            style: `background-image: ${bgColor}; border: 5px solid ${
+              cArray[c].style.backgroundColor
+            };`
+          });
+        } else {
+          setAttributes(colorContent, {
+            'data-clicked': '0',
+            style: ``
+          });
+        }
+      },
+      false
+    );
+  }
 });
 
-function addProject(data) {
-  data.forEach(data => {
-    let elem = document.getElementById('applications');
-    let newProject = document.createElement("div");
-    let domString = `<div class="col s12 l6">
-    <div class="card small hoverable">
-      <div class="card-image waves-effect waves-block waves-light">
-        <img class="activator" src="${data.image}">
-      </div>
-      <div class="card-content">
-        <span class="card-title activator grey-text text-darken-4">${data.name}
-          <i class="material-icons right">more_vert</i>
-        </span>
-        <div class="card-action activator">
-          <a class="activator teal-text text-darken-4">Read more...</a>
-        </div>
-      </div>
-      <div class="card-reveal">
-        <span class="card-title grey-text text-darken-4">${data.name}
-          <i class="material-icons right">close</i>
-        </span>
-        <p>${data.description}</p>
-        <div class="container">
-          <div class="row card-action">
-            <div class="col s5">
-              <p>
-                <a href="${data.live}" target="_blank" class="tooltipped teal-text text-darken-4" data-position="top" data-tooltip="Live Site"><i class="material-icons">web</i>
-                Live Site</a>
-              </p>
-            </div>
-            <div class="col s5">
-              <p>
-                <a href="${data.github}" target="_blank" class="tooltipped teal-text text-darken-4" data-position="top" data-tooltip="GitHub"><i class="fab fa-github-square fa-lg"></i>
-                GitHub</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>`
-    newProject.innerHTML = domString;
-    elem.appendChild(newProject);
+function oppositeLength(percent) {
+  return vH * ((100 - percent) / 100);
+}
+function adjacentLength(percent) {
+  return vW - vW * (percent / 100);
+}
+
+function setAttributes(el, attr) {
+  for (const key in attr) {
+    el.setAttribute(key, attr[key]);
+  }
+}
+
+function positionText() {
+  // adjust text positioning to stay inside color bars based on screen width
+  const screenWidth = document.documentElement.clientWidth;
+  colorArray.forEach(x => {
+    a = x.adjacent;
+    b = x.hypotenuse;
+    c = x.opposite;
+    col = x.text;
+    // find dynamic position for rotated text
+    if (screenWidth <= 900) {
+      pos = screenWidth - ((x.adjacentB - x.adjacent) / 2 + x.adjacentB + 25); // good for width under 900px
+    } else if (screenWidth <= 1350) {
+      pos = screenWidth - ((x.adjacentB - x.adjacent) / 2 + x.adjacentB - 25); // good for width over 900x
+    } else {
+      pos = screenWidth - ((x.adjacentB - x.adjacent) / 2 + x.adjacentB - 50); // good for width over 900x
+    }
+    setAttributes(x.text, {
+      style: `transform: rotate(-${
+        solveTriangle(a, b, c)[5]
+      }deg); left: ${pos}px; `
+    });
   });
+}
+function solveAngle(a, b, c) {
+  var temp = (a * a + b * b - c * c) / (2 * a * b);
+  if (-1 <= temp && temp <= 0.9999999) return radToDeg(Math.acos(temp));
+  else if (temp <= 1)
+    // Explained in https://www.nayuki.io/page/numerically-stable-law-of-cosines
+    return radToDeg(Math.sqrt((c * c - (a - b) * (a - b)) / (a * b)));
+  else throw 'No solution';
+}
+function radToDeg(x) {
+  return (x / Math.PI) * 180;
+}
+// Given some sides and angles, this returns a tuple of 8 number/string values.
+function solveTriangle(a, b, c, A, B, C) {
+  var sides = (a != null) + (b != null) + (c != null); // Boolean to integer conversion
+  var angles = (A != null) + (B != null) + (C != null); // Boolean to integer conversion
+  var area, status;
+
+  if (sides + angles != 3) throw 'Give exactly 3 pieces of information';
+  else if (sides == 0) throw 'Give at least one side length';
+  else if (sides == 3) {
+    status = 'Side side side (SSS) case';
+    if (a + b <= c || b + c <= a || c + a <= b) throw status + ' - No solution';
+    A = solveAngle(b, c, a);
+    B = solveAngle(c, a, b);
+    C = solveAngle(a, b, c);
+    // Heron's formula
+    var s = (a + b + c) / 2;
+    area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+  } else if (angles == 2) {
+    status = 'Angle side angle (ASA) case';
+    // Find missing angle
+    if (A == null) A = 180 - B - C;
+    if (B == null) B = 180 - C - A;
+    if (C == null) C = 180 - A - B;
+    if (A <= 0 || B <= 0 || C <= 0) throw status + ' - No solution';
+    var sinA = Math.sin(degToRad(A));
+    var sinB = Math.sin(degToRad(B));
+    var sinC = Math.sin(degToRad(C));
+    // Use law of sines to find sides
+    var ratio; // side / sin(angle)
+    if (a != null) {
+      ratio = a / sinA;
+      area = (a * ratio * sinB * sinC) / 2;
+    }
+    if (b != null) {
+      ratio = b / sinB;
+      area = (b * ratio * sinC * sinA) / 2;
+    }
+    if (c != null) {
+      ratio = c / sinC;
+      area = (c * ratio * sinA * sinB) / 2;
+    }
+    if (a == null) a = ratio * sinA;
+    if (b == null) b = ratio * sinB;
+    if (c == null) c = ratio * sinC;
+  } else if (
+    (A != null && a == null) ||
+    (B != null && b == null) ||
+    (C != null && c == null)
+  ) {
+    status = 'Side angle side (SAS) case';
+    if (
+      (A != null && A >= 180) ||
+      (B != null && B >= 180) ||
+      (C != null && C >= 180)
+    )
+      throw status + ' - No solution';
+    if (a == null) a = solveSide(b, c, A);
+    if (b == null) b = solveSide(c, a, B);
+    if (c == null) c = solveSide(a, b, C);
+    if (A == null) A = solveAngle(b, c, a);
+    if (B == null) B = solveAngle(c, a, b);
+    if (C == null) C = solveAngle(a, b, c);
+    if (A != null) area = (b * c * Math.sin(degToRad(A))) / 2;
+    if (B != null) area = (c * a * Math.sin(degToRad(B))) / 2;
+    if (C != null) area = (a * b * Math.sin(degToRad(C))) / 2;
+  } else {
+    status = 'Side side angle (SSA) case - ';
+    var knownSide, knownAngle, partialSide;
+    if (a != null && A != null) {
+      knownSide = a;
+      knownAngle = A;
+    }
+    if (b != null && B != null) {
+      knownSide = b;
+      knownAngle = B;
+    }
+    if (c != null && C != null) {
+      knownSide = c;
+      knownAngle = C;
+    }
+    if (a != null && A == null) partialSide = a;
+    if (b != null && B == null) partialSide = b;
+    if (c != null && C == null) partialSide = c;
+    if (knownAngle >= 180) throw status + 'No solution';
+    var ratio = knownSide / Math.sin(degToRad(knownAngle));
+    var temp = partialSide / ratio; // sin(partialAngle)
+    var partialAngle, unknownSide, unknownAngle;
+    if (temp > 1 || (knownAngle >= 90 && knownSide <= partialSide))
+      throw status + 'No solution';
+    else if (temp == 1 || knownSide >= partialSide) {
+      status += 'Unique solution';
+      partialAngle = radToDeg(Math.asin(temp));
+      unknownAngle = 180 - knownAngle - partialAngle;
+      unknownSide = ratio * Math.sin(degToRad(unknownAngle)); // Law of sines
+      area = (knownSide * partialSide * Math.sin(degToRad(unknownAngle))) / 2;
+    } else {
+      status += 'Two solutions';
+      var partialAngle0 = radToDeg(Math.asin(temp));
+      var partialAngle1 = 180 - partialAngle0;
+      var unknownAngle0 = 180 - knownAngle - partialAngle0;
+      var unknownAngle1 = 180 - knownAngle - partialAngle1;
+      var unknownSide0 = ratio * Math.sin(degToRad(unknownAngle0)); // Law of sines
+      var unknownSide1 = ratio * Math.sin(degToRad(unknownAngle1)); // Law of sines
+      partialAngle = [partialAngle0, partialAngle1];
+      unknownAngle = [unknownAngle0, unknownAngle1];
+      unknownSide = [unknownSide0, unknownSide1];
+      area = [
+        (knownSide * partialSide * Math.sin(degToRad(unknownAngle0))) / 2,
+        (knownSide * partialSide * Math.sin(degToRad(unknownAngle1))) / 2
+      ];
+    }
+    if (a != null && A == null) A = partialAngle;
+    if (b != null && B == null) B = partialAngle;
+    if (c != null && C == null) C = partialAngle;
+    if (a == null && A == null) {
+      a = unknownSide;
+      A = unknownAngle;
+    }
+    if (b == null && B == null) {
+      b = unknownSide;
+      B = unknownAngle;
+    }
+    if (c == null && C == null) {
+      c = unknownSide;
+      C = unknownAngle;
+    }
+  }
+
+  return [a, b, c, A, B, C, area, status];
 }
