@@ -1,3 +1,6 @@
+html {
+  font-size: 16px;
+}
 @font-face {
   font-family: Atarian;
   src: url(../font/SF-Atarian-System.woff);
@@ -83,7 +86,7 @@ body::before {
 .color-text {
   font-family: Atarian;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 2rem;
   font-family: Atarian;
   position: absolute;
   text-overflow: ellipsis;
@@ -134,7 +137,12 @@ body::before {
   padding: 10px 30px 0 10px;
   text-indent: 25px;
   text-align: justify;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
   line-height: 1.5;
+  font-size: 1rem;
 }
 .content[data-clicked='0'] {
   max-height: 0;
@@ -198,7 +206,7 @@ body::before {
 
 .blinking-cursor {
   font-weight: 100;
-  font-size: 30px;
+  font-size: 1rem;
   color: aliceblue;
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;
@@ -281,17 +289,17 @@ body::before {
 }
 @media screen and (max-width: 960px) {
   .color-text {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 720px) {
   .info {
     top: 50px;
     left: 25px;
-    font-size: 0.85em;
+    font-size: 0.85rem;
   }
   .color-text {
-    font-size: 1.25em;
+    font-size: 1.25rem;
   }
 }
 @media screen and (max-width: 400px) {
