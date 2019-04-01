@@ -8,6 +8,8 @@ const yellowText = document.getElementById('yellow-text');
 
 const vW = document.documentElement.clientWidth * 0.8;
 const vH = 300;
+let cItems = document.getElementsByClassName('color-clip');
+let cArray = Array.from(cItems); // converts elements list into array
 
 const colorArray = [
   {
@@ -35,14 +37,71 @@ const colorArray = [
     adjacentB: adjacentLength(60)
   }
 ];
-
 document.addEventListener('DOMContentLoaded', function() {
+  positionText();
+  // On-click content toggles
+  for (let c = 0; c < cArray.length; c++) {
+    let color = cArray[c];
+    let colorContent = document.getElementById(`${color.id}-content`);
+    let bgColor = window
+      .getComputedStyle(document.body, null)
+      .getPropertyValue('background-image');
+    cArray[c].addEventListener(
+      'click',
+      function() {
+        let toggles = cArray.filter(color => color != cArray[c]);
+        for (t in toggles) {
+          if (
+            document.getElementById(`${toggles[t].id}-content`).dataset
+              .clicked == '1'
+          ) {
+            let objDiv = document.getElementById(`${toggles[t].id}-content`);
+            setAttributes(objDiv, {
+              'data-clicked': '0',
+              style: ``
+            });
+          }
+        }
+        if (colorContent.dataset.clicked === '0') {
+          setAttributes(colorContent, {
+            'data-clicked': '1',
+            style: `background-image: ${bgColor}; border: 5px solid ${
+              cArray[c].style.backgroundColor
+            };`
+          });
+        } else {
+          setAttributes(colorContent, {
+            'data-clicked': '0',
+            style: ``
+          });
+        }
+      },
+      false
+    );
+  }
+});
+
+function oppositeLength(percent) {
+  return vH * ((100 - percent) / 100);
+}
+function adjacentLength(percent) {
+  return vW - vW * (percent / 100);
+}
+
+function setAttributes(el, attr) {
+  for (const key in attr) {
+    el.setAttribute(key, attr[key]);
+  }
+}
+
+function positionText() {
   // adjust text positioning to stay inside color bars based on screen width
   const screenWidth = document.documentElement.clientWidth;
   colorArray.forEach(x => {
     a = x.adjacent;
     b = x.hypotenuse;
     c = x.opposite;
+    col = x.text;
     // find dynamic position for rotated text
     if (screenWidth <= 900) {
       pos = screenWidth - ((x.adjacentB - x.adjacent) / 2 + x.adjacentB + 25); // good for width under 900px
@@ -57,51 +116,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }deg); left: ${pos}px; `
     });
   });
-
-  // On-click content toggles
-  let cItems = document.getElementsByClassName('color-clip');
-  let cArray = Array.from(cItems); // converts elements list into array
-  for (let c = 0; c < cArray.length; c++) {
-    let color = cArray[c];
-    let colorContent = document.getElementById(`${color.id}-content`);
-    let clicked = colorContent.dataset.clicked;
-    cArray[c].addEventListener(
-      'click',
-      function() {
-        clicked ^= 1;
-        setAttributes(colorContent, {
-          'data-clicked': clicked,
-          style: `background-color: ${cArray[c].style.backgroundColor};`
-        });
-        window.scrollTo(0, document.body.scrollHeight);
-        let toggles = cArray.filter(color => color != cArray[c]);
-        for (t in toggles) {
-          if (
-            document.getElementById(`${toggles[t].id}-content`).dataset
-              .clicked == 1
-          ) {
-            let objDiv = document.getElementById(`${toggles[t].id}-content`);
-            setAttributes(objDiv, {
-              'data-clicked': 0
-            });
-          }
-        }
-      },
-      false
-    );
-  }
-});
-function oppositeLength(percent) {
-  return vH * ((100 - percent) / 100);
-}
-function adjacentLength(percent) {
-  return vW - vW * (percent / 100);
-}
-
-function setAttributes(el, attr) {
-  for (const key in attr) {
-    el.setAttribute(key, attr[key]);
-  }
 }
 function solveAngle(a, b, c) {
   var temp = (a * a + b * b - c * c) / (2 * a * b);
