@@ -4,7 +4,7 @@ const portfolio = [
     image: './assets/images/dks.png',
     description:
       "Dynamite Kitchen Supplier (DkS) is a full-stack web-app that will allow for role based users to input orders for purchase using a restaurant kitchen as its model. The app allow's for a seperation of roles each with their own set of privileges and access. Users will need to login or create a new user which will be stored in the database. Username: supervisor, Password: password",
-    technologies: '',
+    technologies: 'Javascript, SQLite, NodeJS',
     live: 'https://serene-forest-68972.herokuapp.com/',
     github: 'https://github.com/loftusjl/Dynamite-Kitchen-Supplier',
     types: ['fullStack']
@@ -113,18 +113,40 @@ const portfolio = [
 // add projects to portfolio section
 document.addEventListener('DOMContentLoaded', function() {
   let styles = `
-          .projectContainer {
+          .pCard {
               border: 5px solid ${
                 document.getElementById('orange').style.backgroundColor
               };
-          }
+              overflow: hidden;
+              height:150px;
+              transition: max-height 0.6s ease-in-out;
+              -webkit-transition: max-height 0.6s ease-in-out; /* Safari 3.1 to 6.0 */
+            }
+            .pCard[data-clicked='1'] {
+                height: auto;
+            }
+            #p0 {
+                height:auto; 
+              }
           .pHead {
             width: 100%;
             height: 100%;
             min-width: 100%;
             min-height: 100%;
             position: relative;
+            cursor: pointer;
           }
+          .pHead::before {
+            background-size: cover;
+            content: "";
+            display: block;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            z-index: -2;
+            opacity: 0.65;
+        }
           .textOverlay {
             display: flex;
             flex-direction: column;
@@ -139,11 +161,10 @@ document.addEventListener('DOMContentLoaded', function() {
             min-height: 150px;
             display: block;
             position: absolute;
-            top:0;
+            top:0px;
           }
           .pHead-text::before {
             content: "";
-            
             margin-left: 0;
             min-width: 100%;
             min-height: 150px;
@@ -160,6 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
             margin: 3% 0;
             text-transform: uppercase;
           }
+
       `;
   addProjects(portfolio, styles);
   clickExpand();
@@ -169,54 +191,66 @@ function addProjects(data, styles) {
   const projects = document.getElementById('orange-content');
   data.forEach((el, index) => {
     const newProject = document.createElement('div');
-    newProject.className = 'portfolioWrapper';
+    newProject.className = 'pCard';
+    newProject.id = `p${index}`;
+    newProject.dataset.clicked = '0';
 
     styles += `
     #p${index} .pHead::before {
         background-image: url('${el.image}');
-        background-size: cover;
-        content: "";
-        display: block;
-        top:0;
-        left: 0;
-        width: 100%;
-        height: 150px;
-        z-index: -2;
-        opacity: 0.4;
     }
         `;
 
-    let domString = `<div id="p${index}" class="projectContainer">
-        <div class="pHead textOverlay" data-clicked="0">
+    let domString = `
+        <div class="pHead textOverlay">
             <div class="pHead-text">
-                <div class="pHead-title">${el.name}</div>
-                <div class="pHead-tech">${el.technologies}</div>
+                <h1 class="pHead-title">${el.name}</h1>
+                <h3 class="pHead-tech">${el.technologies}</h3>
             </div>
         </div>
-        <div class="pDesc">
+        <p class="pDesc">
           ${el.description}
           <span class="pLogin">Project Login info</span>
-        </div>
-        <div class="pLinks"><a href="${
+        </p>
+        <span class="pLinks"><a href="${
           el.live
-        }" target="_blank">Live Site</a> | <a href="${
+        }" target="_blank"><i class="fas fa-link"></i> Live Site</a> | <a href="${
       data.github
-    }" target="_blank">GitHub</a></div>
-      </div>`;
+    }" target="_blank"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i
+    > GitHub</a></span>
+    `;
     newProject.innerHTML = domString;
     projects.appendChild(newProject);
   });
   insertCSS(styles);
 }
 function clickExpand() {
-  const pItems = document.getElementsByClassName('projectContainer');
+  const pItems = document.getElementsByClassName('pCard');
+  const pArray = Array.from(pItems);
   for (let p = 0; p < pItems.length; p++) {
     pItems[p].addEventListener('click', function() {
-      //   console.log(p);
+      if (pItems[p].dataset.clicked === '0') {
+        setAttributes(pItems[p], {
+          'data-clicked': '1',
+          style: `min-height:auto; height:auto;`
+        });
+      }
+      let toggles = pArray.filter(proj => proj != pArray[p]);
+      for (t in toggles) {
+        setAttributes(toggles[t], {
+          'data-clicked': '0',
+          style: `height: 150px;
+            overflow: hidden;`
+        });
+      }
     });
   }
 }
-
+function setAttributes(el, attr) {
+  for (const key in attr) {
+    el.setAttribute(key, attr[key]);
+  }
+}
 function insertCSS(css) {
   // Create our stylesheet
   const style = document.createElement('style');
