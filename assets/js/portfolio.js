@@ -112,29 +112,93 @@ const portfolio = [
 ];
 // add projects to portfolio section
 document.addEventListener('DOMContentLoaded', function() {
-  addProjects(portfolio);
+  let styles = `
+          .projectContainer {
+              border: 5px solid ${
+                document.getElementById('orange').style.backgroundColor
+              };
+          }
+          .pHead {
+            width: 100%;
+            height: 100%;
+            min-width: 100%;
+            min-height: 100%;
+            position: relative;
+          }
+          .textOverlay {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            
+          }
+          .pHead-text {
+            color: #fff;
+            text-shadow: #343a40 2px 2px;
+            min-width: 100%;
+            min-height: 150px;
+            display: block;
+            position: absolute;
+            top:0;
+          }
+          .pHead-text::before {
+            content: "";
+            
+            margin-left: 0;
+            min-width: 100%;
+            min-height: 150px;
+            z-index: -1;
+            opacity: 0.4;
+            background-color: #343a40;
+          } 
+          .pHead-title, .pHead-text {
+            width: 100%;
+            display: block;
+            text-align: center;
+          } 
+          .pHead-title {
+            margin: 3% 0;
+            text-transform: uppercase;
+          }
+      `;
+  addProjects(portfolio, styles);
+  clickExpand();
 });
 
-function addProjects(data) {
+function addProjects(data, styles) {
   const projects = document.getElementById('orange-content');
-  data.forEach(data => {
+  data.forEach((el, index) => {
     const newProject = document.createElement('div');
     newProject.className = 'portfolioWrapper';
-    let domString = `<div class="projectContainer" style="border: 5px solid ${
-      document.getElementById('orange').style.backgroundColor
-    };">
-        <div class="pHead" style="background-image: url('${
-          data.image
-        }'); background-size: cover; background-repeat: no-repeat; height:150px;">
-          <div class="pHead-text">${data.name}</div>
+
+    styles += `
+    #p${index} .pHead::before {
+        background-image: url('${el.image}');
+        background-size: cover;
+        content: "";
+        display: block;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 150px;
+        z-index: -2;
+        opacity: 0.4;
+    }
+        `;
+
+    let domString = `<div id="p${index}" class="projectContainer">
+        <div class="pHead textOverlay" data-clicked="0">
+            <div class="pHead-text">
+                <div class="pHead-title">${el.name}</div>
+                <div class="pHead-tech">${el.technologies}</div>
+            </div>
         </div>
-        <div class="pTech">${data.technologies}</div>
         <div class="pDesc">
-          ${data.description}
+          ${el.description}
           <span class="pLogin">Project Login info</span>
         </div>
         <div class="pLinks"><a href="${
-          data.live
+          el.live
         }" target="_blank">Live Site</a> | <a href="${
       data.github
     }" target="_blank">GitHub</a></div>
@@ -142,4 +206,25 @@ function addProjects(data) {
     newProject.innerHTML = domString;
     projects.appendChild(newProject);
   });
+  insertCSS(styles);
+}
+function clickExpand() {
+  const pItems = document.getElementsByClassName('projectContainer');
+  for (let p = 0; p < pItems.length; p++) {
+    pItems[p].addEventListener('click', function() {
+      //   console.log(p);
+    });
+  }
+}
+
+function insertCSS(css) {
+  // Create our stylesheet
+  const style = document.createElement('style');
+  style.innerHTML = css;
+
+  // Get the first script tag
+  const ref = document.querySelector('script');
+
+  // Insert new styles before the first script tag
+  ref.parentNode.insertBefore(style, ref);
 }
