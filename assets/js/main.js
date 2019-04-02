@@ -1,3 +1,5 @@
+import * as portfolio from './portfolio';
+
 // color elements
 const orange = document.getElementById('orange');
 const orangeText = document.getElementById('orange-text');
@@ -81,6 +83,11 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+// add projects to portfolio section
+function addProjects(data) {
+  const projects = document.getElementById('orange-content');
+  data.forEach(data => {});
+}
 function oppositeLength(percent) {
   return vH * ((100 - percent) / 100);
 }
