@@ -45,7 +45,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let colorContent = document.getElementById(`${color.id}-content`);
     let bgColor = window
       .getComputedStyle(document.body, null)
-      .getPropertyValue('background-image');
+      .getPropertyValue('background-color');
+    // gradient background
+    // window.getComputedStyle(document.body, null).getPropertyValue('background-image');
     cArray[c].addEventListener(
       'click',
       function() {
@@ -65,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (colorContent.dataset.clicked === '0') {
           setAttributes(colorContent, {
             'data-clicked': '1',
-            style: `background-image: ${bgColor}; border: 5px solid ${
+            style: `background-color: ${bgColor}; border: 5px solid ${
               cArray[c].style.backgroundColor
             };`
           });
