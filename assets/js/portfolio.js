@@ -147,6 +147,18 @@ document.addEventListener('DOMContentLoaded', function() {
             z-index: -2;
             opacity: 0.65;
         }
+        .pHead::after {
+            background-color: #009600bf;
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.4;
+            }
           .textOverlay {
             display: flex;
             flex-direction: column;
