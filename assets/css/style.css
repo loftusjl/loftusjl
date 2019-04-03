@@ -149,6 +149,51 @@ a:visited {
   z-index: 2;
   box-shadow: 0px 1px 3px #005700bf, 0px -1px 3px #009600bf;
 }
+#yellow-content {
+  display: flex;
+  align-content: stretch;
+  text-align: center;
+}
+address {
+  min-height: 100%;
+  display: flex;
+  align-content: stretch;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+address .address-item {
+  padding: 30px 0;
+  height: 100%;
+  font-weight: bold;
+  flex: 1;
+  line-height: 2rem;
+}
+.address-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+address .fa-lg {
+  font-size: 3rem;
+}
+address .map {
+  border-right: 1px solid #3e4246;
+  background-image: url('../images/gmap.jpg');
+  background-size: cover;
+}
+address .social {
+  border-left: 1px solid #3e4246;
+}
+.social span {
+  display: flex;
+  height: 130px;
+  align-items: center;
+  justify-content: space-around;
+  text-decoration: none;
+}
 p {
   padding: 15px;
   text-indent: 25px;
