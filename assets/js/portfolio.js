@@ -114,6 +114,9 @@ const portfolio = [
 document.addEventListener('DOMContentLoaded', function() {
   let styles = `
           .pCard {
+              -moz-box-shadow:    inset 0 0 10px #000000;
+              -webkit-box-shadow: inset 0 0 10px #000000;
+              box-shadow:         inset 0 0 10px #000000;
               border: 5px solid ${
                 document.getElementById('orange').style.backgroundColor
               };
@@ -208,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function addProjects(data, styles) {
   const projects = document.getElementById('orange-content');
   data.forEach((el, index) => {
-    const newProject = document.createElement('div');
+    const newProject = document.createElement('article');
     newProject.className = 'pCard';
     newProject.id = `p${index}`;
     newProject.dataset.clicked = '0';
