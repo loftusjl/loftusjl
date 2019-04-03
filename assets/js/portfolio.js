@@ -1,7 +1,7 @@
 const portfolio = [
   {
     name: 'Dynamite Kitchen Supplier',
-    image: './assets/images/dks.png',
+    image: './assets/images/dk.jpg',
     description:
       "Dynamite Kitchen Supplier (DkS) is a full-stack web-app that will allow for role based users to input orders for purchase using a restaurant kitchen as its model. The app allow's for a seperation of roles each with their own set of privileges and access. Users will need to login or create a new user which will be stored in the database. Username: supervisor, Password: password",
     technologies: 'Javascript, SQLite, NodeJS',
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
             opacity: 0.65;
         }
         .pHead::after {
-            background-color: #009600bf;
+            background-color: #00d400;
             content: "";
             display: block;
             position: absolute;
@@ -159,6 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
             z-index: -1;
             opacity: 0.4;
             }
+
           .textOverlay {
             display: flex;
             flex-direction: column;
@@ -173,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
             min-height: 150px;
             display: block;
             position: absolute;
-            top:0px;
+            top:15px;
           }
           .pHead-text::before {
             content: "";
@@ -190,9 +191,14 @@ document.addEventListener('DOMContentLoaded', function() {
             text-align: center;
           } 
           .pHead-title {
-            margin: 3% 0;
+            margin: 10px 0;
             text-transform: uppercase;
           }
+          .pCard span{
+            margin: 15px;
+            width: 100%;
+          }
+         
 
       `;
   addProjects(portfolio, styles);
@@ -224,10 +230,10 @@ function addProjects(data, styles) {
           ${el.description}
           <span class="pLogin">Project Login info</span>
         </p>
-        <span class="pLinks"><a href="${
+        <span class="pLinks"><a class="button" href="${
           el.live
-        }" target="_blank"><i class="fas fa-link"></i> Live Site</a> | <a href="${
-      data.github
+        }" target="_blank"><i class="fas fa-link"></i> Live Site</a><a class="button" href="${
+      el.github
     }" target="_blank"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i
     > GitHub</a></span>
     `;
