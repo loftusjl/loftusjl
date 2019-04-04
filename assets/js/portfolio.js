@@ -208,8 +208,8 @@ document.addEventListener('DOMContentLoaded', function() {
 function addProjects(data, styles) {
   const projects = document.getElementById('orange-content');
   data.forEach((el, index) => {
-    const newProject = document.createElement('div');
-    newProject.className = 'pCard';
+    const newProject = document.createElement('article');
+    newProject.className = 'pCard shadow-inset';
     newProject.id = `p${index}`;
     newProject.dataset.clicked = '0';
 

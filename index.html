@@ -22,7 +22,7 @@
     <script defer src="./assets/js/all.min.js"></script>
   </head>
   <body>
-    <div class="header frame">
+    <div class="wrapper frame">
       <div id="screen">
         <div class="info">
           <span>Jesse Loftus</span>
@@ -53,8 +53,8 @@
         <div id="blue" class="color-clip" style="background-color: #93A4AD;">
           <span id="blue-text" class="color-text">About Me</span>
         </div>
-        <div id="blue-content" class="content" data-clicked="0">
-          <div class="about">
+        <div id="blue-content" class="content overflow-hidden" data-clicked="0">
+          <article class="about shadow-inset">
             <div>
               <div class="profile-pic"></div>
               <p>
@@ -72,13 +72,47 @@
                 experience I’ve obtained over the years.
               </p>
             </div>
-          </div>
+          </article>
         </div>
         <div id="yellow" class="color-clip" style="background-color: #dbd359;">
           <span id="yellow-text" class="color-text">Contact</span>
         </div>
-        <div id="yellow-content" class="content" data-clicked="0">
-          <p>Contact Info...</p>
+        <div
+          id="yellow-content"
+          class="content overflow-hidden"
+          data-clicked="0"
+        >
+          <address>
+            <div class="map address-item">
+              <i class="fas fa-map-marker-alt fa-lg"></i>
+            </div>
+            <div class="contact address-item">
+              <i class="far fa-id-card fa-lg"></i>
+              <br />
+              <br />
+              <a href="mailto:Jesse.Loftus@gmail.com">
+                (619) 721-3845
+                <br />
+                Jesse.Loftus@gmail.com
+              </a>
+              <span>
+                <div></div>
+                <div></div>
+                <a
+                  href="https://www.linkedin.com/in/jesse-loftus-861aaa1b/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/jesse-loftus-861aaa1b/"
+                  target="_blank"
+                  ><i class="fab fa-github-square fa-lg" aria-hidden="true"></i
+                ></a>
+                <div></div>
+                <div></div>
+              </span>
+            </div>
+          </address>
         </div>
         <div
           id="orangeB"
@@ -97,7 +131,6 @@
         ></div>
       </div>
     </div>
-    <div class="scroll-target"></div>
 
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/portfolio.js"></script>
