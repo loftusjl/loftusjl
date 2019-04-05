@@ -88,8 +88,8 @@ h3 {
 
 .info {
   position: fixed;
-  top: 50px;
-  left: 50px;
+  top: 8%;
+  left: 10%;
 }
 a,
 a:visited {
@@ -485,8 +485,6 @@ a.button:active {
 }
 @media screen and (max-width: 720px) {
   .info {
-    top: 50px;
-    left: 40px;
     font-size: 0.85rem;
   }
   .color-text {
@@ -506,7 +504,7 @@ a.button:active {
 
 @media screen and (max-width: 400px) {
   .info {
-    top: 15px;
+    top: 3%;
     left: 15px;
   }
   .color-bottom {
