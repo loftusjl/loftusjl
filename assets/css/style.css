@@ -278,6 +278,90 @@ p {
   clip-path: polygon(60% 0%, 80% 0%, 100% 20%, 100% 40%);
 }
 
+/* Projects Section: START */
+.pCard {
+  overflow: hidden;
+  height: 150px;
+  transition: max-height 0.6s ease-in-out;
+  -webkit-transition: max-height 0.6s ease-in-out; /* Safari 3.1 to 6.0 */
+}
+.pCard[data-clicked='1'] {
+  height: auto;
+}
+#p0 {
+  height: auto;
+}
+.pHead {
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+.pHead::before {
+  background-size: cover;
+  content: '';
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  z-index: -2;
+  opacity: 0.65;
+}
+.pHead::after {
+  background-color: #00d400;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.4;
+}
+.textOverlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.pHead-text {
+  color: #fff;
+  text-shadow: #343a40 2px 2px;
+  min-width: 100%;
+  min-height: 150px;
+  display: block;
+  position: absolute;
+  top: 15px;
+}
+.pHead-text::before {
+  content: '';
+  margin-left: 0;
+  min-width: 100%;
+  min-height: 150px;
+  z-index: -1;
+  opacity: 0.4;
+  background-color: #343a40;
+}
+.pHead-title,
+.pHead-text {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.pHead-title {
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+.pCard span {
+  margin: 15px;
+  width: 100%;
+}
+/* Projects Section: END */
+
 .blinking-cursor {
   font-weight: 100;
   font-size: 1rem;
