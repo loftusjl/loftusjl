@@ -40,6 +40,10 @@ body::before {
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
 }
+nav {
+  /* position: absolute;
+  bottom: 0; */
+}
 h1 {
   font-size: 2.5rem;
   font-weight: bold;
@@ -83,8 +87,8 @@ h3 {
 }
 
 .info {
-  position: absolute;
-  top: 150px;
+  position: fixed;
+  top: 50px;
   left: 50px;
 }
 a,
@@ -482,11 +486,15 @@ a.button:active {
 @media screen and (max-width: 720px) {
   .info {
     top: 50px;
-    left: 25px;
+    left: 40px;
     font-size: 0.85rem;
   }
   .color-text {
     font-size: 1.2rem;
+  }
+  .content {
+    width: 98%;
+    right: 0;
   }
   h1 {
     font-size: 1.75rem;
@@ -500,6 +508,9 @@ a.button:active {
   .info {
     top: 15px;
     left: 15px;
+  }
+  .color-bottom {
+    max-height: 200px;
   }
   .color-text {
     font-size: 1.15rem;
