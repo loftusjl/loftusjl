@@ -1,7 +1,7 @@
 # Portfolio Website
 
 This is my personal portfolio site.
-[logo](https://loftusjl.github.io/assets/images/site.PNG)
+![logo](https://loftusjl.github.io/assets/images/site.PNG)
 
 ## Getting Started
 
