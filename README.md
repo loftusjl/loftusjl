@@ -1,4 +1,4 @@
-# Portfolio Website
+# [Portfolio Website](https://loftusjl.github.io/)
 
 This is my personal portfolio site.
 ![logo](https://loftusjl.github.io/assets/images/site.PNG)
