@@ -3,8 +3,9 @@ const portfolio = [
     name: 'Dynamite Kitchen Supplier',
     image: './assets/images/dk.jpg',
     description:
-      "Dynamite Kitchen Supplier (DkS) is a full-stack web-app that will allow for role based users to input orders for purchase using a restaurant kitchen as its model. The app allow's for a seperation of roles each with their own set of privileges and access. Users will need to login or create a new user which will be stored in the database. Username: supervisor, Password: password",
-    technologies: 'Javascript, SQLite, NodeJS',
+      "Dynamite Kitchen Supplier (DkS) is a full-stack web-app that will allow for role based users to input orders for purchase using a restaurant kitchen as its model. The app allow's for a seperation of roles each with their own set of privileges and access. Users will need to login or create a new user which will be stored in the database. <br /><br /> Username: supervisor, Password: password",
+    technologies:
+      'Javascript, NodeJS, Express, MaterializeCSS, jQuery, PassportJS',
     live: 'https://serene-forest-68972.herokuapp.com/',
     github: 'https://github.com/loftusjl/Dynamite-Kitchen-Supplier',
     types: ['fullStack']
@@ -14,7 +15,7 @@ const portfolio = [
     image: './assets/images/crystalGame.png',
     description:
       'Each game your crystals receive a random value. Click a crystal and try to remember the value. Each click adds to your score. Try to hit the target score without going over!',
-    technologies: '',
+    technologies: 'JavaScript, jQuery, Bootstrap',
     live: 'https://loftusjl.github.io/Crystal-Lazor-Gunship/',
     github: 'https://github.com/loftusjl/Crystal-Lazor-Gunship',
     types: ['frontEnd']
@@ -34,7 +35,7 @@ const portfolio = [
     image: './assets/images/friendfinder.jpg',
     description:
       'Friend Finder is a full-stack web-app that will compare your survey results with those of 200 users and return the name and profile pic of the people who match your responses most closely!',
-    technologies: '',
+    technologies: 'JavaScript, NodeJS, Express, MaterializeCSS, jQuery',
     live: 'https://frozen-river-95808.herokuapp.com/',
     github: 'https://github.com/loftusjl/FriendFinder',
     types: ['fullStack']
@@ -44,7 +45,7 @@ const portfolio = [
     image: './assets/images/bamazonButton.PNG',
     description:
       "An Amazon-like storefront using MySQL, NodeJS, and Javascript. The app takes in orders from customers and depletes stock from the store's inventory. It will also track product sales across store departments and then provide a summary of the highest-grossing departments in the store along with various other functions.",
-    technologies: '',
+    technologies: 'JavaScript, NodeJS, MySQL',
     live: '',
     github: 'https://github.com/loftusjl/bamazon',
     types: ['backEnd']
@@ -85,7 +86,7 @@ const portfolio = [
     image: './assets/images/HIPAA.png',
     description:
       'A HIPAA training quiz which provides a knowledge check for HIPAA training. Questions are randomized and you are only given so much time to answer. You must score 70% or greater to pass.',
-    technologies: '',
+    technologies: 'jQuery, Bootstrap',
     live: 'https://loftusjl.github.io/TriviaGame/',
     github: 'https://github.com/loftusjl/TriviaGame',
     types: ['frontEnd']
@@ -147,14 +148,16 @@ function addProjects(data, styles) {
         </div>
         <p class="pDesc">
           ${el.description}
-          <span class="pLogin">Project Login info</span>
         </p>
-        <span class="pLinks"><a class="button" href="${
-          el.live
-        }" target="_blank"><i class="fas fa-link"></i> Live Site</a><a class="button" href="${
+        <div class="pActions">
+        <div class="button-wrapper">
+          <a class="button" href="${
+            el.live
+          }" target="_blank"><i class="fas fa-link"></i> Live Site</a><a class="button" href="${
       el.github
-    }" target="_blank"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i
-    > GitHub</a></span>
+    }" target="_blank"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i> GitHub</a>
+          </div>
+        </div>
     `;
     newProject.innerHTML = domString;
     projects.appendChild(newProject);
