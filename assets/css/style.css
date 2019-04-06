@@ -174,6 +174,7 @@ address {
   display: flex;
   align-content: stretch;
   justify-content: center;
+  text-align: center;
   width: 100%;
   overflow: hidden;
 }
@@ -182,7 +183,7 @@ address .address-item {
   height: 100%;
   font-weight: bold;
   flex: 1;
-  line-height: 2rem;
+  line-height: 2.2rem;
 }
 .address-item a {
   display: flex;
@@ -191,9 +192,6 @@ address .address-item {
   text-decoration: none;
 }
 
-address .fa-lg {
-  font-size: 3rem;
-}
 address .map {
   border-right: 1px solid #3e4246;
   background-image: url('../images/gmap.jpg');
@@ -505,7 +503,7 @@ a.button:active {
     right: 0;
   }
   a.button {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   h1 {
     font-size: 1.75rem;
@@ -515,10 +513,13 @@ a.button:active {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .info {
     top: 3%;
     left: 15px;
+  }
+  address .address-item {
+    margin: 0 5px;
   }
   a.button {
     font-size: 0.6rem;
