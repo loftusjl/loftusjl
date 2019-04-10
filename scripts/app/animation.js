@@ -12,3 +12,11 @@ var bouncingBall = anime({
     delay: 268
   }
 });
+
+anime({
+  targets: document.querySelector('.pCard[data-clicked="1"]'),
+  maxHeight: '9000px', // -> from '150px' to '9000px',
+  easing: 'easeInOutQuad',
+  direction: 'alternate',
+  loop: true
+});

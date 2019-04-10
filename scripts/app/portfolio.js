@@ -123,6 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
       `;
   addProjects(portfolio, styles);
   clickExpand();
+  document.getElementById('p0').dataset.clicked = '1';
 });
 
 function addProjects(data, styles) {
@@ -173,16 +174,22 @@ function clickExpand() {
     pItems[p].addEventListener('click', function() {
       if (pItems[p].dataset.clicked === '0') {
         setAttributes(pItems[p], {
-          'data-clicked': '1',
-          style: `min-height:auto; height:auto;`
+          'data-clicked': '1'
+        });
+        console.log(pItems[p]);
+        anime({
+          targets: pItems[p],
+          maxHeight: '9000px', // -> from '150px' to '9000px',
+          duration: 6000,
+          easing: 'easeInOutQuad'
+          // direction: 'alternate'
+          // loop: true
         });
       }
       let toggles = pArray.filter(proj => proj != pArray[p]);
       for (t in toggles) {
         setAttributes(toggles[t], {
-          'data-clicked': '0',
-          style: `height: 150px;
-                overflow: hidden;`
+          'data-clicked': '0'
         });
       }
     });
