@@ -288,15 +288,10 @@ p {
 /* Projects Section: START */
 .pCard {
   overflow: hidden;
-  /* transition: max-height 0.6s ease;
-  -webkit-transition: max-height 0.6s ease; */
 }
-/* .pCard[data-clicked='1'] {
-  max-height: 9000px;
-} */
+
 .pCard[data-clicked='0'] {
   cursor: pointer;
-  max-height: 150px;
 }
 .pActions {
   display: flex;

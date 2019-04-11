@@ -123,7 +123,9 @@ document.addEventListener('DOMContentLoaded', function() {
       `;
   addProjects(portfolio, styles);
   clickExpand();
-  document.getElementById('p0').dataset.clicked = '1';
+  var p0 = document.getElementById('p0');
+  p0.dataset.clicked = '1';
+  p0.style = `max-height: 1000px;`;
 });
 
 function addProjects(data, styles) {
@@ -132,6 +134,7 @@ function addProjects(data, styles) {
     const newProject = document.createElement('article');
     newProject.className = 'pCard shadow-inset';
     newProject.id = `p${index}`;
+    newProject.style = `max-height:150px;`;
     index === 0
       ? (newProject.dataset.clicked = '1')
       : (newProject.dataset.clicked = '0');
@@ -179,17 +182,21 @@ function clickExpand() {
         console.log(pItems[p]);
         anime({
           targets: pItems[p],
-          maxHeight: '9000px', // -> from '150px' to '9000px',
-          duration: 6000,
+          maxHeight: '1000px', // -> from '150px' to '9000px',
+          duration: 650,
           easing: 'easeInOutQuad'
-          // direction: 'alternate'
-          // loop: true
         });
       }
       let toggles = pArray.filter(proj => proj != pArray[p]);
       for (t in toggles) {
         setAttributes(toggles[t], {
           'data-clicked': '0'
+        });
+        anime({
+          targets: toggles[t],
+          duration: 450,
+          maxHeight: '150px', // -> from '150px' to '9000px',
+          easing: 'easeInOutQuad'
         });
       }
     });
