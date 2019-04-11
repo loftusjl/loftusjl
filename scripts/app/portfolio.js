@@ -115,14 +115,17 @@ const portfolio = [
 // add projects to portfolio section
 document.addEventListener('DOMContentLoaded', function() {
   let styles = `
-  .pCard {
-    border: 5px solid ${
-      document.getElementById('orange').style.backgroundColor
-    };
-  }
-  `;
+      .pCard {
+        border: 5px solid ${
+          document.getElementById('orange').style.backgroundColor
+        };
+      }
+      `;
   addProjects(portfolio, styles);
   clickExpand();
+  var p0 = document.getElementById('p0');
+  p0.dataset.clicked = '1';
+  p0.style = `max-height: 1000px;`;
 });
 
 function addProjects(data, styles) {
@@ -131,34 +134,37 @@ function addProjects(data, styles) {
     const newProject = document.createElement('article');
     newProject.className = 'pCard shadow-inset';
     newProject.id = `p${index}`;
-    newProject.dataset.clicked = '0';
+    newProject.style = `max-height:150px;`;
+    index === 0
+      ? (newProject.dataset.clicked = '1')
+      : (newProject.dataset.clicked = '0');
 
     styles += `
-    #p${index} .pHead::before {
-        background-image: url('${el.image}');
-    }
-        `;
+        #p${index} .pHead::before {
+            background-image: url('${el.image}');
+        }
+            `;
 
     let domString = `
-        <div class="pHead textOverlay">
-            <div class="pHead-text">
-                <h1 class="pHead-title">${el.name}</h1>
-                <h3 class="pHead-tech">${el.technologies}</h3>
+            <div class="pHead textOverlay">
+                <div class="pHead-text">
+                    <h1 class="pHead-title">${el.name}</h1>
+                    <h3 class="pHead-tech">${el.technologies}</h3>
+                </div>
             </div>
-        </div>
-        <p class="pDesc">
-          ${el.description}
-        </p>
-        <div class="pActions">
-        <div class="button-wrapper">
-          <a class="button" href="${
-            el.live
-          }" target="_blank"><i class="fas fa-link"></i> Live Site</a><a class="button" href="${
+            <p class="pDesc">
+              ${el.description}
+            </p>
+            <div class="pActions">
+            <div class="button-wrapper">
+              <a class="button" href="${
+                el.live
+              }" target="_blank"><i class="fas fa-link"></i> Live Site</a><a class="button" href="${
       el.github
     }" target="_blank"><i class="fab fa-github-square fa-lg" aria-hidden="true"></i> GitHub</a>
-          </div>
-        </div>
-    `;
+              </div>
+            </div>
+        `;
     newProject.innerHTML = domString;
     projects.appendChild(newProject);
   });
@@ -171,16 +177,26 @@ function clickExpand() {
     pItems[p].addEventListener('click', function() {
       if (pItems[p].dataset.clicked === '0') {
         setAttributes(pItems[p], {
-          'data-clicked': '1',
-          style: `min-height:auto; height:auto;`
+          'data-clicked': '1'
+        });
+        console.log(pItems[p]);
+        anime({
+          targets: pItems[p],
+          maxHeight: '1000px', // -> from '150px' to '9000px',
+          duration: 650,
+          easing: 'easeInOutQuad'
         });
       }
       let toggles = pArray.filter(proj => proj != pArray[p]);
       for (t in toggles) {
         setAttributes(toggles[t], {
-          'data-clicked': '0',
-          style: `height: 150px;
-            overflow: hidden;`
+          'data-clicked': '0'
+        });
+        anime({
+          targets: toggles[t],
+          duration: 450,
+          maxHeight: '150px', // -> from '150px' to '9000px',
+          easing: 'easeInOutQuad'
         });
       }
     });
