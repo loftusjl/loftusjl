@@ -5,7 +5,7 @@ This is my personal portfolio site.
 
 ## Getting Started
 
-The portfolio section showcases the various applications I've worked on along with brief descriptions and links to both the github and live pages.
+The projects section showcases the various applications I've worked on along with brief descriptions and links to both the github and live pages.
 
 ## Built With
 
