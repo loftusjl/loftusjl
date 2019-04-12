@@ -47,10 +47,10 @@ h1 {
 h3 {
   font-size: 1.5 rem;
   font-weight: bold;
-  color: #9dfc9dcb;
+  color: #9dfc9d;
 }
 .pHead-title {
-  color: rgb(157, 252, 157);
+  color: #9dfc9d;
 }
 
 .profile-pic {
@@ -98,6 +98,11 @@ h3 {
 }
 .pDesc li:nth-child(odd) {
   background-color: #f0f8ff17;
+}
+.pHead-tech {
+  text-shadow: none;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 ::selection {
   background: #0080ff;

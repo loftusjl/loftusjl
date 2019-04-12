@@ -24,8 +24,20 @@ const portfolio = [
   {
     name: 'Dynamite Kitchen Supplier',
     image: './assets/images/dk.jpg',
-    description:
-      "Dynamite Kitchen Supplier (DkS) is a full-stack web-app that will allow for role based users to input orders for purchase using a restaurant kitchen as its model. The app allow's for a seperation of roles each with their own set of privileges and access. Users will need to login or create a new user which will be stored in the database. <br /><br /> Username: supervisor, Password: password",
+    description: `<p>
+        Dynamite Kitchen Supplier (DkS) is a full-stack web-app that will allow for role based users to input orders for purchase using a restaurant kitchen as its model. Users will need to login or create a new user which will be stored in the database. <br /><br /> 
+        Demo Login Username: supervisor, Password: password
+      </p>
+      <h3>Features</h3>
+      <ul>
+        <li>Seperation of roles each with their own set of privileges and access.</li>
+        <li>Under PAR list. Displays only ingredients under the PAR (minimum quantity on hand) and allows adding directly to next order.</li>
+        <li>Employee role is limited to requesting restock of items</li>
+        <li>Supervisor role gives additional capabilties such as adjusting requested quantities and placing actual orders</li>
+        <li>Requests are user and date stamped to allow supervisor a view of who is requesting and/or adjusting requirements.</li>
+        <li>Historical order listing which shows the date ordered along with all requests associated with the order.</li>
+      </ul>
+      `,
     technologies:
       'Javascript, NodeJS, Express, MaterializeCSS, jQuery, PassportJS',
     live: 'https://serene-forest-68972.herokuapp.com/',
