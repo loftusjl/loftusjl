@@ -47,7 +47,12 @@ h1 {
 h3 {
   font-size: 1.5 rem;
   font-weight: bold;
+  color: #9dfc9d;
 }
+.pHead-title {
+  color: #9dfc9d;
+}
+
 .profile-pic {
   background-image: url('../images/face.JPG');
   border-radius: 15%;
@@ -72,6 +77,32 @@ h3 {
   margin: 0 auto;
   border-right: 1px solid #3e4246;
   border-left: 1px solid #3e4246;
+}
+.about p {
+  text-shadow: none;
+}
+.pDesc h3 {
+  font-size: 1rem;
+  padding-left: 0.5rem;
+  text-shadow: none;
+  margin: 0;
+  color: #f0f8ff86;
+}
+.pDesc ul {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  list-style-type: disc;
+  text-indent: 25px each-line;
+  line-height: 1.5rem;
+  text-shadow: none;
+}
+.pDesc li:nth-child(odd) {
+  background-color: #f0f8ff17;
+}
+.pHead-tech {
+  text-shadow: none;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 ::selection {
   background: #0080ff;
@@ -321,8 +352,8 @@ a.button {
   transition: all 0.15s;
 }
 a.button:hover {
-  color: #00d400;
-  border-color: #00d400;
+  color: #9dfc9dcb;
+  border-color: #9dfc9dcb;
 }
 a.button:active {
   color: #009600;
@@ -507,9 +538,6 @@ a.button:active {
   }
   h1 {
     font-size: 1.75rem;
-  }
-  h3 {
-    font-size: 1rem;
   }
 }
 

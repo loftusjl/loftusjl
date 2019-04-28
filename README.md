@@ -1,11 +1,11 @@
-# [Portfolio Website](https://loftusjl.github.io/)
+# [loftusjl.github.io](https://loftusjl.github.io/)
 
 This is my personal portfolio site.
 ![logo](https://loftusjl.github.io/assets/images/site.PNG)
 
 ## Getting Started
 
-The portfolio section showcases the various applications I've worked on along with brief descriptions and links to both the github and live pages.
+The projects section showcases the various applications I've worked on along with brief descriptions and links to both the github and live pages.
 
 ## Built With
 
@@ -14,6 +14,7 @@ The portfolio section showcases the various applications I've worked on along wi
 - [CSS: Cascading Style Sheets](https://developer.mozilla.org/en-US/docs/Web/CSS) - The stylesheet language used
 - [Fontawesome](https://fontawesome.com/?from=io) - The majority of icons used
 - [Fontello - icon fonts generator](http://fontello.com/) - Used to create font icons of several technologies not supplied by fontawesome
+- [AnimeJS](https://animejs.com/) - Animation library used
 
 ## Authors
 

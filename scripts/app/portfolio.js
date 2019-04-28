@@ -1,9 +1,43 @@
 const portfolio = [
   {
+    name: 'JobPiper',
+    image: './assets/images/boardroom.jpg',
+    description: `
+      <p>
+        JobPiper is a (MERN) full-stack web application built to make the job search process simple and easy to do.
+      </p>
+      <h3>Features</h3>
+      <ul>
+      <li>Google authentication</li>
+      <li>Google Calendar Integration with drag-and-drop functionality</li>
+      <li>Account based saved jobs listing along with notes and the ability to quickly add a job to your personal calendar</li>
+      <li>Web scraping of Dice.com and yCombinator based on location selected</li>
+      <li>Fuzzy search logic to allow for multiple search terms and spellings within a single search</li>
+      <li>Job search oragainzer with the abiltiy to update status on jobs you've applied, interviewed for, etc...</li>
+      </ul>`,
+    technologies:
+      'MongoDB, Express, React, NodeJS, Material UI, Google Authentication, Firebase, Cheerio.js, Fuse.js, Axios',
+    live: 'https://job-piper.herokuapp.com/',
+    github: 'https://github.com/ScriptKiddie1337/JobPiper.io',
+    types: ['fullStack']
+  },
+  {
     name: 'Dynamite Kitchen Supplier',
     image: './assets/images/dk.jpg',
-    description:
-      "Dynamite Kitchen Supplier (DkS) is a full-stack web-app that will allow for role based users to input orders for purchase using a restaurant kitchen as its model. The app allow's for a seperation of roles each with their own set of privileges and access. Users will need to login or create a new user which will be stored in the database. <br /><br /> Username: supervisor, Password: password",
+    description: `<p>
+        Dynamite Kitchen Supplier (DkS) is a full-stack web-app that will allow for role based users to input orders for purchase using a restaurant kitchen as its model. Users will need to login or create a new user which will be stored in the database. <br /><br /> 
+        Demo Login Username: supervisor, Password: password
+      </p>
+      <h3>Features</h3>
+      <ul>
+        <li>Seperation of roles each with their own set of privileges and access.</li>
+        <li>Under PAR list. Displays only ingredients under the PAR (minimum quantity on hand) and allows adding directly to next order.</li>
+        <li>Employee role is limited to requesting restock of items</li>
+        <li>Supervisor role gives additional capabilties such as adjusting requested quantities and placing actual orders</li>
+        <li>Requests are user and date stamped to allow supervisor a view of who is requesting and/or adjusting requirements.</li>
+        <li>Historical order listing which shows the date ordered along with all requests associated with the order.</li>
+      </ul>
+      `,
     technologies:
       'Javascript, NodeJS, Express, MaterializeCSS, jQuery, PassportJS',
     live: 'https://serene-forest-68972.herokuapp.com/',
@@ -75,8 +109,8 @@ const portfolio = [
     name: 'Horror Hangman',
     image: './assets/images/hangmanChucky.jpg',
     description:
-      'Try to guess the villain in this horror movie take on the classic game hangman!',
-    technologies: '',
+      'This site is a demonstration of capturing user keystrokes. A keyboard will be required to utilize the site functionality. Try to guess the villain in this horror movie take on the classic game hangman!',
+    technologies: 'JavaScript, jQuery, Bootstrap',
     live: 'https://loftusjl.github.io/WordGuessGame/',
     github: 'https://github.com/loftusjl/WordGuessGame',
     types: ['frontEnd']
@@ -85,8 +119,8 @@ const portfolio = [
     name: 'HIPAA Quiz',
     image: './assets/images/HIPAA.png',
     description:
-      'A HIPAA training quiz which provides a knowledge check for HIPAA training. Questions are randomized and you are only given so much time to answer. You must score 70% or greater to pass.',
-    technologies: 'jQuery, Bootstrap',
+      'In this site I created a looped JavaScript function which the questions reside in. Once started, the quiz will give only so much time to answer each question. Once answered, it will highlight the correct question and any incorrect responses given. It is presented as a HIPAA training quiz which provides a knowledge check for HIPAA training. Questions are randomized and you must score 70% or greater to pass.',
+    technologies: 'JavaScript, jQuery, Bootstrap',
     live: 'https://loftusjl.github.io/TriviaGame/',
     github: 'https://github.com/loftusjl/TriviaGame',
     types: ['frontEnd']
@@ -152,9 +186,9 @@ function addProjects(data, styles) {
                     <h3 class="pHead-tech">${el.technologies}</h3>
                 </div>
             </div>
-            <p class="pDesc">
+            <div class="pDesc">
               ${el.description}
-            </p>
+            </div>
             <div class="pActions">
             <div class="button-wrapper">
               <a class="button" href="${
@@ -179,7 +213,6 @@ function clickExpand() {
         setAttributes(pItems[p], {
           'data-clicked': '1'
         });
-        console.log(pItems[p]);
         anime({
           targets: pItems[p],
           maxHeight: '1000px', // -> from '150px' to '9000px',
