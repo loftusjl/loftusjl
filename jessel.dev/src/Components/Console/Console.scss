@@ -1,0 +1,13 @@
+@import "../../sass/variables";
+
+#Console {
+  height: calc(#{$console-height} - 2vh);
+  width: calc(#{$screen-width} - 2vw);
+  background-color: black;
+  z-index: 1;
+  position: fixed;
+  bottom: calc(#{$screen-top} + 1vh);
+  left: calc(#{$screen-left} + 1vw);
+  border-radius: 25px;
+  @include z-2;
+}
