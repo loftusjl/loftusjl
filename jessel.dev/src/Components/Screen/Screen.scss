@@ -1,0 +1,12 @@
+@import "../../sass/variables";
+
+#Screen {
+  height: calc(#{$height} - 6vh);
+  width: calc(#{$width} - 8vw);
+  background-color: black;
+  z-index: 1;
+  position: fixed;
+  top: calc(#{$screen-top} + 3vh);
+  left: calc(#{$screen-left} + 4vw);
+  border-radius: 25px;
+}

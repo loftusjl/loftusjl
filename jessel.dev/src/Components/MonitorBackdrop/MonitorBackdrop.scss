@@ -1,0 +1,46 @@
+@import "../../sass/variables";
+.bg-wrapper {
+  $gray: hsl(120, 1%, 58%);
+  $gray-shadow: hsl(0, 0%, 47%);
+  $position: fixed;
+
+  z-index: 0;
+  .screen-bg-wrapper {
+    .top {
+      width: $width;
+      height: $height;
+      position: $position;
+      top: $screen-top;
+      left: $screen-left;
+      clip-path: polygon(0% 0%, 50% 50%, 100% 0%);
+      background-color: $gray-shadow;
+    }
+    .right {
+      width: $width;
+      height: $height;
+      position: $position;
+      top: $screen-top;
+      left: $screen-left;
+      clip-path: polygon(100% 0%, 50% 50%, 100% 100%);
+      background-color: $gray-shadow;
+    }
+    .bottom {
+      width: $width;
+      height: $height;
+      position: $position;
+      top: $screen-top;
+      left: $screen-left;
+      clip-path: polygon(0% 100%, 50% 50%, 100% 100%);
+      background-color: $gray;
+    }
+    .left {
+      width: $width;
+      height: $height;
+      position: $position;
+      top: $screen-top;
+      left: $screen-left;
+      clip-path: polygon(0% 0%, 50% 50%, 0% 100%);
+      background-color: $gray;
+    }
+  }
+}
