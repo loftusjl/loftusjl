@@ -1,13 +1,20 @@
 @import "../../sass/variables";
 
 #Screen {
-  height: calc(#{$screen-height} - 6vh);
+  height: calc(#{$screen-height} - 8vh);
   width: calc(#{$screen-width} - 8vw);
   background-color: black;
   z-index: 1;
   position: fixed;
-  top: calc(#{$screen-top} + 3vh);
+  top: calc(#{$screen-top} + 4vh);
   left: calc(#{$screen-left} + 4vw);
-  border-radius: 25px;
-  @include z-2;
+  border-radius: 50px;
+  @include glow-z-3;
+  background: repeating-linear-gradient(
+    90deg,
+    $primary-screen,
+    $primary-screen 1px,
+    hsl(0, 0%, 13%) 0,
+    hsl(0, 0%, 13%) 2px
+  );
 }

@@ -1,6 +1,10 @@
-$screen-width: 95vw;
-$screen-height: 70vh;
-$console-height: 20vh;
+// colors
+$primary-screen: hsl(120, 6%, 10%);
+$primary-screen-text: hsl(125, 100%, 50%);
+
+// Sizes
+$screen-width: 98vw;
+$screen-height: 96vh;
 $screen-top: calc((100vw - #{$screen-width}) / 2);
 $screen-left: calc((100vw - #{$screen-width}) / 2);
 
@@ -19,4 +23,22 @@ $screen-left: calc((100vw - #{$screen-width}) / 2);
 }
 @mixin z-5 {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+@mixin z--1 {
+  box-shadow: inset 0 0 10px #000;
+}
+@mixin z--2 {
+  box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.425),
+    inset 0 10px 25px rgba(0, 0, 0, 0.527);
+}
+@mixin z--3 {
+  box-shadow: inset 0 0 10px #000;
+}
+
+// screen glow
+@mixin glow-z-2 {
+  box-shadow: 0 3px 6px rgba(0, 255, 21, 0.15), 0 2px 4px rgba(0, 255, 21, 0.12);
+}
+@mixin glow-z-3 {
+  box-shadow: 0 0px 20px rgba(0, 255, 21, 0.15);
 }

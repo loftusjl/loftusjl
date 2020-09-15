@@ -1,13 +1,17 @@
 @import "../../sass/variables";
 .bg-wrapper {
-  $gray: hsl(120, 1%, 58%);
-  $gray-shadow: hsl(0, 0%, 47%);
+  $gray: hsl(120, 1%, 54%);
+  $gray-shadow: hsl(120, 0%, 47%);
   $position: fixed;
   height: 100vh;
   width: 100vw;
   background-color: hsl(0, 4%, 75%);
   z-index: 0;
   .screen-bg-wrapper {
+    & > div {
+      @include z--2;
+      border-radius: 50px;
+    }
     .top {
       width: $screen-width;
       height: $screen-height;
@@ -40,45 +44,6 @@
       height: $screen-height;
       position: $position;
       top: $screen-top;
-      left: $screen-left;
-      clip-path: polygon(0% 0%, 50% 50%, 0% 100%);
-      background-color: $gray;
-    }
-  }
-
-  .console-bg-wrapper {
-    .top {
-      width: $screen-width;
-      height: $console-height;
-      position: $position;
-      bottom: $screen-top;
-      left: $screen-left;
-      clip-path: polygon(0% 0%, 50% 50%, 100% 0%);
-      background-color: $gray-shadow;
-    }
-    .right {
-      width: $screen-width;
-      height: $console-height;
-      position: $position;
-      bottom: $screen-top;
-      left: $screen-left;
-      clip-path: polygon(100% 0%, 50% 50%, 100% 100%);
-      background-color: $gray-shadow;
-    }
-    .bottom {
-      width: $screen-width;
-      height: $console-height;
-      position: $position;
-      bottom: $screen-top;
-      left: $screen-left;
-      clip-path: polygon(0% 100%, 50% 50%, 100% 100%);
-      background-color: $gray;
-    }
-    .left {
-      width: $screen-width;
-      height: $console-height;
-      position: $position;
-      bottom: $screen-top;
       left: $screen-left;
       clip-path: polygon(0% 0%, 50% 50%, 0% 100%);
       background-color: $gray;

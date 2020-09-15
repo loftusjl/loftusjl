@@ -10,12 +10,6 @@ export const MonitorBackdrop = () => {
         <div className="bottom"></div>
         <div className="left"></div>
       </div>
-      <div className="console-bg-wrapper">
-        <div className="top"></div>
-        <div className="right"></div>
-        <div className="bottom"></div>
-        <div className="left"></div>
-      </div>
     </div>
   );
 };
