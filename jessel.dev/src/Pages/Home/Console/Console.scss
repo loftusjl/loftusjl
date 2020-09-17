@@ -1,0 +1,10 @@
+@import "../../../sass/variables";
+
+#Console {
+  color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 6;
+  font-weight: 800;
+}

@@ -1,20 +1,29 @@
 @import "../../sass/variables";
 
 #Screen {
-  height: calc(#{$screen-height} - 8vh);
-  width: calc(#{$screen-width} - 8vw);
+  height: $screen-height;
+  width: $screen-width;
   background-color: black;
   z-index: 1;
   position: fixed;
-  top: calc(#{$screen-top} + 4vh);
-  left: calc(#{$screen-left} + 4vw);
-  border-radius: 50px;
+  top: $screen-top;
+  left: $screen-left;
+  border-radius: $screen-border-radius;
   @include glow-z-3;
+}
+#ScreenOverlay {
+  position: fixed;
+  top: $screen-top;
+  left: $screen-left;
+  height: $screen-height;
+  width: $screen-width;
+  border-radius: $screen-border-radius;
+  z-index: 99;
   background: repeating-linear-gradient(
     90deg,
     $primary-screen,
     $primary-screen 1px,
-    hsl(0, 0%, 13%) 0,
-    hsl(0, 0%, 13%) 2px
+    hsla(0, 0%, 13%, 0.301) 0,
+    hsla(0, 0%, 13%, 0.199) 2px
   );
 }
