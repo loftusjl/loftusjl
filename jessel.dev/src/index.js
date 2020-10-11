@@ -1,9 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
-import "./index.css";
+import "./index.scss";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+
+// pull in web font loader to avoid render blocking CSS
+import WebFont from 'webfontloader';
+
+WebFont.load({
+  custom: {
+    families: ['unibody8', 'sans-serif'],
+    urls: ['./fonts/fonts.css']
+  }
+});
 
 ReactDOM.render(
   <Router>

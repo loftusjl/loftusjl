@@ -8,6 +8,7 @@ function Home(props) {
     <div>
       <Screen />
       <MonitorBackdrop />
+      <article>This is a test of the 1mc</article>
     </div>
   );
 }
