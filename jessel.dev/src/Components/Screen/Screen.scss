@@ -18,12 +18,13 @@
   height: $screen-height;
   width: $screen-width;
   border-radius: $screen-border-radius;
+  pointer-events: none;
   z-index: 99;
   background: repeating-linear-gradient(
     90deg,
     $primary-screen,
     $primary-screen 1px,
-    hsla(0, 0%, 13%, 0.301) 0,
-    hsla(0, 0%, 13%, 0.199) 2px
+    hsla(0, 0%, 13%, 0.13) 0,
+    hsla(0, 0%, 13%, 0.068) 2px
   );
 }

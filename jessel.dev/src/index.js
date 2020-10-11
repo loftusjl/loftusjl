@@ -6,13 +6,12 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 // pull in web font loader to avoid render blocking CSS
-import WebFont from 'webfontloader';
+import WebFont from "webfontloader";
 
 WebFont.load({
-  custom: {
-    families: ['unibody8', 'sans-serif'],
-    urls: ['./fonts/fonts.css']
-  }
+  google: {
+    families: ["Orbitron", "sans-serif"],
+  },
 });
 
 ReactDOM.render(

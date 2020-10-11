@@ -3,8 +3,101 @@
 #Console {
   color: white;
   position: fixed;
-  top: 50%;
-  left: 50%;
+  height: $screen-height;
+  width: $screen-width;
+  top: $screen-top;
+  left: $screen-left;
+  overflow: hidden auto;
   z-index: 6;
   font-weight: 800;
+  font-size: 3em;
+  display: flex;
+  flex-direction: column;
+  ul {
+    padding: 0;
+    margin: 2rem;
+    list-style: none;
+    li {
+      text-align: left;
+    }
+  }
+  .command-line {
+    margin-left: 2rem;
+    text-align: left;
+    font-size: 1rem;
+  }
+}
+
+// console blinking cursor
+.blinking-cursor {
+  text-align: left;
+  height: 1rem;
+  font-weight: 100;
+  font-size: 1rem;
+  color: aliceblue;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+    text-shadow: none;
+  }
+  50% {
+    color: aliceblue;
+    text-shadow: 0 0 5px #c8c8c8;
+  }
+}
+
+@-moz-keyframes blink {
+  from,
+  to {
+    color: transparent;
+    text-shadow: none;
+  }
+  50% {
+    color: aliceblue;
+    text-shadow: 0 0 5px #c8c8c8;
+  }
+}
+
+@-webkit-keyframes blink {
+  from,
+  to {
+    color: transparent;
+    text-shadow: none;
+  }
+  50% {
+    color: aliceblue;
+    text-shadow: 0 0 5px #c8c8c8;
+  }
+}
+
+@-ms-keyframes blink {
+  from,
+  to {
+    color: transparent;
+    text-shadow: none;
+  }
+  50% {
+    color: aliceblue;
+    text-shadow: 0 0 5px #c8c8c8;
+  }
+}
+
+@-o-keyframes blink {
+  from,
+  to {
+    color: transparent;
+    text-shadow: none;
+  }
+  50% {
+    color: aliceblue;
+    text-shadow: 0 0 5px #c8c8c8;
+  }
 }

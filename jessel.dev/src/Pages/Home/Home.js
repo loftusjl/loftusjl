@@ -7,9 +7,9 @@ import PropTypes from "prop-types";
 function Home(props) {
   return (
     <div>
+      <Console />
       <Screen />
       <MonitorBackdrop />
-      <Console />
     </div>
   );
 }

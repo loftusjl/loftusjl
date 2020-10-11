@@ -3,9 +3,9 @@ $primary-screen: hsl(120, 6%, 10%);
 $primary-screen-text: hsl(125, 100%, 50%);
 
 // Sizes
-$screen-width: 90vw;
-$screen-height: 88vh;
-$screen-top: calc(((100vw - #{$screen-width}) / 2));
+$screen-width: 99vw;
+$screen-height: 99vh;
+$screen-top: calc(((100vh - #{$screen-height}) / 2));
 $screen-left: calc((100vw - #{$screen-width}) / 2);
 $screen-border-radius: 50px;
 
