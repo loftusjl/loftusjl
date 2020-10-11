@@ -13,8 +13,7 @@ export const Console = () => {
 
   return (
     <div id="Console">
-      <h5>Jesse Loftus</h5>
-      <h6>Web Developer</h6>
+      <h1>Jesse Loftus</h1>
       <ul>
         <li>
           <u>P</u> rojects
@@ -28,7 +27,7 @@ export const Console = () => {
         <li><u>?</u> help</li>
       </ul>
       <span className="console-text">{consoleUser}
-        <textarea className="command-line" value={inputValue} onChange={onChangeHandler}/>
+        <textarea className="command-line" value={inputValue} onChange={onChangeHandler} placeholder="Type command and press enter." maxLength="76"/>
       </span>
     </div>
   );

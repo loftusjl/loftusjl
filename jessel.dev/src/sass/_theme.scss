@@ -1,12 +1,27 @@
+@font-face {
+  font-family: "Komrade-Inline";
+  src: url(../fonts/Komrade-Inline.otf);
+}
+@font-face {
+  font-family: "Komrade-Regular";
+  src: url(../fonts/Komrade-Regular.otf);
+}
+@font-face {
+  font-family: "Unibody-8";
+  src: url(../fonts/Unibody8Regular.ttf);
+}
+
 body {
-  font-family: "Orbitron", sans-serif;
+  // font-family: "Orbitron", sans-serif;
+  font-family: "Unibody-8", sans-serif;
   font-size: 16px;
   margin: 0;
   padding: 0;
 }
-h5 {
+h1 {
+  font-family: "Komrade-Regular";
+  color: lawngreen;
+  letter-spacing: 1rem;
+  font-weight: 800;
   margin: 0.25em 0;
-}
-h6 {
-  margin: 0.1em 0;
 }

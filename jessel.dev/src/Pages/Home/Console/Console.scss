@@ -29,8 +29,6 @@
     }
   }
   .console-text {
-    margin-top: auto;
-    margin-bottom: 2.5rem;
     display: flex;
     font-size: 1.5rem;
     white-space: nowrap;
@@ -38,6 +36,8 @@
     height: 1rem;
     width: $screen-width;
     padding: 0 2rem;
+    margin-top: auto;
+    margin-bottom: 2rem;
     .command-line {
       height: 1.75rem;
       overflow: hidden;
