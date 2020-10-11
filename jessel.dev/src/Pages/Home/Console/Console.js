@@ -1,8 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Console.scss";
 
 export const Console = () => {
-  const [consoleText, setconsoleText] = useState("test");
+
+  const [consoleUser, setConsoleUser] = useState('guestuser@JesseL.dev $')
+  const [inputValue, setInputValue] = useState("");
+
+  const onChangeHandler = event => {
+    setInputValue(event.target.value);
+  };
+
 
   return (
     <div id="Console">
@@ -10,18 +17,18 @@ export const Console = () => {
       <h6>Web Developer</h6>
       <ul>
         <li>
-          <u>P</u>rojects
+          <u>P</u> rojects
         </li>
         <li>
-          <u>A</u>bout
+          <u>A</u> bout
         </li>
         <li>
-          <u>C</u>ontact
+          <u>C</u> ontact
         </li>
+        <li><u>?</u> help</li>
       </ul>
-      <span className="command-line">
-        guestuser@JesseL.dev $ {consoleText}
-        <span className="blinking-cursor"> ▍</span>
+      <span className="console-text">{consoleUser}
+        <textarea className="command-line" value={inputValue} onChange={onChangeHandler}/>
       </span>
     </div>
   );
