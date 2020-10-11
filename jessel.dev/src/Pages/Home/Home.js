@@ -1,6 +1,7 @@
 import React from "react";
 import { MonitorBackdrop } from "../../Components/MonitorBackdrop/MonitorBackdrop";
 import { Screen } from "../../Components/Screen/Screen";
+import { Console } from "./Console/Console";
 import PropTypes from "prop-types";
 
 function Home(props) {
@@ -8,7 +9,7 @@ function Home(props) {
     <div>
       <Screen />
       <MonitorBackdrop />
-      <article>This is a test of the 1mc</article>
+      <Console />
     </div>
   );
 }

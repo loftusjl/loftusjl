@@ -2,5 +2,10 @@ import React from "react";
 import "./Screen.scss";
 
 export const Screen = () => {
-  return <div id="Screen"></div>;
+  return (
+    <>
+      <div id="Screen"></div>
+      <div id="ScreenOverlay"></div>
+    </>
+  );
 };
