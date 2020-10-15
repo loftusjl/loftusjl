@@ -1,6 +1,11 @@
 # [loftusjl.github.io](https://loftusjl.github.io/)
 
 This is my personal portfolio site.
+
+Currently I'm working on building a new version in Gatsby when I have the time. The plan is to give it both mouse driven and "CLI" driven functionality.
+
+The branch `feature/reactBaseline` is where I got to before deciding to do it in Gatsby. The Gatsby version will go with a similar look and feel.
+
 ![logo](https://loftusjl.github.io/assets/images/site.PNG)
 
 ## Getting Started
